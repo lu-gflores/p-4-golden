@@ -4,9 +4,10 @@ import '../styles/Home.css'
 
 const Home = () => {
     return (
-        <div className='home-container'>
+        <Container maxWidth='false' className='home-container'>
             <div className='hero-banner'></div>
-        </div>
+
+        </Container>
     )
 }
 
