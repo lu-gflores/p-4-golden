@@ -1,0 +1,12 @@
+.home-container {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+.hero-banner {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/persona-4-hero-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

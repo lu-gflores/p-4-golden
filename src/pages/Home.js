@@ -1,10 +1,11 @@
 import React from 'react'
+import Container from '@material-ui/core/Container'
+import '../styles/Home.css'
 
 const Home = () => {
     return (
-        <div>
-            <h1>Persona 4 golden</h1>
-
+        <div className='home-container'>
+            <div className='hero-banner'></div>
         </div>
     )
 }

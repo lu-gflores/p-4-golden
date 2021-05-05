@@ -1,0 +1,10 @@
+.navbar {
+    margin: 0 auto;
+    position: fixed;
+    top: 2%;
+    left: 3%;
+}
+.navbar .fa-tv {
+    font-size:50px;
+    color: white;
+}
