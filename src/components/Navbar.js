@@ -8,9 +8,6 @@ import Divider from '@material-ui/core/Divider'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import Button from '@material-ui/core/Button'
-import Menu from '@material-ui/core/Menu'
-import MenuItem from '@material-ui/core/MenuItem'
-import Fade from '@material-ui/core/Fade'
 import '../styles/NavBar.css'
 
 const useStyles = makeStyles({
@@ -19,9 +16,12 @@ const useStyles = makeStyles({
     },
     fullList: {
         width: 'auto'
+    },
+    ListItemText: {
+        fontFamily: 'Fira Sans Extra Condensed',
+        fontWeight: '700'
     }
 })
-
 
 const Navbar = () => {
     const classes = useStyles()
@@ -47,27 +47,20 @@ const Navbar = () => {
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
-            <List>
+            <List className='nav-background'>
                 <ListItem button component={NavLink} to='/'>
-                    <ListItemText primary='Home' />
+                    <ListItemText classes={{ primary: classes.ListItemText }} primary='Home' />
                 </ListItem>
                 <ListItem button component={NavLink} to='/story'>
-                    <ListItemText primary='Story' />
+                    <ListItemText classes={{ primary: classes.ListItemText }} primary='Story' />
                 </ListItem>
                 <ListItem button component={NavLink} to='/characters'>
-                    <ListItemText primary='Characters' />
+                    <ListItemText classes={{ primary: classes.ListItemText }} primary='Characters' />
                 </ListItem>
             </List>
         </div>
     )
 
-
-    // const handleClick = e => {
-    //     setActive(e.currentTarget)
-    // }
-    // const handleClose = () => {
-    //     setActive(null)
-    // }
     return (
         <nav className='navbar'>
             {['left'].map(anchor => (
@@ -78,14 +71,6 @@ const Navbar = () => {
                     </Drawer>
                 </Fragment>
             ))}
-            {/* <Button aria-controls='simple-menu' aria-haspopup='true'>
-                <i className="fas fa-tv"></i>
-            </Button>
-            <Menu id='fade-menu' anchorEl={active} keepMounted  onClose={handleClose} TransitionComponent={Fade}>
-                <MenuItem button component={NavLink} to='/' onClick={handleClose}>Home</MenuItem>
-                <MenuItem button component={NavLink} to='/story' onClick={handleClose}>Story</MenuItem>
-                <MenuItem button component={NavLink} to='/characters' onClick={handleClose}>Characters</MenuItem>
-            </Menu> */}
         </nav>
     )
 }
