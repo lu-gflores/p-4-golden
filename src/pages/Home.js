@@ -22,8 +22,7 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.background.paper
     },
     gridList: {
-        width: 1000,
-        height: 1000
+        width: '100%',
     },
     backgroundStyle: {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${backgroundImage1})`,
@@ -38,7 +37,7 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'center',
         justifyContent: 'center',
         height: '100%',
-        opacity: 0.8,
+        opacity: 0.7,
         background: '#000',
         color: '#fff'
     }
@@ -68,12 +67,12 @@ const Home = () => {
                 </div>
             </div>
 
-            <h1>Media</h1>
+            <h1 className='media-title'>Media</h1>
             <section className={classes.gridListRoot}>
-                <GridList cellHeight={180} className={classes.gridList} cols={4}>
+                <GridList cellHeight='auto' className={classes.gridList} cols={4}>
                     {screenshotData.map(tile => (
-                        <GridListTile key={tile.img}>
-                            <img src={tile.img} alt={tile.alt} />
+                        <GridListTile key={tile.img} cols={tile.cols || 1}>
+                            <img className='screenshots' src={tile.img} alt={tile.alt} />
                         </GridListTile>
                     ))}
                 </GridList>
