@@ -8,12 +8,8 @@ import GridListTile from '@material-ui/core/GridListTile'
 import Paper from '@material-ui/core/Paper'
 
 import backgroundImage1 from '../images/backgroundimage-1.gif'
-import Screenshot1 from '../images/screenshots/screenshot-1.jpg'
-import Screenshot2 from '../images/screenshots/screenshot-2.jpg'
-import Screenshot3 from '../images/screenshots/screenshot-3.jpg'
-import Screenshot4 from '../images/screenshots/screenshot-4.jpg'
+import screenshotData from '../utils/ScreenshotData'
 import '../styles/Home.css'
-
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
@@ -22,11 +18,12 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'space-around',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        backgroundColor: theme.palette.background.paper
     },
     gridList: {
-        width: 500,
-        height: 450
+        width: 1000,
+        height: 1000
     },
     backgroundStyle: {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${backgroundImage1})`,
@@ -52,7 +49,7 @@ const Home = () => {
     const classes = useStyles()
 
     return (
-        <Container max-width='false' className='home-container'>
+        <Container max-width='false'>
             <div className='hero-banner'></div>
             <Divider />
             <div className={classes.backgroundStyle}>
@@ -73,19 +70,12 @@ const Home = () => {
 
             <h1>Media</h1>
             <section className={classes.gridListRoot}>
-                <GridList cellHeight={180} className={classes.gridList}>
-                    <GridListTile>
-                        <img src={Screenshot1} alt='screenshot 1' />
-                    </GridListTile>
-                    <GridListTile>
-                        <img src={Screenshot2} alt='screenshot 2' />
-                    </GridListTile>
-                    <GridListTile>
-                        <img src={Screenshot3} alt='screenshot 3' />
-                    </GridListTile>
-                    <GridListTile>
-                        <img src={Screenshot4} alt='screenshot 4' />
-                    </GridListTile>
+                <GridList cellHeight={180} className={classes.gridList} cols={4}>
+                    {screenshotData.map(tile => (
+                        <GridListTile key={tile.img}>
+                            <img src={tile.img} alt={tile.alt} />
+                        </GridListTile>
+                    ))}
                 </GridList>
             </section>
         </Container>
