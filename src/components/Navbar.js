@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import clsx from 'clsx'
 import { NavLink } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import { makeStyles } from '@material-ui/core/styles'
 import Drawer from '@material-ui/core/Drawer'
 import List from '@material-ui/core/List'
@@ -65,7 +66,7 @@ const Navbar = () => {
         <nav className='navbar'>
             {['left'].map(anchor => (
                 <Fragment key={anchor} >
-                    <Button onClick={toggleDrawer(anchor, true)}><i className="fas fa-tv"></i></Button>
+                    <Button onClick={toggleDrawer(anchor, true)}><motion.i whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="fas fa-tv"></motion.i></Button>
                     <Drawer anchor={anchor} open={active[anchor]} onClose={toggleDrawer(anchor, false)}>
                         {list(anchor)}
                     </Drawer>
