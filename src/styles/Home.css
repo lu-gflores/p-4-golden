@@ -1,4 +1,6 @@
-
+h2 {
+    text-align: center;
+}
 .hero-banner {
     width: 100%;
     height: 100vh;

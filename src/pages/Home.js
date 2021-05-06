@@ -8,17 +8,25 @@ import GridListTile from '@material-ui/core/GridListTile'
 import Paper from '@material-ui/core/Paper'
 
 import backgroundImage1 from '../images/backgroundimage-1.gif'
+import Screenshot1 from '../images/screenshots/screenshot-1.jpg'
+import Screenshot2 from '../images/screenshots/screenshot-2.jpg'
+import Screenshot3 from '../images/screenshots/screenshot-3.jpg'
+import Screenshot4 from '../images/screenshots/screenshot-4.jpg'
 import '../styles/Home.css'
 
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
     },
-    gridListStyle: {
+    gridListRoot: {
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'space-around',
         overflow: 'hidden'
+    },
+    gridList: {
+        width: 500,
+        height: 450
     },
     backgroundStyle: {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${backgroundImage1})`,
@@ -63,8 +71,22 @@ const Home = () => {
                 </div>
             </div>
 
-            <section className={classes.gridListStyle}>
-                <h2>Media</h2>
+            <h1>Media</h1>
+            <section className={classes.gridListRoot}>
+                <GridList cellHeight={180} className={classes.gridList}>
+                    <GridListTile>
+                        <img src={Screenshot1} alt='screenshot 1' />
+                    </GridListTile>
+                    <GridListTile>
+                        <img src={Screenshot2} alt='screenshot 2' />
+                    </GridListTile>
+                    <GridListTile>
+                        <img src={Screenshot3} alt='screenshot 3' />
+                    </GridListTile>
+                    <GridListTile>
+                        <img src={Screenshot4} alt='screenshot 4' />
+                    </GridListTile>
+                </GridList>
             </section>
         </Container>
     )
