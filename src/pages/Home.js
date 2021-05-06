@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         width: '100%',
-        height: '85vh'
+        padding: '10rem'
     },
     paper: {
         padding: theme.spacing(2),
@@ -32,7 +32,7 @@ const Home = () => {
     const classes = useStyles()
 
     return (
-        <Container maxWidth='false' className='home-container'>
+        <Container max-width='xl' className='home-container'>
             <div className='hero-banner'></div>
             <Divider />
             <div className={classes.backgroundStyle}>
