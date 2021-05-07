@@ -1,12 +1,12 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, useTheme } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
 import GridList from '@material-ui/core/GridList'
 import GridListTile from '@material-ui/core/GridListTile'
 import Paper from '@material-ui/core/Paper'
-
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 import backgroundImage1 from '../images/backgroundimage-1.gif'
 import screenshotData from '../utils/ScreenshotData'
 import '../styles/Home.css'
@@ -23,6 +23,7 @@ const useStyles = makeStyles(theme => ({
     },
     gridList: {
         width: '100%',
+        height: 'auto',
     },
     backgroundStyle: {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${backgroundImage1})`,
@@ -34,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     },
     paper: {
         padding: theme.spacing(2),
-        width: 200,
+        width: 210,
         height: 150,
         lineHeight: 1.5,
         textAlign: 'center',
@@ -46,6 +47,21 @@ const useStyles = makeStyles(theme => ({
 
 const Home = () => {
     const classes = useStyles()
+    const theme = useTheme()
+    const exSmallScreen = useMediaQuery(theme.breakpoints.only('xs'))
+    const smallScreen = useMediaQuery(theme.breakpoints.only('sm'))
+    const mediumScreen = useMediaQuery(theme.breakpoints.only('md'))
+    const largeScreen = useMediaQuery(theme.breakpoints.only('lg'))
+    const exLargeScreen = useMediaQuery(theme.breakpoints.only('xl'))
+    const screenWidth = () => {
+        if (exLargeScreen) return 4;
+
+        else if (largeScreen) return 3;
+
+        else if (mediumScreen) return 2;
+
+        else return 1;
+    }
 
     return (
         <Container max-width='false'>
@@ -69,7 +85,7 @@ const Home = () => {
 
             <section className={classes.gridListRoot}>
                 <h1 className='media-title'>Media</h1>
-                <GridList cellHeight='auto' className={classes.gridList} cols={4}>
+                <GridList cellHeight='auto' cols={screenWidth()} className={classes.gridList} >
                     {screenshotData.map(tile => (
                         <GridListTile key={tile.img}>
                             <img className='screenshots' src={tile.img} alt={tile.alt} />
