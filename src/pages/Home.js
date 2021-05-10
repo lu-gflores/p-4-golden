@@ -83,6 +83,10 @@ const Home = () => {
                 </div>
             </div>
 
+            <section className='general-info'>
+                <h1>General info</h1>
+            </section>
+
             <section className={classes.gridListRoot}>
                 <h1 className='media-title'>Media</h1>
                 <GridList cellHeight='auto' cols={screenWidth()} className={classes.gridList} >

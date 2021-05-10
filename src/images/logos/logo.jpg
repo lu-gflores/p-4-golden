@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<!-- saved from url=(0018)https://atlus.com/ -->
+<html lang="en-US" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./logo_files/64db19c156"></script><script src="./logo_files/nr-1208.min.js.download"></script><script id="twitter-wjs" src="./logo_files/widgets.js.download"></script><script async="" src="./logo_files/page.js.download"></script><script type="text/javascript" async="" src="./logo_files/analytics.js.download"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"64db19c156",applicationID:"7830361"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="https://atlus.com/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="https://atlus.com/wp-content/themes/jumpstart/framework/assets/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<meta name="robots" content="max-image-preview:large">
+
+<!-- This site is optimized with the Yoast SEO plugin v9.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>ATLUS Official website homepage | Atlus West</title>
+<meta name="description" content="Atlus official website. Receive up-to-date information on Atlus&#39; game titles including Persona series, Shin Megami Tensei Series, Etrian Odyssey.">
+<link rel="canonical" href="https://atlus.com/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Atlus Official Website">
+<meta property="og:description" content="Atlus official website. Receive up-to-date information on Atlus&#39; game titles including Persona series, Shin Megami Tensei Series, Etrian Odyssey.">
+<meta property="og:url" content="https://atlus.com/">
+<meta property="og:site_name" content="Atlus West">
+<meta property="og:image" content="https://atlus.com/wp-content/uploads/2017/08/atlus-logo-black.jpg">
+<meta property="og:image:secure_url" content="https://atlus.com/wp-content/uploads/2017/08/atlus-logo-black.jpg">
+<meta property="og:image:width" content="200">
+<meta property="og:image:height" content="200">
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/atlus.com\/","name":"Atlus West","potentialAction":{"@type":"SearchAction","target":"https:\/\/atlus.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Organization","url":"https:\/\/atlus.com\/","sameAs":["https:\/\/www.facebook.com\/AtlusUSA\/"],"@id":"https:\/\/atlus.com\/#organization","name":"Atlus U.S.A., Inc.","logo":"https:\/\/atlus.com\/wp-content\/uploads\/2017\/08\/atlus-logo-black.jpg"}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="https://ajax.googleapis.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Atlus West » Feed" href="https://atlus.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Atlus West » Comments Feed" href="https://atlus.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Atlus West » 1 – Home Comments Feed" href="https://atlus.com/1-home/feed/">
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v7.17.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script src="./logo_files/js" type="text/javascript" data-cfasync="false"></script>
+			<script type="text/javascript" data-cfasync="false">
+				var mi_version = '7.17.0';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStr = 'ga-disable-UA-56281875-1';
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					return document.cookie.indexOf( disableStr + '=true' ) > - 1;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if ( __gtagTrackerIsOptedOut() ) {
+					window[disableStr] = true;
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+					window[disableStr] = true;
+				}
+
+				if ( 'undefined' === typeof gaOptout ) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+				if ( mi_track_user ) {
+					function __gtagTracker() {dataLayer.push( arguments );}
+					__gtagTracker( 'js', new Date() );
+					__gtagTracker( 'set', {
+						'developer_id.dZGIzZG' : true,
+						                    });
+					__gtagTracker( 'config', 'UA-56281875-1', {
+						forceSSL:true,					} );
+										window.gtag = __gtagTracker;										(
+						function () {
+							/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+							/* ga and __gaTracker compatibility shim. */
+							var noopfn = function () {
+								return null;
+							};
+							var newtracker = function () {
+								return new Tracker();
+							};
+							var Tracker = function () {
+								return null;
+							};
+							var p = Tracker.prototype;
+							p.get = noopfn;
+							p.set = noopfn;
+							p.send = function (){
+								var args = Array.prototype.slice.call(arguments);
+								args.unshift( 'send' );
+								__gaTracker.apply(null, args);
+							};
+							var __gaTracker = function () {
+								var len = arguments.length;
+								if ( len === 0 ) {
+									return;
+								}
+								var f = arguments[len - 1];
+								if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+									if ( 'send' === arguments[0] ) {
+										var hitConverted, hitObject = false, action;
+										if ( 'event' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[3] ) {
+												hitObject = {
+													'eventAction': arguments[3],
+													'eventCategory': arguments[2],
+													'eventLabel': arguments[4],
+													'value': arguments[5] ? arguments[5] : 1,
+												}
+											}
+										}
+										if ( typeof arguments[2] === 'object' ) {
+											hitObject = arguments[2];
+										}
+										if ( typeof arguments[5] === 'object' ) {
+											Object.assign( hitObject, arguments[5] );
+										}
+										if ( 'undefined' !== typeof (
+											arguments[1].hitType
+										) ) {
+											hitObject = arguments[1];
+										}
+										if ( hitObject ) {
+											action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+											hitConverted = mapArgs( hitObject );
+											__gtagTracker( 'event', action, hitConverted );
+										}
+									}
+									return;
+								}
+
+								function mapArgs( args ) {
+									var gaKey, hit = {};
+									var gaMap = {
+										'eventCategory': 'event_category',
+										'eventAction': 'event_action',
+										'eventLabel': 'event_label',
+										'eventValue': 'event_value',
+										'nonInteraction': 'non_interaction',
+										'timingCategory': 'event_category',
+										'timingVar': 'name',
+										'timingValue': 'value',
+										'timingLabel': 'event_label',
+									};
+									for ( gaKey in gaMap ) {
+										if ( 'undefined' !== typeof args[gaKey] ) {
+											hit[gaMap[gaKey]] = args[gaKey];
+										}
+									}
+									return hit;
+								}
+
+								try {
+									f.hitCallback();
+								} catch ( ex ) {
+								}
+							};
+							__gaTracker.create = newtracker;
+							__gaTracker.getByName = newtracker;
+							__gaTracker.getAll = function () {
+								return [];
+							};
+							__gaTracker.remove = noopfn;
+							__gaTracker.loaded = true;
+							window['__gaTracker'] = __gaTracker;
+						}
+					)();
+									} else {
+										console.log( "" );
+					( function () {
+							function __gtagTracker() {
+								return null;
+							}
+							window['__gtagTracker'] = __gtagTracker;
+							window['gtag'] = __gtagTracker;
+					} )();
+									}
+			</script>
+				<!-- / Google Analytics by MonsterInsights -->
+				<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/atlus.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=ee0dcf30454d50676c21d8af017aa1c0"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./logo_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="bootstrap-css" href="./logo_files/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="fontawesome-css" href="./logo_files/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="magnific_popup-css" href="./logo_files/magnificpopup.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="themeblvd-css" href="./logo_files/themeblvd.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="./logo_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="rs-plugin-settings-css" href="./logo_files/rs6.css" type="text/css" media="all">
+<style id="rs-plugin-settings-inline-css" type="text/css">
+#rs-demo-id {}
+#rev_slider_4_1_wrapper .uranus.tparrows {
+  width:50px;
+  height:50px;
+  background:rgba(255,255,255,0);
+ }
+ #rev_slider_4_1_wrapper .uranus.tparrows:before {
+ width:50px;
+ height:50px;
+ line-height:50px;
+ font-size:40px;
+ transition:all 0.3s;
+-webkit-transition:all 0.3s;
+ }
+ 
+  #rev_slider_4_1_wrapper .uranus.tparrows:hover:before {
+    opacity:0.75;
+  }
+#rev_slider_4_1_wrapper .erinyen.tp-bullets {
+}
+#rev_slider_4_1_wrapper .erinyen.tp-bullets:before {
+	content:' ';
+	position:absolute;
+	width:100%;
+	height:100%;
+    background: -moz-linear-gradient(top,  #545353 0%, #222222 100%); /* ff3.6+ */
+    background: -webkit-linear-gradient(top,  #545353 0%,#222222 100%); /* chrome10+,safari5.1+ */
+    background: -o-linear-gradient(top,  #545353 0%,#222222 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(top,  #545353 0%,#222222 100%); /* ie10+ */
+    background: linear-gradient(to bottom,  #545353 0%,#222222 100%); /* w3c */
+
+	padding:10px 15px;
+	margin-left:-15px;margin-top:-10px;
+	box-sizing:content-box;
+   border-radius:10px;
+   box-shadow:0px 0px 2px 1px rgba(33,33,33,0.3);
+}
+#rev_slider_4_1_wrapper .erinyen .tp-bullet {
+	width:13px;
+	height:13px;
+	position:absolute;
+	background:#111111;	
+	border-radius:50%;
+	cursor: pointer;
+	box-sizing:content-box;
+}
+#rev_slider_4_1_wrapper .erinyen .tp-bullet:hover,
+#rev_slider_4_1_wrapper .erinyen .tp-bullet.selected {
+background: -moz-linear-gradient(top,  #e5e5e5 0%, #999999 100%); /* ff3.6+ */
+background: -webkit-linear-gradient(top,  #e5e5e5 0%,#999999 100%); /* chrome10+,safari5.1+ */
+background: -o-linear-gradient(top,  #e5e5e5 0%,#999999 100%); /* opera 11.10+ */
+background: -ms-linear-gradient(top,  #e5e5e5 0%,#999999 100%); /* ie10+ */
+background: linear-gradient(to bottom,  #e5e5e5 0%,#999999 100%); /* w3c */
+border:1px solid #555;
+width:13px;
+height:13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<link rel="stylesheet" id="ubermenu-source-sans-pro-css" href="./logo_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="ubermenu-ubuntu-css" href="./logo_files/css(1)" type="text/css" media="all">
+<link rel="stylesheet" id="catalogue-style-css" href="./logo_files/catalogue-style.css" type="text/css" media="all">
+<link rel="stylesheet" id="User_CSS_1-css" href="./logo_files/animate.css" type="text/css" media="all">
+<link rel="stylesheet" id="User_CSS_2-css" href="./logo_files/slick-theme.css" type="text/css" media="all">
+<link rel="stylesheet" id="User_CSS_3-css" href="./logo_files/slick.css" type="text/css" media="all">
+<link rel="stylesheet" id="User_CSS_4-css" href="./logo_files/user-style.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpfront-notification-bar-css" href="./logo_files/wpfront-notification-bar.css" type="text/css" media="all">
+<link rel="stylesheet" id="addtoany-css" href="./logo_files/addtoany.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="themeblvd_theme-css" href="./logo_files/style.css" type="text/css" media="all">
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='themeblvd_ie-css'  href='https://atlus.com/wp-content/themes/jumpstart/assets/css/ie.css?ver=ee0dcf30454d50676c21d8af017aa1c0' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="ubermenu-css" href="./logo_files/ubermenu.min.css" type="text/css" media="all">
+<script type="text/javascript" src="./logo_files/jquery.min.js.download" id="jquery-js"></script>
+<script type="text/javascript" id="monsterinsights-frontend-script-js-extra">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"https:\/\/atlus.com","hash_tracking":"false","ua":"UA-56281875-1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./logo_files/frontend-gtag.min.js.download" id="monsterinsights-frontend-script-js"></script>
+<script type="text/javascript" src="./logo_files/addtoany.min.js.download" id="addtoany-js"></script>
+<script type="text/javascript" src="./logo_files/rbtools.min.js.download" id="tp-tools-js"></script>
+<script type="text/javascript" src="./logo_files/rs6.min.js.download" id="revmin-js"></script>
+<script type="text/javascript" src="./logo_files/upcp-jquery-functions.js.download" id="upcpjquery-js"></script>
+<script type="text/javascript" src="./logo_files/jquery.c.js.download" id="jquery.cookie-js"></script>
+<script type="text/javascript" src="./logo_files/wpfront-notification-bar.js.download" id="wpfront-notification-bar-js"></script>
+<script type="text/javascript" src="./logo_files/bootstrap.min.js.download" id="bootstrap-js"></script>
+<script type="text/javascript" src="./logo_files/magnificpopup.min.js.download" id="magnific_popup-js"></script>
+<script type="text/javascript" id="themeblvd-js-extra">
+/* <![CDATA[ */
+var themeblvd = {"thumb_animations":"true","featured_animations":"true","image_slide_animations":"true","retina_logo":"true","bootstrap":"true","magnific_popup":"true","lightbox_animation":"fade","lightbox_mobile":"0","lightbox_mobile_iframe":"768","lightbox_mobile_gallery":"0","lightbox_error":"The lightbox media could not be loaded.","lightbox_close":"Close","lightbox_loading":"Loading...","lightbox_counter":"%curr% of %total%","lightbox_next":"Next","lightbox_previous":"Previous"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./logo_files/themeblvd.min.js.download" id="themeblvd-js"></script>
+<script type="text/javascript" src="./logo_files/js.cookie.js.download" id="jscookie-js"></script>
+<script type="text/javascript" src="./logo_files/bouncer.min.js.download" id="bouncer-js"></script>
+<script type="text/javascript" src="./logo_files/bouncer.polyfills.min.js.download" id="bouncer-pf-js"></script>
+<link rel="https://api.w.org/" href="https://atlus.com/wp-json/"><link rel="alternate" type="application/json" href="https://atlus.com/wp-json/wp/v2/pages/75"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://atlus.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://atlus.com/wp-includes/wlwmanifest.xml"> 
+
+<link rel="shortlink" href="https://atlus.com/">
+<link rel="alternate" type="application/json+oembed" href="https://atlus.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fatlus.com%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://atlus.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fatlus.com%2F&amp;format=xml">
+
+<script data-cfasync="false">
+window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};
+(function(d,s,a,b){a=d.createElement(s);b=d.getElementsByTagName(s)[0];a.async=1;a.src="https://static.addtoany.com/menu/page.js";b.parentNode.insertBefore(a,b);})(document,"script");
+</script>
+<style id="ubermenu-custom-generated-css">
+/** UberMenu Custom Menu Styles (Customizer) **/
+/* main */
+.ubermenu-main { background:#ffffff; }
+.ubermenu-main.ubermenu-transition-fade .ubermenu-item .ubermenu-submenu-drop { margin-top:0; }
+.ubermenu-main .ubermenu-item-level-0 > .ubermenu-target { text-transform:uppercase; color:#707070; }
+.ubermenu-main .ubermenu-nav .ubermenu-item.ubermenu-item-level-0 > .ubermenu-target { font-weight:bold; }
+.ubermenu.ubermenu-main .ubermenu-item-level-0:hover > .ubermenu-target, .ubermenu-main .ubermenu-item-level-0.ubermenu-active > .ubermenu-target { color:#0072c6; background:#ffffff; }
+.ubermenu-main .ubermenu-item-level-0.ubermenu-current-menu-item > .ubermenu-target, .ubermenu-main .ubermenu-item-level-0.ubermenu-current-menu-parent > .ubermenu-target, .ubermenu-main .ubermenu-item-level-0.ubermenu-current-menu-ancestor > .ubermenu-target { color:#dd3333; background:#ffffff; }
+.ubermenu-main .ubermenu-item.ubermenu-item-level-0 > .ubermenu-highlight { background:#ffffff; }
+.ubermenu-main .ubermenu-item-level-0.ubermenu-active > .ubermenu-target { -webkit-box-shadow:inset 1px 0 0 0 rgba(255,255,255,0); -moz-box-shadow:inset 1px 0 0 0 rgba(255,255,255,0); -o-box-shadow:inset 1px 0 0 0 rgba(255,255,255,0); box-shadow:inset 1px 0 0 0 rgba(255,255,255,0); }
+.ubermenu-main .ubermenu-submenu.ubermenu-submenu-drop { background-color:#ffffff; }
+.ubermenu-main .ubermenu-item-normal > .ubermenu-target,.ubermenu-main .ubermenu-submenu .ubermenu-target,.ubermenu-main .ubermenu-submenu .ubermenu-nonlink,.ubermenu-main .ubermenu-submenu .ubermenu-widget,.ubermenu-main .ubermenu-submenu .ubermenu-custom-content-padded,.ubermenu-main .ubermenu-submenu .ubermenu-retractor,.ubermenu-main .ubermenu-submenu .ubermenu-colgroup .ubermenu-column,.ubermenu-main .ubermenu-submenu.ubermenu-submenu-type-stack > .ubermenu-item-normal > .ubermenu-target,.ubermenu-main .ubermenu-submenu.ubermenu-submenu-padded { padding:10px; }
+.ubermenu .ubermenu-grid-row { padding-right:10px; }
+.ubermenu .ubermenu-grid-row .ubermenu-target { padding-right:0; }
+.ubermenu-main .ubermenu-submenu .ubermenu-item-header > .ubermenu-target, .ubermenu-main .ubermenu-tab > .ubermenu-target { font-size:14px; }
+.ubermenu-main .ubermenu-submenu .ubermenu-item-header > .ubermenu-target { color:#464646; }
+.ubermenu-main .ubermenu-submenu .ubermenu-item-header > .ubermenu-target:hover { color:#1268b3; }
+.ubermenu-main .ubermenu-submenu .ubermenu-item-header.ubermenu-current-menu-item > .ubermenu-target { color:#ed1c24; }
+.ubermenu-main .ubermenu-nav .ubermenu-submenu .ubermenu-item-header > .ubermenu-target { font-weight:bold; }
+.ubermenu-main .ubermenu-submenu .ubermenu-item-header.ubermenu-has-submenu-stack > .ubermenu-target { border:none; }
+.ubermenu-main .ubermenu-submenu-type-stack { padding-top:0; }
+.ubermenu-main .ubermenu-submenu-type-flyout > .ubermenu-item-normal > .ubermenu-target { padding-top:10px; padding-bottom:10px; }
+.ubermenu.ubermenu-main .ubermenu-search input.ubermenu-search-input { color:#2d2d2d; }
+.ubermenu.ubermenu-main .ubermenu-search input.ubermenu-search-input::-webkit-input-placeholder { color:#e8e8e8; }
+.ubermenu.ubermenu-main .ubermenu-search input.ubermenu-search-input::-moz-placeholder { color:#e8e8e8; }
+.ubermenu.ubermenu-main .ubermenu-search input.ubermenu-search-input::-ms-input-placeholder { color:#e8e8e8; }
+.ubermenu.ubermenu-main .ubermenu-search .ubermenu-search-submit { color:#757575; }
+.ubermenu-main, .ubermenu-main .ubermenu-target, .ubermenu-main .ubermenu-nav .ubermenu-item-level-0 .ubermenu-target, .ubermenu-main div, .ubermenu-main p, .ubermenu-main input { font-family:'Ubuntu', serif; font-weight:700; }
+/* footer */
+.ubermenu-footer.ubermenu-transition-fade .ubermenu-item .ubermenu-submenu-drop { margin-top:0; }
+.ubermenu-footer .ubermenu-item-level-0 > .ubermenu-target { font-size:18px; text-transform:uppercase; color:#464646; padding-top:0px; padding-bottom:0px; padding-left:5px; padding-right:5px; }
+.ubermenu-footer .ubermenu-nav .ubermenu-item.ubermenu-item-level-0 > .ubermenu-target { font-weight:bold; }
+.ubermenu.ubermenu-footer .ubermenu-item-level-0:hover > .ubermenu-target, .ubermenu-footer .ubermenu-item-level-0.ubermenu-active > .ubermenu-target { color:#0072c6; }
+.ubermenu-footer .ubermenu-item-level-0.ubermenu-current-menu-item > .ubermenu-target, .ubermenu-footer .ubermenu-item-level-0.ubermenu-current-menu-parent > .ubermenu-target, .ubermenu-footer .ubermenu-item-level-0.ubermenu-current-menu-ancestor > .ubermenu-target { color:#dd3333; }
+.ubermenu-footer .ubermenu-item-normal > .ubermenu-target,.ubermenu-footer .ubermenu-submenu .ubermenu-target,.ubermenu-footer .ubermenu-submenu .ubermenu-nonlink,.ubermenu-footer .ubermenu-submenu .ubermenu-widget,.ubermenu-footer .ubermenu-submenu .ubermenu-custom-content-padded,.ubermenu-footer .ubermenu-submenu .ubermenu-retractor,.ubermenu-footer .ubermenu-submenu .ubermenu-colgroup .ubermenu-column,.ubermenu-footer .ubermenu-submenu.ubermenu-submenu-type-stack > .ubermenu-item-normal > .ubermenu-target,.ubermenu-footer .ubermenu-submenu.ubermenu-submenu-padded { padding:0px; }
+.ubermenu .ubermenu-grid-row { padding-right:0px; }
+.ubermenu .ubermenu-grid-row .ubermenu-target { padding-right:0; }
+.ubermenu-footer .ubermenu-submenu .ubermenu-item-header > .ubermenu-target, .ubermenu-footer .ubermenu-tab > .ubermenu-target { font-size:14px; }
+.ubermenu-footer .ubermenu-submenu .ubermenu-item-header > .ubermenu-target { color:#464646; }
+.ubermenu-footer .ubermenu-submenu .ubermenu-item-header.ubermenu-has-submenu-stack > .ubermenu-target { border:none; }
+.ubermenu-footer .ubermenu-submenu-type-stack { padding-top:0; }
+.ubermenu-footer .ubermenu-item-normal > .ubermenu-target { font-size:14px; }
+.ubermenu-footer, .ubermenu-footer .ubermenu-target, .ubermenu-footer .ubermenu-nav .ubermenu-item-level-0 .ubermenu-target, .ubermenu-footer div, .ubermenu-footer p, .ubermenu-footer input { font-family:'Source Sans Pro', sans-serif; }
+
+
+/* Status: Loaded from Transient */
+
+</style><script type="text/javascript">
+var ajaxurl = 'https://atlus.com/wp-admin/admin-ajax.php';
+</script>
+<style type="text/css" id="et-bloom-custom-css">
+					.et_bloom .et_bloom_optin_1 .et_bloom_form_content { background-color: #3a3a3a !important; } .et_bloom .et_bloom_optin_1 .et_bloom_form_container .et_bloom_form_header { background-color: #1c1c1c !important; } .et_bloom .et_bloom_optin_1 .curve_edge .curve { fill: #1c1c1c} .et_bloom .et_bloom_optin_1 .et_bloom_form_content button { background-color: #a153e0 !important; } .et_bloom .et_bloom_optin_1 .et_bloom_form_content button { background-color: #a153e0 !important; } .et_bloom .et_bloom_optin_1 h2, .et_bloom .et_bloom_optin_1 h2 span, .et_bloom .et_bloom_optin_1 h2 strong { font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif; }.et_bloom .et_bloom_optin_1 p, .et_bloom .et_bloom_optin_1 p span, .et_bloom .et_bloom_optin_1 p strong, .et_bloom .et_bloom_optin_1 form input, .et_bloom .et_bloom_optin_1 form button span { font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif; } div.consent ul li > *{display:inline-block;vertical-align:middle} div.consent ul li label div{width:calc(100% - 45px);display:inline-block;vertical-align:middle;line-height:1.5em !important;} .nlag-container{position:absolute;width:100%;height:100%;background:#000;top:0;left:0;z-index:10;text-align:center;}.nlag-content{position:relative;width:100%;height:100%;display:block;}.nlag-wrapper{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:75%;color:#FFF}.nlag-wrapper h3{color:#FFF;margin-bottom:20px!important;}.nlag-wrapper div.date-input{display:inline-block;width:25%;text-align:center;margin:20px 10px 20px 0;border:#FFF}.nlag-wrapper div.date-input:last-child{margin-right:0} div.date-input input{border:#f00 1px solid!important;text-align:center;} .agnp{position:absolute;width:100%;height:100%;background:#000;display:none;z-index:15;left:0;top:0} .agnp h3{color:#FFF;display:block;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);1.5em;width:80%;text-align:center;}
+				</style><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="https://atlus.com/wp-content/themes/atlus/favicon.ico"><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><meta name="generator" content="Powered by Slider Revolution 6.4.8 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
+<script type="text/javascript">function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {				 
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;	
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;	
+				try {								
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);		
+					if(e.layout==="fullscreen" || e.l==="fullscreen") 						
+						newh = Math.max(e.mh,window.RSIH);					
+					else{					
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];					
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,						
+							sl;					
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;					
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];									
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}															
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);					
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}				
+					if(window.rs_init_css===undefined) window.rs_init_css = document.head.appendChild(document.createElement("style"));					
+					document.getElementById(e.c).height = newh+"px";
+					window.rs_init_css.innerHTML += "#"+e.c+"_wrapper { height: "+newh+"px }";				
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}					   
+			//});
+		  };</script>
+		<style type="text/css" id="wp-custom-css">
+			/*
+You can add your own CSS here.
+
+Click the help icon above to learn more.
+*/
+.woobox-offer{margin:0 auto}
+.esum {
+    display: list-item;
+    margin-left: 1.5em;
+    list-style-type: decimal;
+    font-weight:bold
+}
+    .esum > p, .esum > ol > li > span, .esum ol li span{
+        font-weight:normal
+    }
+.esum ol{
+padding-inline-start:40px;
+font-weight:bold
+}
+.esum ol ul{
+padding-inline-start:40px
+}		</style>
+		<style>#rev_slider_4_1_wrapper { height: 600px }</style><script charset="utf-8" src="./logo_files/moment_timeline.bcb1cafa923482f4826e32741fe16a98.js.download"></script><script charset="utf-8" src="./logo_files/timeline.28ecda9667eeb8e1b18898b99fee6c31.js.download"></script></head>
+<body data-rsssl="1" class="home page-template page-template-template_builder page-template-template_builder-php page page-id-75 et_bloom linux chrome show-featured-area hide-featured-area-above custom-layout-1 has_custom_layout sidebar-layout-sidebar_right et_bloom_popup_active"><div id="wpfront-notification-bar-spacer" style="display: block; top: 0px; height: 0px;">
+    <div id="wpfront-notification-bar-open-button" class="top wpfront-bottom-shadow" style="top: 0px; position: fixed; display: none;"></div>
+    <div id="wpfront-notification-bar" class="wpfront-fixed " style="top: 0px; height: 0px; position: fixed; visibility: visible;">
+                    <div class="wpfront-close">X</div>
+                <table border="0" cellspacing="0" cellpadding="0">
+            <tbody><tr>
+                <td>
+                    <div class="wpfront-message">
+                        <div style="width:75%;margin:10px auto;">As you may know there’s a new data protection law designed to give you more control over your data. So, we’re writing to let you know that we’ve made some changes to our Privacy Policy to make it easier to read and provide more transparency about our privacy practices. Our updated Privacy Policy describes how we collect, share, and protect your information and how we may communicate with you. We would encourage you to review the full, updated version by clicking on the link provided below:</div><br><br>
+<a style="padding:10px;margin:20px auto;background:rgba(255,0,0,1);color:#FFF" href="https://atlus.com/privacy-policy">Privacy Policy</a>                    </div>
+                    <div>
+                                            </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+</div>
+<div id="wrapper">
+	<div id="container">
+
+		
+		<!-- HEADER (start) -->
+
+		<div id="top">
+			<header id="branding" role="banner">
+				<div class="content">
+					<div class="header-above"></div><!-- .header-above (end) -->	<div id="header_content">
+		<div class="header_content-inner">
+			<div class="header_content-content clearfix">
+					<div class="header_logo header_logo_image">
+		<a href="https://atlus.com/" title="Atlus West" class="tb-image-logo"><img src="./logo_files/Atlus_Logo_Thin_Stroke_277x108.png" alt="Atlus West" width="220"></a>	</div><!-- .tbc_header_logo (end) -->
+	<a class="ubermenu-responsive-toggle ubermenu-responsive-toggle-main ubermenu-skin-none ubermenu-loc-ubermenu" data-ubermenu-target="ubermenu-main-2-ubermenu-2"><i class="fa fa-bars"></i>Menu</a><nav id="ubermenu-main-2-ubermenu-2" class="ubermenu ubermenu-main ubermenu-menu-2 ubermenu-loc-ubermenu ubermenu-responsive ubermenu-responsive-default ubermenu-responsive-collapse ubermenu-horizontal ubermenu-transition-slide ubermenu-trigger-hover ubermenu-skin-none  ubermenu-bar-align-left ubermenu-items-align-left ubermenu-sub-indicators ubermenu-retractors-responsive ubermenu-notouch"><ul id="ubermenu-nav-main-2-ubermenu" class="ubermenu-nav"><li id="menu-item-102" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-home ubermenu-current-menu-item ubermenu-page_item ubermenu-page-item-75 ubermenu-current_page_item ubermenu-item-102 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://atlus.com/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Home</span></a></li><li id="menu-item-109" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-item-109 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-align-left ubermenu-has-submenu-drop ubermenu-has-submenu-mega"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only ubermenu-target-nowrap" href="https://atlus.com/games/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Games</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-109 ubermenu-submenu-type-mega ubermenu-submenu-drop ubermenu-submenu-align-full_width ubermenu-submenu-grid"><!-- begin Tabs: [Tabs] 190 --><li id="menu-item-190" class="ubermenu-tabs menu-item-190 ubermenu-item-level-1 ubermenu-column ubermenu-column-full ubermenu-tab-layout-left ubermenu-tabs-show-default"><ul class="ubermenu-tabs-group ubermenu-column ubermenu-column-1-4 ubermenu-submenu ubermenu-submenu-id-190 ubermenu-submenu-type-auto ubermenu-submenu-type-tabs-group" style="min-height: 270px;"><li id="menu-item-227" class="ubermenu-tab ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-227 ubermenu-item-auto ubermenu-column ubermenu-column-full ubermenu-has-submenu-drop ubermenu-active ubermenu-in-transition" data-ubermenu-trigger="mouseover"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://atlus.com/games/?sub-categories=7"><span class="ubermenu-target-title ubermenu-target-text">Upcoming Releases</span></a><ul class="ubermenu-tab-content-panel ubermenu-column ubermenu-column-3-4 ubermenu-submenu ubermenu-submenu-id-227 ubermenu-submenu-type-auto ubermenu-submenu-type-tab-content-panel" style="min-height: 270px;"><li id="menu-item-271" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-271 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-3 ubermenu-column ubermenu-column-1-12 ubermenu-align-left ubermenu-hide-mobile"><div class="ubermenu-content-block ubermenu-custom-content ubermenu-custom-content-padded">&nbsp;</div></li><li id="menu-item-231" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-231 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-3 ubermenu-column ubermenu-column-11-12 ubermenu-hide-mobile"><div class="ubermenu-content-block ubermenu-custom-content "><div class="upcp-minimal-catalogue upcp-minimal-width-3" style="padding: 0px;"><div class="upcp-insert-product upcp-minimal-product-listing"><div class="upcp-product-thumbnail"><a class="upcp-minimal-link" href="https://atlus.com/atlus-titles/smt3-nocturne/?"><div class="upcp-minimal-img-div"><div class="upcp-prod-desc-custom-fields" style="display:none;"><div>An apocalyptic story in a modernized version of the acclaimed ATLUS classic.</div></div><img class="upcp-minimal-img" src="./logo_files/smt3_nocturne.jpg" alt="Product Image"></div></a><div class="upcp-minimal-info-wrapper"><div class="upcp-minimal-title">Shin Megami Tensei III Nocturne HD Remaster</div><div class="upcp-minimal-facts"><div class="quick-facts"><a href="https://atlus.com/atlus-titles/smt3-nocturne/?">Quick Facts</a></div></div><!-- end .upcp-minimal-facts --></div><!-- end .upcp-minimal-info-wrapper --></div><!-- end .upcp-product-thumbnail --></div></div>
+</div></li></ul></li><li id="menu-item-226" class="ubermenu-tab ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-226 ubermenu-item-auto ubermenu-column ubermenu-column-full ubermenu-has-submenu-drop" data-ubermenu-trigger="mouseover"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://atlus.com/games/?sub-categories=8"><span class="ubermenu-target-title ubermenu-target-text">Available Now</span></a><ul class="ubermenu-tab-content-panel ubermenu-column ubermenu-column-3-4 ubermenu-submenu ubermenu-submenu-id-226 ubermenu-submenu-type-auto ubermenu-submenu-type-tab-content-panel" style="min-height: 270px;"><li id="menu-item-272" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-272 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-3 ubermenu-column ubermenu-column-1-12 ubermenu-hide-mobile"><div class="ubermenu-content-block ubermenu-custom-content ubermenu-custom-content-padded">&nbsp;</div></li><li id="menu-item-235" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-235 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-3 ubermenu-column ubermenu-column-11-12 ubermenu-hide-mobile"><div class="ubermenu-content-block ubermenu-custom-content "><div class="upcp-minimal-catalogue upcp-minimal-width-3" style="padding: 0px;"><div class="upcp-insert-product upcp-minimal-product-listing"><div class="upcp-product-thumbnail"><a class="upcp-minimal-link" href="https://atlus.com/atlus-titles/p5s/?"><div class="upcp-minimal-img-div"><div class="upcp-prod-desc-custom-fields" style="display:none;"><div>Join the Phantom Thieves and strike back against the corruption overtaking cities across Japan.</div></div><img class="upcp-minimal-img" src="./logo_files/p5s_sq.jpg" alt="Product Image"></div></a><div class="upcp-minimal-info-wrapper"><div class="upcp-minimal-title">Persona 5 Strikers</div><div class="upcp-minimal-facts"><div class="quick-facts"><a href="https://atlus.com/atlus-titles/p5s/?"><span class="link-fill">Quick Facts</span></a></div><div class="official-website"><a href="https://www.atlus.com/p5s/" target="_blank"><span class="link-fill">Official Website</span></a></div></div><!-- end .upcp-minimal-facts --></div><!-- end .upcp-minimal-info-wrapper --></div><!-- end .upcp-product-thumbnail --></div><div class="upcp-insert-product upcp-minimal-product-listing"><div class="upcp-product-thumbnail"><a class="upcp-minimal-link" href="https://atlus.com/atlus-titles/p5r/?"><div class="upcp-minimal-img-div"><div class="upcp-prod-desc-custom-fields" style="display:none;"><div>Persona 5 Royal is a new challenge to defy conventions, discover the power within, and fight for justice.</div></div><img class="upcp-minimal-img" src="./logo_files/p5r_main.jpg" alt="Product Image"></div></a><div class="upcp-minimal-info-wrapper"><div class="upcp-minimal-title">Persona 5 Royal</div><div class="upcp-minimal-facts"><div class="quick-facts"><a href="https://atlus.com/atlus-titles/p5r/?"><span class="link-fill">Quick Facts</span></a></div><div class="official-website"><a href="https://atlus.com/p5r/" target="_blank"><span class="link-fill">Official Website</span></a></div></div><!-- end .upcp-minimal-facts --></div><!-- end .upcp-minimal-info-wrapper --></div><!-- end .upcp-product-thumbnail --></div><div class="upcp-insert-product upcp-minimal-product-listing"><div class="upcp-product-thumbnail"><a class="upcp-minimal-link" href="https://atlus.com/atlus-titles/personaq2/?"><div class="upcp-minimal-img-div"><div class="upcp-prod-desc-custom-fields" style="display:none;"><div>Prepare to face a mysterious world of film in Persona Q2: New Cinema Labyrinth, a challenging dungeon crawler for the Nintendo 3DS™.</div></div><img class="upcp-minimal-img" src="./logo_files/pq2_digitalBoxArt_350x350.jpg" alt="Product Image"></div></a><div class="upcp-minimal-info-wrapper"><div class="upcp-minimal-title">Persona Q2: New Cinema Labyrinth</div><div class="upcp-minimal-facts"><div class="quick-facts"><a href="https://atlus.com/atlus-titles/personaq2/?"><span class="link-fill">Quick Facts</span></a></div><div class="official-website"><a href="https://atlus.com/personaq2" target="_blank"><span class="link-fill">Official Website</span></a></div></div><!-- end .upcp-minimal-facts --></div><!-- end .upcp-minimal-info-wrapper --></div><!-- end .upcp-product-thumbnail --></div></div></div></li></ul></li><li id="menu-item-228" class="ubermenu-tab ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-228 ubermenu-item-auto ubermenu-column ubermenu-column-full ubermenu-has-submenu-drop" data-ubermenu-trigger="mouseover"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://atlus.com/games/?sub-categories=9"><span class="ubermenu-target-title ubermenu-target-text">Classic Titles</span></a><ul class="ubermenu-tab-content-panel ubermenu-column ubermenu-column-3-4 ubermenu-submenu ubermenu-submenu-id-228 ubermenu-submenu-type-auto ubermenu-submenu-type-tab-content-panel" style="min-height: 270px;"><li id="menu-item-528" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-528 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-3 ubermenu-column ubermenu-column-1-12 ubermenu-align-left ubermenu-hide-mobile"><div class="ubermenu-content-block ubermenu-custom-content ubermenu-custom-content-padded">&nbsp;</div></li><li id="menu-item-529" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-529 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-3 ubermenu-column ubermenu-column-11-12 ubermenu-hide-mobile"><div class="ubermenu-content-block ubermenu-custom-content "><div class="upcp-minimal-catalogue upcp-minimal-width-3" style="padding: 0px;"><div class="upcp-insert-product upcp-minimal-product-listing"><div class="upcp-product-thumbnail"><a class="upcp-minimal-link" href="https://atlus.com/atlus-titles/traumateam/?"><div class="upcp-minimal-img-div"><div class="upcp-prod-desc-custom-fields" style="display:none;"><div>Experience six medical-themed disciplines; surgery, emergency medicine, endoscopy, diagnosis, orthopedics and forensic medicine.</div></div><img class="upcp-minimal-img" src="./logo_files/tt_cover.jpg" alt="Product Image"></div></a><div class="upcp-minimal-info-wrapper"><div class="upcp-minimal-title">Trauma Team</div><div class="upcp-minimal-facts"><div class="quick-facts"><a href="https://atlus.com/atlus-titles/traumateam/?">Quick Facts</a></div></div><!-- end .upcp-minimal-facts --></div><!-- end .upcp-minimal-info-wrapper --></div><!-- end .upcp-product-thumbnail --></div><div class="upcp-insert-product upcp-minimal-product-listing"><div class="upcp-product-thumbnail"><a class="upcp-minimal-link" href="https://atlus.com/atlus-titles/tcutk2/?"><div class="upcp-minimal-img-div"><div class="upcp-prod-desc-custom-fields" style="display:none;"><div>Derek and Angie are back; see the aftermath of GUILT.</div></div><img class="upcp-minimal-img" src="./logo_files/UTK2_cvr.jpg" alt="Product Image"></div></a><div class="upcp-minimal-info-wrapper"><div class="upcp-minimal-title">Trauma Center Under The Knife 2</div><div class="upcp-minimal-facts"><div class="quick-facts"><a href="https://atlus.com/atlus-titles/tcutk2/?">Quick Facts</a></div></div><!-- end .upcp-minimal-facts --></div><!-- end .upcp-minimal-info-wrapper --></div><!-- end .upcp-product-thumbnail --></div><div class="upcp-insert-product upcp-minimal-product-listing"><div class="upcp-product-thumbnail"><a class="upcp-minimal-link" href="https://atlus.com/atlus-titles/tcutk/?"><div class="upcp-minimal-img-div"><div class="upcp-prod-desc-custom-fields" style="display:none;"><div>As Dr. Derek Stiles, players will experience all the highs and lows of medical drama as they save patients and learn cutting-edge medical techniques.</div></div><img class="upcp-minimal-img" src="./logo_files/tcutk_cover.jpg" alt="Product Image"></div></a><div class="upcp-minimal-info-wrapper"><div class="upcp-minimal-title">Trauma Center Under The Knife</div><div class="upcp-minimal-facts"><div class="quick-facts"><a href="https://atlus.com/atlus-titles/tcutk/?">Quick Facts</a></div></div><!-- end .upcp-minimal-facts --></div><!-- end .upcp-minimal-info-wrapper --></div><!-- end .upcp-product-thumbnail --></div></div></div></li></ul></li></ul></li><!-- end Tabs: [Tabs] 190 --></ul></li><li id="menu-item-121" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-121 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://atlus.com/news/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">News</span></a></li><li id="menu-item-146" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-146 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://atlus.com/company/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Company</span></a></li><li id="menu-item-6355" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-6355 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" title="Careers" target="_blank" href="https://careers.sega.com/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Careers</span></a></li><li id="menu-item-181" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-advanced-sub ubermenu-item-181 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-align-left ubermenu-has-submenu-drop ubermenu-has-submenu-mega ubermenu-submenu-rtl"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only ubermenu-target-nowrap" href="https://atlus.com/contact/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Contact</span></a><div class="ubermenu-submenu ubermenu-submenu-id-181 ubermenu-submenu-type-mega ubermenu-submenu-drop ubermenu-submenu-align-right_edge_item ubermenu-submenu-grid"><ul class="ubermenu-row ubermenu-row-id-951 ubermenu-autoclear "><li id="menu-item-186" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-186 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only text-align-center" href="https://atlus.com/contact/#support-tag" data-ubermenu-scrolltarget="#support-tag"><span class="ubermenu-target-title ubermenu-target-text">Support</span></a></li><li id="menu-item-185" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-185 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only text-align-center" href="https://atlus.com/contact/#contact-tag" data-ubermenu-scrolltarget="#contact-tag"><span class="ubermenu-target-title ubermenu-target-text">E-mail</span></a></li></ul></div></li></ul></nav>     <div class="social-media-icons">
+     	<div class="social-media-wrapper">
+            <div id="facebook"><a href="https://www.facebook.com/AtlusWest/" target="_blank"><img src="./logo_files/icon-facebook.png" alt="Atlus USA Facebook page" title="Atlus USA official Facebook page"></a></div>
+            <div id="instagram"><a href="https://www.instagram.com/atlus_west/" target="_blank"><img src="./logo_files/icon-instagram.png" alt="Atlus West Instagram page" title="Atlus USA official Instagram page"></a></div>
+            <div id="twitch"><a href="https://www.twitch.tv/atlus_west" target="_blank"><img src="./logo_files/icon-twitch.png" alt="Atlus West Twitch Channel" title="Midnight Channel on Twitch"></a></div>
+            <div id="twitter"><a href="https://twitter.com/Atlus_West" target="_blank"><img src="./logo_files/icon-twitter.png" alt="Follow Atlus on Twitter" title="Follow Atlus West on Twitter"></a></div>
+            <div id="youtube"><a href="https://www.youtube.com/c/atlus" target="_blank"><img src="./logo_files/icon-youtube.png" alt="Watch Atlus videos on YouTube" title="Watch Atlus West videos on YouTube"></a></div>
+        </div><!-- .social-media-wrapper (end) -->
+     </div><!-- .social-media-icons (end) -->
+<div id="newsletter">
+	<button id="sign-up" class="newsletter-optin">JOIN OUR NEWSLETTER</button>
+</div>
+	     			</div><!-- .header_content-content (end) -->
+		</div><!-- .header_content-inner (end) -->
+	</div><!-- #header_content (end) -->
+					</div><!-- .content (end) -->
+			</header><!-- #branding (end) -->
+		</div><!-- #top (end) -->
+
+		<!-- HEADER (end) -->
+
+			<!-- FEATURED (start) -->
+
+	<div id="featured">
+		<div class="featured-inner has_builder">
+			<div class="featured-content clearfix">
+	<div class="element featured-element-1 element-content first-element height-adjust " style="height: 107px;"><div class="element-inner"><div class="element-inner-wrap"><div class="grid-protection"><div style="height:101px"></div><div class="clear"></div></div><!-- .grid-protection (end) --></div><!-- .element-inner-wrap (end) --></div><!-- .element-inner (end) --></div><!-- .element (end) --><div class="element featured-element-2 element-content slider-holder "><div class="element-inner"><div class="element-inner-wrap"><div class="grid-protection">			<script type="text/javascript" src="./logo_files/rbtools.min.js(1).download"></script>
+			<script type="text/javascript" src="./logo_files/rs6.min.js(1).download"></script>
+
+			<!-- START Home Page Slider REVOLUTION SLIDER 6.4.8 -->
+			<rs-fullwidth-wrap id="rev_slider_4_1_forcefullwidth" style="margin-top:0px;margin-bottom:0px;"><rs-module-wrap id="rev_slider_4_1_wrapper" data-source="gallery" style="background: rgb(0, 0, 0); padding: 0px; margin: 0px auto; width: 1519px; height: 600px; visibility: visible; position: absolute; overflow: visible; left: 0px;"><rs-module id="rev_slider_4_1" style="width: 1519px; height: 600px; max-height: 600px;" data-version="6.4.8" data-idcheck="true" class="revslider-initialised rev_redraw_on_blurfocus" data-slideactive="rs-316">
+					
+				<rs-loader class="spinner5 " style="display: none;"><div class="dot1"></div><div class="dot2"></div><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></rs-loader><rs-arrow style="opacity: 0; transform: translate(25px, -25px); top: 50%; left: 0px;" class="tp-leftarrow tparrows uranus"></rs-arrow><rs-arrow style="opacity: 0; transform: translate(-75px, -25px); top: 50%; left: 100%;" class="tp-rightarrow tparrows uranus"></rs-arrow><rs-bullets style="opacity: 1; width: 67px; height: 13px; transform: translate(-33px, -28px); top: 100%; left: 50%;" class="tp-bullets erinyen horizontal nav-pos-hor-center nav-pos-ver-bottom nav-dir-horizontal"><rs-bullet data-key="rs-348" class="tp-bullet" style="left: 0px; top: 0px;"></rs-bullet><rs-bullet data-key="rs-316" class="tp-bullet selected" style="left: 18px; top: 0px;"></rs-bullet><rs-bullet data-key="rs-226" class="tp-bullet" style="left: 36px; top: 0px;"></rs-bullet><rs-bullet data-key="rs-222" class="tp-bullet" style="left: 54px; top: 0px;"></rs-bullet></rs-bullets><rs-slides style="visibility: visible; max-height: none; height: 100%; width: 100%; overflow: hidden;">
+						<rs-slide data-key="rs-348" data-title="Persona 5 Strikers" data-duration="5500" data-in="o:0;" data-out="a:false;" data-originalindex="1" data-origindex="0" data-description="" data-sba="" data-scroll-based="false" style="overflow: hidden; height: 100%; width: 100%; z-index: 10; opacity: 1; visibility: inherit;" data-owidth="300" data-oheight="200" data-rspausetimeronce="0" data-isactiveslide="false"><rs-sbg-px><rs-sbg-wrap data-key="rs-348" data-owidth="300" data-oheight="200"><!--Runtime Modification - Img tag is Still Available for SEO Goals in Source - <img src="//atlus.com/wp-content/plugins/revslider/public/assets/assets/transparent.png" alt="Persona 5 Strikers" title="1 – Home" class="rev-slidebg tp-rs-img" data-bg="c:#000000;" data-parallax="off" data-no-retina="">--><rs-sbg class="" data-bgcolor="#000000" style="width: 100%; height: 100%;" data-src-rs-ref="https://atlus.com/wp-content/plugins/revslider/public/assets/assets/transparent.png"><canvas style="width: 100%; height: 100%; background-color: transparent; opacity: 1; filter: none; transform: translate(0px, 0px);" width="1899" height="750"></canvas></rs-sbg></rs-sbg-wrap></rs-sbg-px>
+							
+<!--
+							--><rs-layer-wrap class="rs-parallax-wrap rs-forcehidden" style="position: absolute; display: block; pointer-events: none; left: 254.5px; top: 24px; z-index: 6; visibility: hidden; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-4-slide-348-layer-2" data-type="image" data-rsp_ch="on" data-xy="x:135px;y:24px;" data-text="l:22;a:inherit;" data-dim="w:341px;h:294px;" data-frame_0="sX:0;sY:0;" data-frame_1="e:easeInOutBack;st:1140;sp:800;sR:1140;" data-frame_999="o:0;st:5190;sR:3250;" style="z-index: 6; color: rgb(255, 255, 255); width: 341px; height: 294px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="./logo_files/logo_p5s_slider.png" class="tp-rs-img" width="1356" height="1170" data-no-retina="" data-src-rs-ref="https://atlus.com/wp-content/uploads/2020/11/logo_p5s_slider.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap rs-forcehidden" style="position: absolute; display: block; pointer-events: none; left: 116.5px; top: -3px; z-index: 5; visibility: hidden; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-4-slide-348-layer-9" data-type="image" data-rsp_ch="on" data-xy="x:-3px;y:-3px;" data-text="l:22;a:inherit;" data-dim="w:1290px;h:726px;" data-frame_1="e:power1.in;sp:1750;sR:10;" data-frame_999="o:0;e:nothing;st:5490;sp:0;sR:3730;" style="z-index: 5; color: rgb(255, 255, 255); width: 1290px; height: 726px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="./logo_files/p5s_bg_fade.png" class="tp-rs-img" width="1290" height="726" data-no-retina="" data-src-rs-ref="https://atlus.com/wp-content/uploads/2020/11/p5s_bg_fade.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap rs-forcehidden" style="position: absolute; display: block; pointer-events: none; left: 235.5px; top: 286px; z-index: 7; visibility: hidden; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-4-slide-348-layer-11" data-type="image" data-rsp_ch="on" data-xy="x:116px;y:286px;" data-text="l:22;a:inherit;" data-dim="w:412px;h:163px;" data-frame_0="x:left;o:1;" data-frame_1="st:1040;sp:800;sR:1040;" data-frame_999="o:0;st:5190;sR:3350;" style="z-index: 7; color: rgb(255, 255, 255); width: 412px; height: 163px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="./logo_files/strikeback.png" class="tp-rs-img" width="720" height="285" data-no-retina="" data-src-rs-ref="https://atlus.com/wp-content/uploads/2020/11/strikeback.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap rs-forcehidden" style="position: absolute; display: block; pointer-events: none; left: 244.5px; top: 460px; z-index: 8; visibility: hidden; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-4-slide-348-layer-14" data-type="image" data-rsp_ch="on" data-xy="x:125px;y:460px;" data-text="l:22;a:inherit;" data-dim="w:381px;h:34px;" data-frame_0="x:50px;" data-frame_1="st:1240;sp:600;sR:1240;" data-frame_999="o:0;st:5190;sR:3350;" style="z-index: 8; color: rgb(255, 255, 255); width: 381px; height: 34px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="./logo_files/availablenow.png" class="tp-rs-img" width="283" height="33" data-no-retina="" data-src-rs-ref="https://atlus.com/wp-content/uploads/2021/02/availablenow.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap rs-forcehidden" style="position: absolute; display: block; pointer-events: none; left: 155.5px; top: 524px; z-index: 9; visibility: hidden; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-4-slide-348-layer-15" data-type="image" data-rsp_ch="on" data-xy="x:36px;y:524px;" data-text="l:22;a:inherit;" data-dim="w:187px;h:40px;" data-frame_0="y:50px;" data-frame_1="st:1840;sp:500;sR:1840;" data-frame_999="o:0;st:5190;sR:2850;" style="z-index: 9; color: rgb(255, 255, 255); width: 187px; height: 40px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="./logo_files/ps4_logo.png" class="tp-rs-img" width="360" height="78" data-no-retina="" data-src-rs-ref="https://atlus.com/wp-content/uploads/2020/11/ps4_logo.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap rs-forcehidden" style="position: absolute; display: block; pointer-events: none; left: 357.5px; top: 525px; z-index: 10; visibility: hidden; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-4-slide-348-layer-16" data-type="image" data-rsp_ch="on" data-xy="x:238px;y:525px;" data-text="l:22;a:inherit;" data-dim="w:189px;h:40px;" data-frame_0="y:50px;" data-frame_1="st:2340;sp:500;sR:2340;" data-frame_999="o:0;st:5190;sR:2350;" style="z-index: 10; color: rgb(255, 255, 255); width: 189px; height: 40px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="./logo_files/swich.png" class="tp-rs-img" width="189" height="40" data-no-retina="" data-src-rs-ref="https://atlus.com/wp-content/uploads/2020/11/swich.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap rs-forcehidden" style="position: absolute; display: block; pointer-events: none; left: 561.5px; top: 518px; z-index: 11; visibility: hidden; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-4-slide-348-layer-17" data-type="image" data-rsp_ch="on" data-xy="x:442px;y:518px;" data-text="l:22;a:inherit;" data-dim="w:184px;h:56px;" data-frame_0="y:50px;" data-frame_1="st:2840;sp:500;sR:2840;" data-frame_999="o:0;st:5190;sR:1850;" style="z-index: 11; color: rgb(255, 255, 255); width: 184px; height: 56px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="./logo_files/steam_logo_rev.png" class="tp-rs-img" width="200" height="61" data-no-retina="" data-src-rs-ref="https://atlus.com/wp-content/uploads/2020/12/steam_logo_rev.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+-->						</rs-slide>
+						<rs-slide data-key="rs-316" data-title="cfb_switch" data-thumb="//atlus.com/wp-content/uploads/2019/01/heart_bg2.jpg" data-link="//catherinethegame.com/fullbody/" data-target="_blank" data-seoz="front" data-duration="6990" data-anim="ms:600;" data-in="o:0;" data-out="a:false;" data-originalindex="2" data-origindex="1" data-description="" data-sba="" data-scroll-based="false" style="overflow: hidden; height: 100%; width: 100%; z-index: 20; opacity: 1; visibility: inherit;" data-owidth="300" data-oheight="200" data-rspausetimeronce="0" data-isactiveslide="true"><rs-sbg-px><rs-sbg-wrap data-key="rs-316" data-owidth="300" data-oheight="200"><!--Runtime Modification - Img tag is Still Available for SEO Goals in Source - <img src="//atlus.com/wp-content/plugins/revslider/public/assets/assets/transparent.png" alt="cfb_switch" title="1 – Home" class="rev-slidebg tp-rs-img" data-bg="p:center top;c:#000000;" data-parallax="off" data-no-retina="">--><rs-sbg class="" data-bgcolor="#000000" style="width: 100%; height: 100%;" data-src-rs-ref="https://atlus.com/wp-content/plugins/revslider/public/assets/assets/transparent.png"><canvas style="width: 100%; height: 100%; background-color: transparent; opacity: 1; filter: none;" width="1899" height="750"></canvas></rs-sbg></rs-sbg-wrap></rs-sbg-px><rs-layer-wrap class="rs-parallax-wrap" style="z-index: 95; position: absolute; display: block; pointer-events: auto; width: 100% !important; height: 100% !important; visibility: visible; perspective: 601px;"><rs-loop-wrap style="z-index:95;width:100% !important;height:100% !important;position:absolute;display:block;"><rs-mask-wrap style="z-index: 95; position: absolute; display: block; width: 100% !important; height: 100% !important; overflow: visible;"><rs-layer class="rs-layer slidelink rs-waction rs-wclickaction" id="rs_slidelink_25275" data-zindex="95" dataxy="x:c;y:c" data-dim="w:100%;h:100%" data-basealign="slide" data-actions="o:click;a:simplelink;target:_blank;url://catherinethegame.com/fullbody/;" data-frame_1="e:power3.inOut;st:100;sp:100" data-frame_999="e:power3.inOut;o:0;st:w;sp:100" data-idcheck="true" data-stylerecorder="true" data-initialised="true" style="color: rgb(255, 255, 255); transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;"></rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap>
+							
+<!--
+							--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 38.5px; top: -176px; z-index: 5; visibility: visible; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-4-slide-316-layer-13" data-type="image" data-rsp_ch="on" data-xy="x:-81px;y:-176px;" data-text="l:22;a:inherit;" data-dim="w:1451px;h:1009px;" data-frame_0="tp:600;" data-frame_1="tp:600;sR:10;" data-frame_999="o:0;tp:600;st:w;sR:6680;" style="z-index: 5; color: rgb(255, 255, 255); width: 1451px; height: 1009px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; transform: translate(0px, 0px); opacity: 1; visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="./logo_files/heart_bg2.jpg" class="tp-rs-img" width="1600" height="1113" data-no-retina="" data-src-rs-ref="https://atlus.com/wp-content/uploads/2019/01/heart_bg2.jpg" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 329.5px; top: 47px; z-index: 6; visibility: visible; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-4-slide-316-layer-31" data-type="image" data-rsp_ch="on" data-xy="x:210px;y:47px;" data-text="l:22;a:inherit;" data-dim="w:500px;h:317px;" data-frame_0="sX:0.8;sY:0.8;tp:600;" data-frame_1="tp:600;e:power4.out;sp:1500;sR:10;" data-frame_999="tp:600;st:w;sR:5480;" style="z-index: 6; color: rgb(255, 255, 255); width: 500px; height: 317px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="./logo_files/cfb_logo.png" class="tp-rs-img" width="500" height="317" data-no-retina="" data-src-rs-ref="https://atlus.com/wp-content/uploads/2019/02/cfb_logo.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 277.5px; top: 388px; z-index: 7; visibility: visible; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-4-slide-316-layer-27" data-type="image" data-rsp_ch="on" data-xy="x:158px;y:388px;" data-text="l:22;a:inherit;" data-dim="w:607px;h:158px;" data-frame_0="sX:0.8;sY:0.8;tp:600;" data-frame_1="tp:600;e:power4.out;st:900;sp:1500;sR:900;" data-frame_999="tp:600;st:w;sR:4590;" style="z-index: 7; color: rgb(255, 255, 255); width: 607px; height: 158px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="./logo_files/comingdate-1.png" class="tp-rs-img" width="992" height="144" data-no-retina="" data-src-rs-ref="https://atlus.com/wp-content/uploads/2020/07/comingdate-1.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 110.5px; top: 604px; z-index: 8; visibility: visible; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-4-slide-316-layer-33" data-type="image" data-rsp_ch="on" data-xy="x:-9px;y:604px;" data-text="l:22;a:inherit;" data-dim="w:102px;h:132px;" data-frame_0="y:top;o:1;rZ:360deg;tp:600;" data-frame_1="tp:600;e:none;st:2870;sp:3600;sR:2870;" data-frame_999="o:0;tp:600;st:w;sR:520;" style="z-index: 8; color: rgb(255, 255, 255); width: 102px; height: 132px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="./logo_files/fallingsheep.png" class="tp-rs-img" width="154" height="200" data-no-retina="" data-src-rs-ref="https://atlus.com/wp-content/uploads/2019/02/fallingsheep.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 1213.5px; top: 605px; z-index: 9; visibility: visible; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-4-slide-316-layer-8" data-type="image" data-rsp_ch="on" data-xy="x:1094px;y:605px;" data-text="l:22;a:inherit;" data-dim="w:92px;h:97px;" data-frame_0="y:top;o:1;rZ:360deg;tp:600;" data-frame_1="tp:600;e:none;st:2240;sp:3800;sR:2240;" data-frame_999="o:0;tp:600;e:nothing;st:w;sR:950;" style="z-index: 9; color: rgb(255, 255, 255); width: 92px; height: 97px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="./logo_files/sheep4.png" class="tp-rs-img" width="189" height="200" data-no-retina="" data-src-rs-ref="https://atlus.com/wp-content/uploads/2019/01/sheep4.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 845.5px; top: 641px; z-index: 10; visibility: visible; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-4-slide-316-layer-9" data-type="image" data-rsp_ch="on" data-xy="x:726px;y:641px;" data-text="l:22;a:inherit;" data-dim="w:61px;h:73px;" data-frame_0="y:top;o:1;rZ:360deg;tp:600;" data-frame_1="tp:600;e:none;st:580;sp:4600;sR:580;" data-frame_999="o:0;tp:600;e:nothing;st:w;sR:1810;" style="z-index: 10; color: rgb(255, 255, 255); width: 61px; height: 73px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="./logo_files/sheep3.png" class="tp-rs-img" width="169" height="200" data-no-retina="" data-src-rs-ref="https://atlus.com/wp-content/uploads/2019/01/sheep3.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 676.5px; top: 606px; z-index: 11; visibility: visible; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-4-slide-316-layer-10" data-type="image" data-rsp_ch="on" data-xy="x:557px;y:606px;" data-text="l:22;a:inherit;" data-dim="w:86px;h:74px;" data-frame_0="y:top;o:1;rZ:360deg;tp:600;" data-frame_1="tp:600;e:none;st:2790;sp:3700;sR:2790;" data-frame_999="o:0;tp:600;e:nothing;st:w;sR:500;" style="z-index: 11; color: rgb(255, 255, 255); width: 86px; height: 74px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="./logo_files/sheep2.png" class="tp-rs-img" width="232" height="200" data-no-retina="" data-src-rs-ref="https://atlus.com/wp-content/uploads/2019/01/sheep2.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 1397.5px; top: 602px; z-index: 12; visibility: visible; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-4-slide-316-layer-32" data-type="image" data-rsp_ch="on" data-xy="x:1278px;y:602px;" data-text="l:22;a:inherit;" data-dim="w:69px;h:89px;" data-frame_0="y:top;o:1;rZ:360deg;tp:600;" data-frame_1="tp:600;e:none;st:250;sp:4200;sR:250;" data-frame_999="o:0;tp:600;st:w;sR:2540;" style="z-index: 12; color: rgb(255, 255, 255); width: 69px; height: 89px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="./logo_files/fallingsheep.png" class="tp-rs-img" width="154" height="200" data-no-retina="" data-src-rs-ref="https://atlus.com/wp-content/uploads/2019/02/fallingsheep.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 404.5px; top: 603px; z-index: 13; visibility: visible; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-4-slide-316-layer-12" data-type="image" data-rsp_ch="on" data-xy="x:285px;y:603px;" data-text="l:22;a:inherit;" data-dim="w:74px;h:78px;" data-frame_0="y:top;o:1;rZ:360deg;tp:600;" data-frame_1="tp:600;e:none;st:720;sp:4700;sR:720;" data-frame_999="o:0;tp:600;e:nothing;st:w;sR:1570;" style="z-index: 13; color: rgb(255, 255, 255); width: 74px; height: 78px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="./logo_files/sheep4.png" class="tp-rs-img" width="189" height="200" data-no-retina="" data-src-rs-ref="https://atlus.com/wp-content/uploads/2019/01/sheep4.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 865.5px; top: 16px; z-index: 14; visibility: visible; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-4-slide-316-layer-36" data-type="image" data-rsp_ch="on" data-xy="x:746px;y:16px;" data-text="l:22;a:inherit;" data-dim="w:461px;h:536px;" data-frame_0="o:1;tp:600;" data-frame_1="tp:600;st:0;" data-frame_999="tp:600;st:w;sR:6690;" style="z-index: 14; color: rgb(255, 255, 255); width: 461px; height: 536px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; transform: translate(0px, 0px); opacity: 1; visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="./logo_files/rin_vincent.png" class="tp-rs-img" width="430" height="500" data-no-retina="" data-src-rs-ref="https://atlus.com/wp-content/uploads/2019/02/rin_vincent.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+-->						</rs-slide>
+						<rs-slide data-key="rs-226" data-title="p3dp5d" data-thumb="//atlus.com/wp-content/uploads/2017/10/slider_bg-100x50.png" data-link="//atlus.com/personadancing/" data-target="_self" data-seoz="front" data-duration="5990" data-anim="ms:600;" data-in="o:0;" data-out="a:false;" data-originalindex="3" data-origindex="2" data-description="" data-sba="" data-scroll-based="false" style="overflow: hidden; height: 100%; width: 100%;"><rs-sbg-px><rs-sbg-wrap data-key="rs-226"><!--Runtime Modification - Img tag is Still Available for SEO Goals in Source - <img src="//atlus.com/wp-content/uploads/2017/10/slider_bg.png" title="1 – Home" class="rev-slidebg tp-rs-img" data-parallax="off" data-no-retina="">--><rs-sbg class="" data-bgcolor="transparent" style="width: 100%; height: 100%;"><canvas style="width: 100%; height: 100%;"></canvas></rs-sbg></rs-sbg-wrap></rs-sbg-px><rs-layer-wrap class="rs-parallax-wrap " style=" z-index:95;width:100% !important;height:100% !important;position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="z-index:95;width:100% !important;height:100% !important;position:absolute;display:block;"><rs-mask-wrap style="z-index:95;width:100% !important;height:100% !important;position:absolute;display:block;"><rs-layer class="rs-layer slidelink rs-waction rs-wclickaction" id="rs_slidelink_59170" data-zindex="95" dataxy="x:c;y:c" data-dim="w:100%;h:100%" data-basealign="slide" data-actions="o:click;a:simplelink;target:_self;url://atlus.com/personadancing/;" data-frame_1="e:power3.inOut;st:100;sp:100" data-frame_999="e:power3.inOut;o:0;st:w;sp:100" data-idcheck="true"></rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap>
+							
+<!--
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-4-slide-226-layer-2" class="tp-shape tp-shapewrapper rs-layer" data-type="shape" data-rsp_ch="on" data-xy="x:-553px;" data-text="fw:100;a:inherit;" data-dim="w:1200px;h:626px;" data-frame_0="x:left;o:1;tp:600;" data-frame_1="tp:600;e:power0.in;sp:400;sR:10;" data-frame_999="o:0;tp:600;st:w;sR:5580;" style="z-index:5;background-color:#0039f9;" data-idcheck="true"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-4-slide-226-layer-3" class="tp-shape tp-shapewrapper rs-layer" data-type="shape" data-rsp_ch="on" data-xy="x:r;xo:-555px;y:-24px;" data-text="fw:100;a:inherit;" data-dim="w:1200px;h:626px;" data-frame_0="x:right;o:1;tp:600;" data-frame_1="tp:600;e:power0.in;sp:400;sR:10;" data-frame_999="o:0;tp:600;st:w;sR:5580;" style="z-index:6;background-color:#fe0000;" data-idcheck="true"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-4-slide-226-layer-5" data-type="image" data-rsp_ch="on" data-xy="x:c;y:c;" data-text="l:22;a:inherit;" data-dim="w:1200px;h:742;" data-frame_0="sX:1.25;sY:1.25;tp:600;" data-frame_1="tp:600;st:400;sp:450;sR:400;" data-frame_999="tp:600;st:w;sR:5140;" style="z-index:7;" class="rs-layer" data-idcheck="true"><img src="./logo_files/toplayer01.png" class="tp-rs-img" width="1920" height="1187" data-no-retina=""> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-4-slide-226-layer-11" data-type="image" data-rsp_ch="on" data-xy="x:c;y:c;" data-text="l:22;a:inherit;" data-dim="w:1100px;h:680px;" data-frame_0="tp:600;" data-frame_1="tp:600;st:850;sR:850;" data-frame_999="tp:600;st:w;sR:4840;" style="z-index:8;" class="rs-layer" data-idcheck="true"><img src="./logo_files/toplayer03.png" class="tp-rs-img" width="1920" height="1187" data-no-retina=""> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-4-slide-226-layer-8" data-type="image" data-rsp_ch="on" data-xy="x:c;y:c;" data-text="l:22;a:inherit;" data-dim="w:1400px;h:866;" data-frame_0="sX:0.5;sY:0.5;tp:600;" data-frame_0_mask="u:t;" data-frame_1="tp:600;e:power2.out;st:850;sR:850;" data-frame_1_mask="u:t;" data-frame_999="o:0;tp:600;st:w;sR:4840;" style="z-index:9;" class="rs-layer" data-idcheck="true"><img src="./logo_files/toplayer02.png" class="tp-rs-img" width="1920" height="1187" data-no-retina=""> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-4-slide-226-layer-9" data-type="image" data-rsp_ch="on" data-xy="x:c;y:c;" data-text="l:22;a:inherit;" data-dim="w:1400px;h:866;" data-frame_0="sX:0.5;sY:0.5;tp:600;" data-frame_0_mask="u:t;" data-frame_1="tp:600;st:850;sp:400;sR:850;" data-frame_1_mask="u:t;" data-frame_999="tp:600;st:w;sR:4740;" style="z-index:10;" class="rs-layer" data-idcheck="true"><img src="./logo_files/toplayer04.png" class="tp-rs-img" width="1920" height="1187" data-no-retina=""> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-4-slide-226-layer-10" data-type="image" data-rsp_ch="on" data-xy="x:c;y:c;" data-text="l:22;a:inherit;" data-dim="w:1400px;h:866px;" data-frame_0="sX:0.5;sY:0.5;tp:600;" data-frame_0_mask="u:t;" data-frame_1="tp:600;e:power2.out;st:850;sp:400;sR:850;" data-frame_1_mask="u:t;" data-frame_999="o:0;tp:600;st:w;sR:4740;" style="z-index:11;" class="rs-layer" data-idcheck="true"><img src="./logo_files/toplayer05.png" class="tp-rs-img" width="1920" height="1187" data-no-retina=""> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-4-slide-226-layer-6" data-type="image" data-rsp_ch="on" data-xy="x:251px;y:-18px;" data-text="l:22;a:inherit;" data-dim="w:465px;h:725px;" data-frame_0="x:right;o:1;tp:600;" data-frame_1="tp:600;st:1180;sp:1000;sR:1180;" data-frame_999="tp:600;st:w;sR:3810;" style="z-index:12;" class="rs-layer" data-idcheck="true"><img src="./logo_files/toplayercharap3.png" class="tp-rs-img" width="746" height="1163" data-no-retina=""> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-4-slide-226-layer-7" data-type="image" data-rsp_ch="on" data-xy="x:545px;y:-5px;" data-text="l:22;a:inherit;" data-dim="w:444px;h:725px;" data-frame_0="x:left;o:1;tp:600;" data-frame_1="tp:600;st:1190;sp:1000;sR:1190;" data-frame_999="tp:600;st:w;sR:3800;" style="z-index:13;" class="rs-layer" data-idcheck="true"><img src="./logo_files/toplayercharap5.png" class="tp-rs-img" width="768" height="1253" data-no-retina=""> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-4-slide-226-layer-12" data-type="image" data-rsp_ch="on" data-xy="x:33px;y:c;yo:-86px;" data-text="l:22;a:inherit;" data-dim="w:300px;h:239;" data-frame_0="x:center;y:middle;tp:600;" data-frame_1="tp:600;e:power1.inOut;st:2200;sp:400;sR:2200;" data-frame_999="o:0;tp:600;st:w;sR:3390;" style="z-index:14;" class="rs-layer" data-idcheck="true"><img src="./logo_files/p3d_logo_icon.png" class="tp-rs-img" width="1004" height="800" data-no-retina=""> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-4-slide-226-layer-13" data-type="image" data-rsp_ch="on" data-xy="x:c;xo:416px;y:c;yo:-86px;" data-text="l:22;a:inherit;" data-dim="w:300px;h:239;" data-frame_0="x:center;y:middle;tp:600;" data-frame_1="tp:600;e:power1.inOut;st:2200;sp:400;sR:2200;" data-frame_999="o:0;tp:600;st:w;sR:3390;" style="z-index:15;" class="rs-layer" data-idcheck="true"><img src="./logo_files/p5d_logo_icon.png" class="tp-rs-img" width="1004" height="800" data-no-retina=""> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-4-slide-226-layer-14" data-type="image" data-rsp_ch="on" data-xy="x:c;xo:1px;y:c;yo:-36px;" data-text="l:22;a:inherit;" data-dim="w:677px;h:298px;" data-frame_0="sX:0.5;sY:0.5;tp:600;" data-frame_1="tp:600;e:power1.inOut;st:2200;sp:400;sR:2200;" data-frame_999="o:0;tp:600;st:w;sR:3390;" style="z-index:16;" class="rs-layer" data-idcheck="true"><img src="./logo_files/releasedate.png" class="tp-rs-img" width="818" height="360" data-no-retina=""> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+-->						</rs-slide>
+						<rs-slide data-key="rs-222" data-title="P5 - ultimate/reg purchase" data-seoz="front" data-duration="4996" data-in="o:0;" data-out="a:false;" data-originalindex="4" data-origindex="3" data-description="" data-sba="" data-scroll-based="false" style="overflow: hidden; height: 100%; width: 100%;"><rs-sbg-px><rs-sbg-wrap data-key="rs-222"><!--Runtime Modification - Img tag is Still Available for SEO Goals in Source - <img src="//atlus.com/wp-content/plugins/revslider/public/assets/assets/transparent.png" alt="P5 - ultimate/reg purchase" title="1 – Home" class="rev-slidebg tp-rs-img" data-bg="c:#660000;" data-parallax="off" data-no-retina="">--><rs-sbg class="" data-bgcolor="#660000" style="width: 100%; height: 100%;"><canvas style="width: 100%; height: 100%;"></canvas></rs-sbg></rs-sbg-wrap></rs-sbg-px>
+							
+<!--
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-4-slide-222-layer-4" data-type="image" data-rsp_ch="on" data-xy="x:c;" data-text="l:22;a:inherit;" data-dim="w:1920px;h:600px;" data-frame_0="tp:600;" data-frame_1="tp:600;sp:800;sR:10;" data-frame_999="tp:600;e:nothing;st:w;sR:4190;" style="z-index:5;" class="rs-layer" data-idcheck="true"><img src="./logo_files/p5_background.jpg" class="tp-rs-img" width="1920" height="600" data-no-retina=""> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-4-slide-222-layer-5" data-type="image" data-rsp_ch="on" data-xy="x:c;xo:-4px;" data-text="l:22;a:inherit;" data-dim="w:1920px;h:600px;" data-frame_0="tp:600;" data-frame_1="tp:600;sp:800;sR:10;" data-frame_999="tp:600;e:nothing;st:w;sR:4190;" style="z-index:6;" class="rs-layer" data-idcheck="true"><img src="./logo_files/characters2.png" class="tp-rs-img" width="1920" height="600" data-no-retina=""> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><a id="slider-4-slide-222-layer-10" class="rs-layer" href="https://store.playstation.com/en-us/product/UP2611-CUSA05877_00-P5PS4ULTIMATE001" target="_blank" rel="noopener" data-type="image" data-rsp_ch="on" data-xy="x:910px;y:203px;" data-text="l:22;a:inherit;" data-dim="w:319px;h:203px;" data-frame_0="tp:600;" data-frame_1="tp:600;e:power3.out;st:800;sp:1500;sR:800;" data-frame_999="tp:600;e:nothing;st:w;sR:2700;" style="z-index:7;" data-idcheck="true"><img src="./logo_files/persona5_ue_logo.png" class="tp-rs-img" width="718" height="505" data-no-retina=""> 
+							</a></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><a id="slider-4-slide-222-layer-9" class="rs-layer" href="https://store.playstation.com/en-us/product/UP2611-CUSA05877_00-P5PS4ULTIMATE001" target="_blank" rel="noopener" data-type="image" data-rsp_ch="on" data-xy="x:934px;y:523px;" data-text="l:22;a:inherit;" data-dim="w:309px;h:44px;" data-frame_0="tp:600;" data-frame_1="tp:600;e:power0.in;st:1900;sp:400;sR:1900;" data-frame_999="tp:600;e:nothing;st:w;sR:2700;" style="z-index:8;" data-idcheck="true"><img src="./logo_files/ps_store_logo_white-1.png" class="tp-rs-img" width="355" height="50" data-no-retina=""> 
+							</a></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><a id="slider-4-slide-222-layer-14" class="rs-layer" href="https://atlus.com/persona5/purchase.html" target="_blank" rel="noopener" data-type="image" data-rsp_ch="on" data-xy="x:113px;y:479px;" data-text="l:22;a:inherit;" data-dim="w:262px;h:121px;" data-frame_0="y:bottom;o:1;rZ:5;tp:600;" data-frame_1="rZ:5;tp:600;e:power4.out;st:1400;sp:500;sR:1400;" data-frame_999="o:0;tp:600;st:w;sR:3100;" style="z-index:9;" data-idcheck="true"><img src="./logo_files/p5_text_banner.png" class="tp-rs-img" width="597" height="276" data-no-retina=""> 
+							</a></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><a id="slider-4-slide-222-layer-7" class="rs-layer" href="https://atlus.com/persona5/purchase.html" target="_blank" rel="noopener" data-type="image" data-rsp_ch="on" data-xy="x:30px;y:433px;" data-text="l:22;a:inherit;" data-dim="w:170px;h:96px;" data-frame_0="x:-50px;rZ:348;tp:600;" data-frame_1="rZ:348;tp:600;e:power4.out;st:1050;sp:850;sR:1050;" data-frame_999="o:0;tp:600;st:w;sR:3100;" style="z-index:10;" data-idcheck="true"><img src="./logo_files/get_it_today.png" class="tp-rs-img" width="346" height="193" data-no-retina=""> 
+							</a></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><a id="slider-4-slide-222-layer-8" class="rs-layer" href="https://store.playstation.com/en-us/product/UP2611-CUSA05877_00-P5PS4ULTIMATE001" target="_blank" rel="noopener" data-type="image" data-rsp_ch="on" data-xy="x:881px;y:432px;" data-text="l:22;a:inherit;" data-dim="w:424px;h:75px;" data-frame_0="y:bottom;o:1;tp:600;" data-frame_1="tp:600;e:power4.out;st:1400;sp:500;sR:1400;" data-frame_999="o:0;tp:600;e:power0.in;st:w;sR:3100;" style="z-index:11;" data-idcheck="true"><img src="./logo_files/p5_pre-order.png" class="tp-rs-img" width="600" height="106" data-no-retina=""> 
+							</a></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><a id="slider-4-slide-222-layer-12" class="rs-layer" href="https://atlus.com/persona5/purchase.html" target="_blank" rel="noopener" data-type="image" data-rsp_ch="on" data-xy="x:121px;y:180px;" data-text="l:22;a:inherit;" data-dim="w:196px;h:233px;" data-frame_0="tp:600;" data-frame_1="tp:600;e:power3.out;st:800;sp:1500;sR:800;" data-frame_999="tp:600;e:nothing;st:w;sR:2700;" style="z-index:12;" data-idcheck="true"><img src="./logo_files/p5_ps4_box.png" class="tp-rs-img" width="403" height="479" data-no-retina=""> 
+							</a></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+-->						</rs-slide>
+					</rs-slides><rs-progress style="visibility:hidden;"><rs-progress-bar style="background: rgba(255, 255, 255, 0.5); transform-origin: 0% 50%; transform: translate3d(0px, 0px, 0px) scale(0.8621, 1);"></rs-progress-bar></rs-progress></rs-module>
+				
+				<script type="text/javascript">
+					setREVStartSize({c: 'rev_slider_4_1',rl:[1240,1024,778,480],el:[600],gw:[1280],gh:[600],type:'standard',justify:'',layout:'fullwidth',mh:"600"});
+					var	revapi4,
+						tpj;
+					function revinit_revslider41() {
+					jQuery(function() {
+						tpj = jQuery;
+						revapi4 = tpj("#rev_slider_4_1");
+						tpj.noConflict();
+						if(revapi4==undefined || revapi4.revolution == undefined){
+							revslider_showDoubleJqueryError("rev_slider_4_1");
+						}else{
+							revapi4.revolution({
+								DPR:"dpr",
+								sliderLayout:"fullwidth",
+								duration:7500,
+								visibilityLevels:"1240,1024,778,480",
+								gridwidth:1280,
+								gridheight:600,
+								minHeight:600,
+								spinner:"spinner5",
+								perspective:600,
+								perspectiveType:"local",
+								editorheight:"600,768,960,720",
+								responsiveLevels:"1240,1024,778,480",
+								progressBar:{disableProgressBar:true},
+								navigation: {
+									mouseScrollNavigation:false,
+									wheelCallDelay:1000,
+									onHoverStop:false,
+									arrows: {
+										enable:true,
+										style:"uranus",
+										hide_onleave:true,
+										rtl:true,
+										left: {
+											h_offset:25
+										},
+										right: {
+											h_offset:25
+										}
+									},
+									bullets: {
+										enable:true,
+										tmp:"",
+										style:"erinyen",
+										v_offset:15,
+										container:"layergrid"
+									}
+								},
+								parallax: {
+									levels:[5,10,15,20,25,30,35,40,45,50,47,48,49,50,51,55],
+									type:"mouse",
+									disable_onmobile:true
+								},
+								fallbacks: {
+									panZoomDisableOnMobile:true,
+									allowHTML5AutoPlayOnAndroid:true
+								},
+							});
+						}
+						
+                		if(typeof RsParticlesAddOn !== "undefined") RsParticlesAddOn(revapi4);
+
+					});
+					} // End of RevInitScript
+				var once_revslider41 = false;
+				if (document.readyState === "loading") {document.addEventListener('readystatechange',function() { if((document.readyState === "interactive" || document.readyState === "complete") && !once_revslider41 ) { once_revslider41 = true; revinit_revslider41();}});} else {once_revslider41 = true; revinit_revslider41();}
+				</script>
+				<script>
+					var htmlDivCss = unescape("%23rev_slider_4_1_wrapper%20.uranus.tparrows%20%7B%0A%20%20width%3A50px%3B%0A%20%20height%3A50px%3B%0A%20%20background%3Argba%28255%2C255%2C255%2C0%29%3B%0A%20%7D%0A%20%23rev_slider_4_1_wrapper%20.uranus.tparrows%3Abefore%20%7B%0A%20width%3A50px%3B%0A%20height%3A50px%3B%0A%20line-height%3A50px%3B%0A%20font-size%3A40px%3B%0A%20transition%3Aall%200.3s%3B%0A-webkit-transition%3Aall%200.3s%3B%0A%20%7D%0A%20%0A%20%20%23rev_slider_4_1_wrapper%20.uranus.tparrows%3Ahover%3Abefore%20%7B%0A%20%20%20%20opacity%3A0.75%3B%0A%20%20%7D%0A%23rev_slider_4_1_wrapper%20.erinyen.tp-bullets%20%7B%0A%7D%0A%23rev_slider_4_1_wrapper%20.erinyen.tp-bullets%3Abefore%20%7B%0A%09content%3A%27%20%27%3B%0A%09position%3Aabsolute%3B%0A%09width%3A100%25%3B%0A%09height%3A100%25%3B%0A%20%20%20%20background%3A%20-moz-linear-gradient%28top%2C%20%20%23545353%200%25%2C%20%23222222%20100%25%29%3B%20%2F%2A%20ff3.6%2B%20%2A%2F%0A%20%20%20%20background%3A%20-webkit-linear-gradient%28top%2C%20%20%23545353%200%25%2C%23222222%20100%25%29%3B%20%2F%2A%20chrome10%2B%2Csafari5.1%2B%20%2A%2F%0A%20%20%20%20background%3A%20-o-linear-gradient%28top%2C%20%20%23545353%200%25%2C%23222222%20100%25%29%3B%20%2F%2A%20opera%2011.10%2B%20%2A%2F%0A%20%20%20%20background%3A%20-ms-linear-gradient%28top%2C%20%20%23545353%200%25%2C%23222222%20100%25%29%3B%20%2F%2A%20ie10%2B%20%2A%2F%0A%20%20%20%20background%3A%20linear-gradient%28to%20bottom%2C%20%20%23545353%200%25%2C%23222222%20100%25%29%3B%20%2F%2A%20w3c%20%2A%2F%0A%0A%09padding%3A10px%2015px%3B%0A%09margin-left%3A-15px%3Bmargin-top%3A-10px%3B%0A%09box-sizing%3Acontent-box%3B%0A%20%20%20border-radius%3A10px%3B%0A%20%20%20box-shadow%3A0px%200px%202px%201px%20rgba%2833%2C33%2C33%2C0.3%29%3B%0A%7D%0A%23rev_slider_4_1_wrapper%20.erinyen%20.tp-bullet%20%7B%0A%09width%3A13px%3B%0A%09height%3A13px%3B%0A%09position%3Aabsolute%3B%0A%09background%3A%23111111%3B%09%0A%09border-radius%3A50%25%3B%0A%09cursor%3A%20pointer%3B%0A%09box-sizing%3Acontent-box%3B%0A%7D%0A%23rev_slider_4_1_wrapper%20.erinyen%20.tp-bullet%3Ahover%2C%0A%23rev_slider_4_1_wrapper%20.erinyen%20.tp-bullet.selected%20%7B%0Abackground%3A%20-moz-linear-gradient%28top%2C%20%20%23e5e5e5%200%25%2C%20%23999999%20100%25%29%3B%20%2F%2A%20ff3.6%2B%20%2A%2F%0Abackground%3A%20-webkit-linear-gradient%28top%2C%20%20%23e5e5e5%200%25%2C%23999999%20100%25%29%3B%20%2F%2A%20chrome10%2B%2Csafari5.1%2B%20%2A%2F%0Abackground%3A%20-o-linear-gradient%28top%2C%20%20%23e5e5e5%200%25%2C%23999999%20100%25%29%3B%20%2F%2A%20opera%2011.10%2B%20%2A%2F%0Abackground%3A%20-ms-linear-gradient%28top%2C%20%20%23e5e5e5%200%25%2C%23999999%20100%25%29%3B%20%2F%2A%20ie10%2B%20%2A%2F%0Abackground%3A%20linear-gradient%28to%20bottom%2C%20%20%23e5e5e5%200%25%2C%23999999%20100%25%29%3B%20%2F%2A%20w3c%20%2A%2F%0Aborder%3A1px%20solid%20%23555%3B%0Awidth%3A13px%3B%0Aheight%3A13px%3B%0A%7D%0A%0A%0A");
+					var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+					if(htmlDiv) {
+						htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+					}else{
+						var htmlDiv = document.createElement('div');
+						htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+						document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+					}
+				</script>
+				<script>
+					var htmlDivCss = unescape("%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A");
+					var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+					if(htmlDiv) {
+						htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+					}else{
+						var htmlDiv = document.createElement('div');
+						htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+						document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+					}
+				</script>
+			</rs-module-wrap><rs-fw-forcer style="height:600px"></rs-fw-forcer></rs-fullwidth-wrap>
+			<!-- END REVOLUTION SLIDER -->
+
+<div class="clear"></div></div><!-- .grid-protection (end) --></div><!-- .element-inner-wrap (end) --></div><!-- .element-inner (end) --></div><!-- .element (end) --><div class="element featured-element-3 element-content last-element navbar-container "><div class="element-inner"><div class="element-inner-wrap"><div class="grid-protection"><div class="full-width-navbar-background"></div><div class="clear"></div></div><!-- .grid-protection (end) --></div><!-- .element-inner-wrap (end) --></div><!-- .element-inner (end) --></div><!-- .element (end) -->			</div><!-- .featured-content (end) -->
+		</div><!-- .featured-inner (end) -->
+	</div><!-- #featured (end) -->
+
+	<!-- FEATURED (end) -->
+		<!-- MAIN (start) -->
+
+	<div id="main" class="sidebar_right">
+		<div class="main-inner">
+			<div class="main-content">
+				<div class="grid-protection clearfix">
+	<div class="main-top"></div><!-- .main-top (end) -->
+	<div id="sidebar_layout" class="clearfix">
+		<div class="sidebar_layout-inner">
+			<div class="row grid-protection">
+
+				
+				<!-- CONTENT (start) -->
+
+				<div id="content" class="col-sm-8 clearfix" role="main">
+					<div class="inner">
+																			<div class="element primary-element-1 element-content first-element new-releases-home "><div class="element-inner"><div class="element-inner-wrap"><div class="grid-protection"><div class="main-sub-header">AVAILABLE NOW</div>
+<hr>
+<div class="thumbnail-holder" id="home-new-releases">
+<div class="upcp-minimal-catalogue upcp-minimal-width-3" style="padding: 0px 64px;"><div class="upcp-insert-product upcp-minimal-product-listing"><div class="upcp-product-thumbnail"><a class="upcp-minimal-link" href="https://atlus.com/atlus-titles/p5s/?"><div class="upcp-minimal-img-div"><div class="upcp-prod-desc-custom-fields" style="display: none;"><div>Join the Phantom Thieves and strike back against the corruption overtaking cities across Japan.</div></div><img class="upcp-minimal-img" src="./logo_files/p5s_sq.jpg" alt="Product Image"></div></a><div class="upcp-minimal-info-wrapper"><div class="upcp-minimal-title">Persona 5 Strikers</div><div class="upcp-minimal-facts"><div class="quick-facts"><a href="https://atlus.com/atlus-titles/p5s/?"><span class="link-fill">Quick Facts</span></a></div><div class="official-website"><a href="https://www.atlus.com/p5s/" target="_blank"><span class="link-fill">Official Website</span></a></div></div><!-- end .upcp-minimal-facts --></div><!-- end .upcp-minimal-info-wrapper --></div><!-- end .upcp-product-thumbnail --></div><div class="upcp-insert-product upcp-minimal-product-listing"><div class="upcp-product-thumbnail"><a class="upcp-minimal-link" href="https://atlus.com/atlus-titles/13sentinels_aegisrim/?"><div class="upcp-minimal-img-div"><div class="upcp-prod-desc-custom-fields" style="display: table; opacity: 0.730487;"><div>A Story of Battle Ready Youths, Humanity,
+and Giant Mechs</div></div><img class="upcp-minimal-img" src="./logo_files/13s_keyart.jpg" alt="Product Image"></div></a><div class="upcp-minimal-info-wrapper"><div class="upcp-minimal-title">13 Sentinels: Aegis Rim</div><div class="upcp-minimal-facts"><div class="quick-facts"><a href="https://atlus.com/atlus-titles/13sentinels_aegisrim/?"><span class="link-fill">Quick Facts</span></a></div><div class="official-website"><a href="https://atlus.com/13sentinels" target="_blank"><span class="link-fill">Official Website</span></a></div></div><!-- end .upcp-minimal-facts --></div><!-- end .upcp-minimal-info-wrapper --></div><!-- end .upcp-product-thumbnail --></div><div class="upcp-insert-product upcp-minimal-product-listing"><div class="upcp-product-thumbnail"><a class="upcp-minimal-link" href="https://atlus.com/atlus-titles/p5r/?"><div class="upcp-minimal-img-div"><div class="upcp-prod-desc-custom-fields" style="opacity: 0.992555;"><div>Persona 5 Royal is a new challenge to defy conventions, discover the power within, and fight for justice.</div></div><img class="upcp-minimal-img" src="./logo_files/p5r_main.jpg" alt="Product Image"></div></a><div class="upcp-minimal-info-wrapper"><div class="upcp-minimal-title">Persona 5 Royal</div><div class="upcp-minimal-facts"><div class="quick-facts"><a href="https://atlus.com/atlus-titles/p5r/?"><span class="link-fill">Quick Facts</span></a></div><div class="official-website"><a href="https://atlus.com/p5r/" target="_blank"><span class="link-fill">Official Website</span></a></div></div><!-- end .upcp-minimal-facts --></div><!-- end .upcp-minimal-info-wrapper --></div><!-- end .upcp-product-thumbnail --></div><div class="upcp-insert-product upcp-minimal-product-listing"><div class="upcp-product-thumbnail"><a class="upcp-minimal-link" href="https://atlus.com/atlus-titles/catherinefullbody/?"><div class="upcp-minimal-img-div"><div class="upcp-prod-desc-custom-fields" style="display:none;"><div>A mature action-puzzle thriller. Available on PlayStation®4, enhanced like a full-bodied wine.</div></div><img class="upcp-minimal-img" src="./logo_files/cfb_keyart.jpg" alt="Product Image"></div></a><div class="upcp-minimal-info-wrapper"><div class="upcp-minimal-title">Catherine Full Body</div><div class="upcp-minimal-facts"><div class="quick-facts"><a href="https://atlus.com/atlus-titles/catherinefullbody/?"><span class="link-fill">Quick Facts</span></a></div><div class="official-website"><a href="https://www.catherinethegame.com/fullbody" target="_blank"><span class="link-fill">Official Website</span></a></div></div><!-- end .upcp-minimal-facts --></div><!-- end .upcp-minimal-info-wrapper --></div><!-- end .upcp-product-thumbnail --></div></div>
+<div class="clear"></div>
+</div><div class="clear"></div></div><!-- .grid-protection (end) --></div><!-- .element-inner-wrap (end) --></div><!-- .element-inner (end) --></div><!-- .element (end) --><div class="element primary-element-2 element-content last-element coming-soon-home "><div class="element-inner"><div class="element-inner-wrap"><div class="grid-protection"><div class="main-sub-header">UPCOMING RELEASES</div>
+<hr>
+<div class="thumbnail-holder" id="home-coming-soon">
+<div class="upcp-minimal-catalogue upcp-minimal-width-3" style="padding: 0px 394px;"><div class="upcp-insert-product upcp-minimal-product-listing"><div class="upcp-product-thumbnail"><a class="upcp-minimal-link" href="https://atlus.com/atlus-titles/smt3-nocturne/?"><div class="upcp-minimal-img-div"><div class="upcp-prod-desc-custom-fields" style="display:none;"><div>An apocalyptic story in a modernized version of the acclaimed ATLUS classic.</div></div><img class="upcp-minimal-img" src="./logo_files/smt3_nocturne.jpg" alt="Product Image"></div></a><div class="upcp-minimal-info-wrapper"><div class="upcp-minimal-title">Shin Megami Tensei III Nocturne HD Remaster</div><div class="upcp-minimal-facts"><div class="quick-facts"><a href="https://atlus.com/atlus-titles/smt3-nocturne/?">Quick Facts</a></div></div><!-- end .upcp-minimal-facts --></div><!-- end .upcp-minimal-info-wrapper --></div><!-- end .upcp-product-thumbnail --></div></div>
+<div class="clear"></div>
+</div><div class="clear"></div></div><!-- .grid-protection (end) --></div><!-- .element-inner-wrap (end) --></div><!-- .element-inner (end) --></div><!-- .element (end) -->																	</div><!-- .inner (end) -->
+				</div><!-- #content (end) -->
+
+				<!-- CONTENT (end) -->
+
+				<div class="fixed-sidebar right-sidebar col-sm-4"><div class="fixed-sidebar-inner"><div class="widget-area widget-area-fixed"><aside id="text-11" class="widget widget_text"><div class="widget-inner"><h3 class="widget-title">Latest News</h3>			<div class="textwidget"><div class="latest-news-container">
+<div class="element element-post_list"><div class="element-inner"><div class="element-inner-wrap"><div class="grid-protection"><div class="post_list"><article id="post-6315" class="post-6315 post type-post status-publish format-standard hentry category-atlus category-events category-shin-megami-tensei">
+	<header class="entry-header">
+		<h1 class="entry-title entry-title-with-meta">
+			<a href="https://atlus.com/join-us-for-the-shin-megami-tensei-online-concert-event/" title="Join us for the Shin Megami Tensei Online Concert Event!">Join us for the Shin Megami Tensei Online Concert Event!</a>		</h1>
+		<div class="entry-meta"><time class="entry-date updated" datetime="2021-03-02T09:00:30-08:00"><i class="fa fa-calendar"></i> March 2, 2021</time><span class="sep"> / </span><span class="author vcard"><i class="fa fa-user"></i> <a class="url fn n" href="https://atlus.com/author/arianne-advincula-pr5465/" title="View all posts by Arianne Advincula" rel="author">Arianne Advincula</a></span><span class="sep"> / </span><span class="category"><i class="fa fa-bars"></i> <a href="https://atlus.com/category/atlus/" rel="category tag">ATLUS</a>, <a href="https://atlus.com/category/events/" rel="category tag">Events</a>, <a href="https://atlus.com/category/shin-megami-tensei/" rel="category tag">Shin Megami Tensei</a></span></div><!-- .entry-meta -->	</header><!-- .entry-header (end) -->
+	<div class="entry-content">
+				<p>Join us for the&nbsp;“Shin&nbsp;Megami&nbsp;Tensei” Online Live 2021 ～Reason of Music～&nbsp;streaming&nbsp;event&nbsp;on March 20th!&nbsp; Experience an epic&nbsp;live orchestra performance of songs from the&nbsp;Shin&nbsp;Megami&nbsp;Tensei&nbsp;series, including&nbsp;Shin&nbsp;Megami&nbsp;Tensei&nbsp;III Nocturne HD Remaster,&nbsp;by&nbsp;LaiD&nbsp;Back Devil, and others!&nbsp; The streaming event begins March&nbsp;20th&nbsp;at 6:00am ET (3:00am PT)&nbsp;and&nbsp;an archive of the performance&nbsp;will be available until&nbsp;10:59am ET&nbsp;(7:59am PT)&nbsp;on 2021/03/27 (Sat).&nbsp; Tickets&nbsp;are&nbsp;available now!&nbsp;</p>
+<p><a href="https://atlus.com/join-us-for-the-shin-megami-tensei-online-concert-event/" title="Read More" class="btn btn-default" target="_self" rel="noopener">Read More</a></p>				<div class="clear"></div>
+	</div><!-- .entry-content (end) -->
+    <hr>
+</article><!-- #post-6315 -->
+<article id="post-6297" class="post-6297 post type-post status-publish format-standard hentry category-atlus category-persona category-persona-5-strikers">
+	<header class="entry-header">
+		<h1 class="entry-title entry-title-with-meta">
+			<a href="https://atlus.com/persona-5-strikers-digital-wallpaper-collection/" title="Persona 5 Strikers Digital Wallpaper Collection">Persona 5 Strikers Digital Wallpaper Collection</a>		</h1>
+		<div class="entry-meta"><time class="entry-date updated" datetime="2021-02-23T13:00:14-08:00"><i class="fa fa-calendar"></i> February 23, 2021</time><span class="sep"> / </span><span class="author vcard"><i class="fa fa-user"></i> <a class="url fn n" href="https://atlus.com/author/arianne-advincula-pr5465/" title="View all posts by Arianne Advincula" rel="author">Arianne Advincula</a></span><span class="sep"> / </span><span class="category"><i class="fa fa-bars"></i> <a href="https://atlus.com/category/atlus/" rel="category tag">ATLUS</a>, <a href="https://atlus.com/category/persona/" rel="category tag">Persona</a>, <a href="https://atlus.com/category/persona/persona-5-strikers/" rel="category tag">Persona 5 Strikers</a></span></div><!-- .entry-meta -->	</header><!-- .entry-header (end) -->
+	<div class="entry-content">
+				<p>It’s showtime!&nbsp;&nbsp; Persona 5 Strikers is now available, and we’re celebrating with a special digital wallpaper&nbsp;collection&nbsp;featuring&nbsp;the Phantom Thieves of Hearts&nbsp;and their new allies, Sophia and&nbsp;Zenkichi!&nbsp;&nbsp; Show the world who your favorite Phantom Thief&nbsp;is or&nbsp;reveal their true form with&nbsp;their Persona!&nbsp;No matter who you pick, we’re sure your phone will be looking cool.&nbsp;&nbsp; Persona 5 Strikers is […]</p>
+<p><a href="https://atlus.com/persona-5-strikers-digital-wallpaper-collection/" title="Read More" class="btn btn-default" target="_self" rel="noopener">Read More</a></p>				<div class="clear"></div>
+	</div><!-- .entry-content (end) -->
+    <hr>
+</article><!-- #post-6297 -->
+<article id="post-6186" class="post-6186 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+		<h1 class="entry-title entry-title-with-meta">
+			<a href="https://atlus.com/catherine-full-body-digital-wallpaper/" title="Catherine: Full Body Digital Wallpaper">Catherine: Full Body Digital Wallpaper</a>		</h1>
+		<div class="entry-meta"><time class="entry-date updated" datetime="2020-07-08T13:44:38-07:00"><i class="fa fa-calendar"></i> July 8, 2020</time><span class="sep"> / </span><span class="author vcard"><i class="fa fa-user"></i> <a class="url fn n" href="https://atlus.com/author/arianne-advincula-pr5465/" title="View all posts by Arianne Advincula" rel="author">Arianne Advincula</a></span><span class="sep"> / </span><span class="category"><i class="fa fa-bars"></i> <a href="https://atlus.com/category/uncategorized/" rel="category tag">Uncategorized</a></span></div><!-- .entry-meta -->	</header><!-- .entry-header (end) -->
+	<div class="entry-content">
+				<p>Celebrate the Nintendo Switch release of #CatherineFullBody with a new digital wallpaper! &nbsp; Exclusively for this release, this new artwork is a re-imagining of the original PS4 cover. It features protagonist Vincent stuck between Catherine, Katherine, and Rin!</p>
+<p><a href="https://atlus.com/catherine-full-body-digital-wallpaper/" title="Read More" class="btn btn-default" target="_self" rel="noopener">Read More</a></p>				<div class="clear"></div>
+	</div><!-- .entry-content (end) -->
+    <hr>
+</article><!-- #post-6186 -->
+</div><!-- .post_list (end) --></div><!-- .grid-protection (end) --></div><!-- .element-inner-wrap (end) --></div><!-- .element-inner (end) --></div><!-- .element (end) -->
+</div></div>
+		</div></aside><aside id="text-5" class="widget widget_text"><div class="widget-inner"><h3 class="widget-title">Twitter</h3>			<div class="textwidget"><div class="twitter-sidebar">
+<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-timeline twitter-timeline-rendered" style="position: static; visibility: visible; display: inline-block; width: 100%; height: 600px; padding: 0px; border: none; max-width: 100%; min-width: 180px; margin-top: 0px; margin-bottom: 0px; min-height: 200px;" data-widget-id="profile:Atlus_West" title="Twitter Timeline" src="./logo_files/saved_resource.html"></iframe>
+
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div></div>
+		</div></aside></div><!-- .widget_area (end) --></div><!-- .fixed-sidebar-inner (end) --></div><!-- .fixed-sidebar (end) -->
+			</div><!-- .grid-protection (end) -->
+		</div><!-- .sidebar_layout-inner (end) -->
+	</div><!-- #sidebar_layout (end) -->
+
+<div class="main-bottom"></div><!-- .main-bottom (end) -->				</div><!-- .grid-protection (end) -->
+			</div><!-- .main-content (end) -->
+		</div><!-- .main-inner (end) -->
+	</div><!-- #main (end) -->
+
+	<!-- MAIN (end) -->
+	
+		<!-- FOOTER (start) -->
+
+		<div id="bottom">
+			<footer id="colophon" role="contentinfo">
+				<div class="colophon-inner">
+						<div id="footer_sub_content">
+		<div class="footer_sub_content-inner">
+			<div class="footer_sub_content-content clearfix">
+				<div class="footer-logo">
+                		<div class="header_logo header_logo_image">
+		<a href="https://atlus.com/" title="Atlus West" class="tb-image-logo"><img src="./logo_files/Atlus_Logo_Thin_Stroke_277x108.png" alt="Atlus West" width="220"></a>	</div><!-- .tbc_header_logo (end) -->
+	                </div>
+                <div class="footer-nav">
+					<span class="footer-inner">
+						<nav id="ubermenu-footer-3-footer-2" class="ubermenu ubermenu-footer ubermenu-menu-3 ubermenu-loc-footer ubermenu-responsive-collapse ubermenu-horizontal ubermenu-transition-none ubermenu-trigger-hover_intent ubermenu-skin-none  ubermenu-bar-align-left ubermenu-items-align-left ubermenu-bound ubermenu-retractors-responsive ubermenu-notouch ubermenu-no-transitions"><ul id="ubermenu-nav-footer-3-footer" class="ubermenu-nav"><li id="menu-item-209" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-item-209 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://atlus.com/games/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Games</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-209 ubermenu-submenu-type-stack"><li class="  ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-has-children ubermenu-item-888 ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack ubermenu-item-type-column ubermenu-column-id-888"><ul class="ubermenu-submenu ubermenu-submenu-id-888 ubermenu-submenu-type-stack"><li id="menu-item-894" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-894 ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-natural"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://atlus.com/games/?sub-categories=7"><span class="ubermenu-target-title ubermenu-target-text">Upcoming Releases</span></a></li><li id="menu-item-895" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-895 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-natural"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://atlus.com/games/?sub-categories=8"><span class="ubermenu-target-title ubermenu-target-text">Available Now</span></a></li><li id="menu-item-896" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-896 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-natural"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://atlus.com/games/?sub-categories=9"><span class="ubermenu-target-title ubermenu-target-text">Classic Titles</span></a></li></ul></li></ul></li><li id="menu-item-208" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-item-208 ubermenu-item-level-0 ubermenu-column ubermenu-column-natural ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only ubermenu-target-nowrap ubermenu-noindicator" href="https://atlus.com/news/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">News</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-208 ubermenu-submenu-type-stack ubermenu-submenu-padded ubermenu-submenu-indent"><li class="  ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-has-children ubermenu-item-222 ubermenu-item-level-1 ubermenu-column ubermenu-column-natural ubermenu-has-submenu-stack ubermenu-item-type-column ubermenu-column-id-222"><ul class="ubermenu-submenu ubermenu-submenu-id-222 ubermenu-submenu-type-stack"><li id="menu-item-220" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-220 ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-natural ubermenu-align-left"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only ubermenu-target-nowrap ubermenu-noindicator" href="https://atlus.com/news/"><span class="ubermenu-target-title ubermenu-target-text">Blog</span></a></li><li id="menu-item-216" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-216 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-natural ubermenu-align-left"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only ubermenu-target-nowrap ubermenu-noindicator" href="https://www.facebook.com/AtlusWest/"><span class="ubermenu-target-title ubermenu-target-text">Facebook</span></a></li><li id="menu-item-5248" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-5248 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.instagram.com/atlus_west/"><span class="ubermenu-target-title ubermenu-target-text">Instagram</span></a></li><li id="menu-item-218" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-218 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-natural ubermenu-align-left"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only ubermenu-noindicator" href="https://www.twitch.tv/atlus_west"><span class="ubermenu-target-title ubermenu-target-text">Twitch</span></a></li><li id="menu-item-217" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-217 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-natural ubermenu-align-left"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only ubermenu-target-nowrap ubermenu-noindicator" href="https://twitter.com/Atlus_West"><span class="ubermenu-target-title ubermenu-target-text">Twitter</span></a></li><li id="menu-item-219" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-219 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-natural ubermenu-align-left"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only ubermenu-target-nowrap ubermenu-noindicator" href="https://www.youtube.com/c/atlus"><span class="ubermenu-target-title ubermenu-target-text">YouTube</span></a></li></ul></li></ul></li><li id="menu-item-207" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-item-207 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only ubermenu-target-nowrap ubermenu-noindicator" href="https://atlus.com/company/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Company</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-207 ubermenu-submenu-type-stack"><li class="  ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-has-children ubermenu-item-223 ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack ubermenu-item-type-column ubermenu-column-id-223"><ul class="ubermenu-submenu ubermenu-submenu-id-223 ubermenu-submenu-type-stack"><li id="menu-item-6205" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-6205 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" target="_blank" href="https://careers.sega.com/"><span class="ubermenu-target-title ubermenu-target-text">Careers</span></a></li><li id="menu-item-212" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-212 ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-natural ubermenu-align-left"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only ubermenu-target-nowrap ubermenu-noindicator" href="https://atlus.com/privacy-policy/"><span class="ubermenu-target-title ubermenu-target-text">Privacy Policy</span></a></li></ul></li></ul></li><li id="menu-item-206" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-item-206 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only ubermenu-target-nowrap ubermenu-noindicator" href="https://atlus.com/contact/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Contact</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-206 ubermenu-submenu-type-stack"><li class="  ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-has-children ubermenu-item-978 ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack ubermenu-item-type-column ubermenu-column-id-978"><ul class="ubermenu-submenu ubermenu-submenu-id-978 ubermenu-submenu-type-stack"><li id="menu-item-214" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-214 ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto ubermenu-align-right"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://atlus.com/contact/#support-tag"><span class="ubermenu-target-title ubermenu-target-text">Support</span></a></li><li id="menu-item-213" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-213 ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto ubermenu-align-right"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only ubermenu-target-nowrap" href="https://atlus.com/contact/#contact-tag"><span class="ubermenu-target-title ubermenu-target-text">E-mail</span></a></li></ul></li></ul></li></ul></nav>					</span>
+				</div><!-- .footer-nav (end) -->
+                <div class="copyright">
+					<span class="copyright-inner">
+						© ATLUS. © SEGA. All rights reserved.<br>The "PS" Family logo, "PS3", "PS4", and "PSVITA"  are registered trademarks or trademarks of Sony Interactive Entertainment Inc.<br>Nintendo trademarks and copyrights are properties of Nintendo.					</span>
+				</div><!-- .copyright (end) -->
+			</div><!-- .footer_sub_content-content (end) -->
+		</div><!-- .footer_sub_content-inner (end) -->
+	</div><!-- .footer_sub_content (end) -->
+	<div class="footer-below"></div><!-- .footer-below (end) -->				</div><!-- .content (end) -->
+			</footer><!-- #colophon (end) -->
+		</div><!-- #bottom (end) -->
+
+		<!-- FOOTER (end) -->
+
+		
+	</div><!-- #container (end) -->
+</div><!-- #wrapper (end) -->
+<div class="et_bloom_popup et_bloom_optin et_bloom_resize et_bloom_optin_1 et_bloom_trigger_click" data-trigger_click=".newsletter-optin">
+							<div class="et_bloom_form_container et_bloom_popup_container et_bloom_form_bottom with_edge curve_edge et_bloom_rounded et_bloom_form_text_light et_bloom_animation_fadein" style="max-height: 658px; top: 349px;">
+								
+			<div class="et_bloom_form_container_wrapper clearfix" style="max-height: 638px;">
+				<div class="et_bloom_header_outer">
+					<div class="et_bloom_form_header et_bloom_header_text_light">
+						<img width="277" height="108" src="./logo_files/Atlus_Logo_Thin_Stroke_277x108.png" class=" et_bloom_image_slideup et_bloom_image" alt="" loading="lazy" srcset="https://atlus.com/wp-content/uploads/2014/12/Atlus_Logo_Thin_Stroke_277x108.png 277w, https://atlus.com/wp-content/uploads/2014/12/Atlus_Logo_Thin_Stroke_277x108-195x76.png 195w" sizes="(max-width: 277px) 100vw, 277px">
+						<div class="et_bloom_form_text">
+						<h2 style="text-align: center;">Subscribe To Our Newsletter</h2><p style="text-align: center;"><span style="text-align: center;">Join our mailing list to receive the latest news and updates from ATLUS.</span></p>
+					</div>
+						
+					</div>
+				</div>
+				<div class="et_bloom_form_content et_bloom_1_field et_bloom_bottom_stacked et_bloom_custom_html_form" data-optin_id="optin_1" data-service="custom_form" data-list_id="custom_form" data-page_id="-1" data-account="custom_form">
+					<div class="nlag-container">
+<div class="nlag-content">
+<div class="nlag-wrapper">
+  <h3>
+    Please enter your birthdate
+  </h3>
+  <form id="newsletter-agegate" action="https://atlus.com/" name="birthday" novalidate="true">
+    <div class="date-input"><input id="mm" placeholder="MM" type="text" min="1" max="12" minlength="1" maxlength="2" autocomplete="off" pattern="[0-9]{1,}" data-bouncer-target="#month-error" data-bouncer-mismatch-message="2 Digit Month Required" required=""></div>
+    <div class="date-input"><input id="dd" placeholder="DD" type="text" min="1" max="31" minlength="1" maxlength="2" autocomplete="off" pattern="[0-9]{1,}" data-bouncer-target="#day-error" data-bouncer-mismatch-message="2 Digit Day Required" required=""></div>
+    <div class="date-input"><input id="yyyy" placeholder="YYYY" type="text" minlength="4" maxlength="4" autocomplete="off" pattern="[0-9]{4}" data-bouncer-target="#year-error" data-bouncer-mismatch-message="4 Digit Year Required" required=""></div>
+<button id="submit-button-popup" disabled="">SUBMIT</button>
+  </form>
+</div>
+</div>
+</div>
+<div class="agnp">
+<h3>
+  Sorry, you do not qualify to receive newsletters from ATLUS.
+</h3>
+</div>
+<!-- Begin Mailchimp Signup Form -->
+<link href="./logo_files/classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://atlus.us19.list-manage.com/subscribe/post?u=e374116042be76c56bd310fdf&amp;id=daf2e70ee9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+    <div id="mc_embed_signup_scroll">
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="consent mc-field-group input-group">
+    <ul><li><div class="checker" id="uniform-mce-group[2447]-2447-0"><span><input type="checkbox" class="required" value="1" name="group[2447][1]" id="mce-group[2447]-2447-0"></span></div><label for="mce-group[2447]-2447-0"><div>I acknowledge that I have read and understood the practices set out in the <a class="privacyNewsletter" href="https://www.sega.com/Privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a><span class="asterisk">*</span><!--</label--></div></label></li>
+</ul>
+</div>
+<div class="consent mc-field-group input-group">
+	<ul><li><div class="checker" id="uniform-mce-group[2483]-2483-0"><span><input type="checkbox" class="required" value="2" name="group[2483][2]" id="mce-group[2483]-2483-0"></span></div><label for="mce-group[2483]-2483-0"><div>I would like to receive updates by email about products and services, news, and invitations to events from ATLUS and any of the SEGA group companies (please tick if you consent). You may opt-out of receiving these communications at any time by using the unsubscribe link in our emails.<span class="asterisk">*</span></div></label></li>
+</ul>
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e374116042be76c56bd310fdf_daf2e70ee9" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<script type="&#39;text/javascript&#39;" src="./logo_files/mc-validate.js&#39;"></script><script type="&#39;text/javascript&#39;">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=&#039;EMAIL&#039;;ftypes[0]=&#039;email&#039;;}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
+					<div class="et_bloom_success_container">
+						<span class="et_bloom_success_checkmark"></span>
+					</div>
+					<h2 class="et_bloom_success_message">Almost finished... We need to confirm your email address. To complete the subscription process, please click the link in the email we just sent you.</h2>
+					
+				</div>
+			</div>
+			<span class="et_bloom_close_button"></span>
+							</div>
+						</div><link href="./logo_files/css(2)" rel="stylesheet" property="stylesheet" media="all" type="text/css">
+
+
+<style type="text/css">
+    #wpfront-notification-bar 
+    {
+        background: #1268b3;
+        background: -moz-linear-gradient(top, #1268b3 0%, #1268b3 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1268b3), color-stop(100%,#1268b3));
+        background: -webkit-linear-gradient(top, #1268b3 0%,#1268b3 100%);
+        background: -o-linear-gradient(top, #1268b3 0%,#1268b3 100%);
+        background: -ms-linear-gradient(top, #1268b3 0%,#1268b3 100%);
+        background: linear-gradient(to bottom, #1268b3 0%, #1268b3 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1268b3', endColorstr='#1268b3',GradientType=0 );
+    }
+
+    #wpfront-notification-bar div.wpfront-message
+    {
+        color: #ffffff;
+    }
+
+    #wpfront-notification-bar a.wpfront-button
+    {
+        background: #00b7ea;
+        background: -moz-linear-gradient(top, #00b7ea 0%, #009ec3 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b7ea), color-stop(100%,#009ec3));
+        background: -webkit-linear-gradient(top, #00b7ea 0%,#009ec3 100%);
+        background: -o-linear-gradient(top, #00b7ea 0%,#009ec3 100%);
+        background: -ms-linear-gradient(top, #00b7ea 0%,#009ec3 100%);
+        background: linear-gradient(to bottom, #00b7ea 0%, #009ec3 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 );
+
+        color: #ffffff;
+    }
+
+    #wpfront-notification-bar-open-button
+    {
+        background-color: #1268b3;
+    }
+
+    #wpfront-notification-bar  div.wpfront-close 
+    {
+        border: 1px solid #555555;
+        background-color: #555555;
+        color: #ffffff;
+    }
+
+    #wpfront-notification-bar  div.wpfront-close:hover 
+    {
+        border: 1px solid #aaaaaa;
+        background-color: #aaaaaa;
+    }
+</style>
+
+
+
+
+
+<style type="text/css">
+</style>
+<script type="text/javascript">if(typeof wpfront_notification_bar == "function") wpfront_notification_bar({"position":1,"height":0,"fixed_position":"on","animate_delay":0.5,"close_button":true,"button_action_close_bar":"on","auto_close_after":30,"display_after":1,"is_admin_bar_showing":false,"display_open_button":false,"keep_closed":"on","keep_closed_for":0,"position_offset":0,"display_scroll":false,"display_scroll_offset":100});</script>		<script type="text/javascript">
+		if(typeof revslider_showDoubleJqueryError === "undefined") {
+			function revslider_showDoubleJqueryError(sliderID) {
+				var err = "<div class='rs_error_message_box'>";
+				err += "<div class='rs_error_message_oops'>Oops...</div>";
+				err += "<div class='rs_error_message_content'>";
+				err += "You have some jquery.js library include that comes after the Slider Revolution files js inclusion.<br>";
+				err += "To fix this, you can:<br>&nbsp;&nbsp;&nbsp; 1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on";
+				err += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jQuery.js inclusion and remove it";
+				err += "</div>";
+			err += "</div>";
+				var slider = document.getElementById(sliderID); slider.innerHTML = err; slider.style.display = "block";
+			}
+		}
+		</script>
+<link rel="stylesheet" id="et-gf-open-sans-css" href="./logo_files/css(3)" type="text/css" media="all">
+<link rel="stylesheet" id="rs-particles-front-css" href="./logo_files/revolution.addon.particles.css" type="text/css" media="all">
+<link rel="stylesheet" id="et_bloom-css-css" href="./logo_files/style(1).css" type="text/css" media="all">
+<script type="text/javascript" src="./logo_files/jquery.hash-tabs.min.js.download" id="User_jQuery_1-js"></script>
+<script type="text/javascript" src="./logo_files/slick.min.js.download" id="User_jQuery_2-js"></script>
+<script type="text/javascript" src="./logo_files/z-page-scripts.js.download" id="User_jQuery_3-js"></script>
+<script type="text/javascript" src="./logo_files/theme.js.download" id="themeblvd_theme-js"></script>
+<script type="text/javascript" id="ubermenu-js-extra">
+/* <![CDATA[ */
+var ubermenu_data = {"remove_conflicts":"on","reposition_on_load":"off","intent_delay":"300","intent_interval":"100","intent_threshold":"7","scrollto_offset":"50","scrollto_duration":"1000","responsive_breakpoint":"0","accessible":"on","retractor_display_strategy":"responsive","touch_off_close":"on","v":"3.1.1","ajax_url":"https:\/\/atlus.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./logo_files/ubermenu.min.js.download" id="ubermenu-js"></script>
+<script type="text/javascript" src="./logo_files/newsletter.js.download" id="newsletter-js"></script>
+<script type="text/javascript" src="./logo_files/wp-embed.min.js.download" id="wp-embed-js"></script>
+<script type="text/javascript" src="./logo_files/revolution.addon.particles.min.js.download" id="rs-particles-front-js"></script>
+<script type="text/javascript" src="./logo_files/jquery.uniform.min.js.download" id="et_bloom-uniform-js-js"></script>
+<script type="text/javascript" id="et_bloom-custom-js-js-extra">
+/* <![CDATA[ */
+var bloomSettings = {"ajaxurl":"https:\/\/atlus.com\/wp-admin\/admin-ajax.php","pageurl":"https:\/\/atlus.com\/","stats_nonce":"94bfbc8c15","subscribe_nonce":"42abe0e8a5","is_user_logged_in":"not_logged"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./logo_files/custom.js.download" id="et_bloom-custom-js-js"></script>
+<script type="text/javascript" src="./logo_files/idle-timer.min.js.download" id="et_bloom-idle-timer-js-js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"64db19c156","applicationID":"7830361","transactionName":"YFNVNhBRCENYV0UPCVkZdgEWWQleFkBUCxZbV0MHPVITWVVQVBQ=","queueTime":0,"applicationTime":2625,"atts":"TBRWQFhLG00=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./logo_files/widget_iframe.06c6ee58c3810956b7509218508c7b56.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./logo_files/saved_resource(1).html"></iframe></body></html>
