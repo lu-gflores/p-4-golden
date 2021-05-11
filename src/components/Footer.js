@@ -37,14 +37,14 @@ const Footer = () => {
                 <Toolbar>
                     <Paper variant='outlined' square className={classes.paper}>
                         <img className='logo' src={Rating} alt='ESRB Mature Rating' />
-                        <ul className={classes.esrbContent}>
+                        {/* <ul className={classes.esrbContent}>
                             <li>Alcohol Reference</li>
                             <li>Animated Blood</li>
                             <li>Language</li>
                             <li>Partial Nudity</li>
                             <li>Sexual Themes</li>
                             <li>Violence</li>
-                        </ul>
+                        </ul> */}
                     </Paper>
                     <img className='logo' src={Atlus} alt='Atlus Co.' />
                     <img className='logo' src={Steam} alt='Steam' />
