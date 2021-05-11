@@ -8,6 +8,7 @@ import Paper from '@material-ui/core/Paper'
 import StoryBackground from '../images/story-background-image.jpg'
 import heroBanner from '../images/story-images/story-title.gif'
 import MidnightChannel from '../images/story-images/MidnightChannel.jpg'
+import Exams from '../images/story-images/exams.jpg'
 
 const useStyles = makeStyles(() => ({
     backgroundImage: {
@@ -54,12 +55,19 @@ const useStyles = makeStyles(() => ({
         transform: 'rotate(-3deg)',
         color: '#004f77',
     },
-    introImage: {
-        width: 500,
+    imageStyle1: {
+        width: '100%',
         height: 400,
         borderRadius: '35px',
         alignContent: 'center',
         transform: 'rotate(-3deg)',
+    },
+    imageStyle2: {
+        width: '100%',
+        height: 350,
+        borderRadius: '35px',
+        alignContent: 'center',
+        transform: 'rotate(3deg)',
     }
 }))
 
@@ -79,11 +87,10 @@ const Story = () => {
                     </p>
                 </Paper>
             </Box>
-
             <Box>
                 <Grid container spacing={2}>
                     <Grid item md={6} xs={12}>
-                        <img src={MidnightChannel} alt='Midnight Channel' className={classes.introImage} />
+                        <img src={MidnightChannel} alt='Midnight Channel' className={classes.imageStyle1} />
                     </Grid>
                     <Grid item md={6} xs={12}>
                         <Paper className={classes.paperSection1}>
@@ -101,9 +108,14 @@ const Story = () => {
                     <Grid item md={6} xs={12}>
                         <Paper className={classes.paperIntro}>
                             <p>
-                                Donec at nulla ac ante ullamcorper varius id vel justo. Phasellus et elit eget risus lacinia pretium. Integer semper, libero a egestas dignissim, augue arcu condimentum ex, ut elementum sapien turpis nec metus. Cras rhoncus id sem pellentesque viverra. Donec convallis ullamcorper lacinia. Praesent feugiat sem sit amet diam tempor, vel lobortis dolor ornare. Praesent commodo erat non diam malesuada, non feugiat lorem suscipit. Nulla facilisi. Donec congue leo et rutrum dictum.
+                                Attend Yasogami High School, where you will maintain an ordinary teenage social life. Listen to lectures, take exams, and join clubs to increase your social stats
+                                (Courage, Knowledge, Expression, Understanding, and Diligence).
+                                Along the way, forge bonds with your classmates. Who knows, it may lead down to a deeper relationship.
                             </p>
                         </Paper>
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                        <img src={Exams} alt='Taking the exams' className={classes.imageStyle2} />
                     </Grid>
                 </Grid>
             </Box>
