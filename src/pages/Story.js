@@ -42,7 +42,7 @@ const useStyles = makeStyles(() => ({
         borderRadius: '30px',
         transform: 'rotate(3deg)',
         color: '#004f77',
-        zIndex: 9999
+        zIndex: 5
     },
     paperSection1: {
         background: `linear-gradient(0deg, rgba(156,203,227,1) 9%, rgba(255,255,255,1) 100%)`,
@@ -75,7 +75,7 @@ const useStyles = makeStyles(() => ({
 const Story = () => {
     const classes = useStyles()
     return (
-        <Container className={classes.backgroundImage}>
+        <Container maxWidth='false' className={classes.backgroundImage}>
             <div className={classes.heroBanner}>
                 <h1 className={classes.storyTitle}>Story</h1>
             </div>

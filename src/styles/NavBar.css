@@ -5,6 +5,7 @@
     position: fixed;
     top: 2%;
     left: 3%;
+    z-index: 7;
 }
 .nav-background {
     background-color: #FFFB41;

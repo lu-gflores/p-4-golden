@@ -64,7 +64,7 @@ const Home = () => {
     }
 
     return (
-        <Container max-width='false'>
+        <Container maxWidth='false'>
             <div className='hero-banner'></div>
             <Divider />
             <div className={classes.backgroundStyle}>

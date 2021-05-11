@@ -17,6 +17,7 @@ const useStyles = makeStyles({
     },
     fullList: {
         width: 'auto',
+        zIndex: 9999,
     },
     ListItemText: {
         fontFamily: 'Fira Sans Extra Condensed',
