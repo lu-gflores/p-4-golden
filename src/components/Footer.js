@@ -2,6 +2,7 @@ import React from 'react'
 import AppBar from '@material-ui/core/AppBar'
 import Container from '@material-ui/core/Container'
 import Toolbar from '@material-ui/core/Toolbar'
+import Paper from '@material-ui/core/Paper'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 
 import Rating from '../images/logos/rating.jpg'
@@ -16,6 +17,16 @@ const useStyles = makeStyles(theme => ({
         width: '100%',
         padding: '20px 0',
         alignContent: 'center'
+    },
+    paper: {
+        display: 'flex'
+    },
+    esrbContent: {
+        margin: 0,
+        paddingLeft: '0.5rem',
+        textAlign: 'left',
+        listStyle: 'none',
+        fontWeight: 'bold'
     }
 }))
 const Footer = () => {
@@ -24,7 +35,17 @@ const Footer = () => {
         <AppBar position='static' className={classes.footer}>
             <Container maxWidth='md'>
                 <Toolbar>
-                    <img className='logo' src={Rating} alt='ESRB Mature Rating' />
+                    <Paper variant='outlined' square className={classes.paper}>
+                        <img className='logo' src={Rating} alt='ESRB Mature Rating' />
+                        <ul className={classes.esrbContent}>
+                            <li>Alcohol Reference</li>
+                            <li>Animated Blood</li>
+                            <li>Language</li>
+                            <li>Partial Nudity</li>
+                            <li>Sexual Themes</li>
+                            <li>Violence</li>
+                        </ul>
+                    </Paper>
                     <img className='logo' src={Atlus} alt='Atlus Co.' />
                     <img className='logo' src={Steam} alt='Steam' />
 
