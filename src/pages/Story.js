@@ -65,6 +65,7 @@ const useStyles = makeStyles(() => ({
     imageStyle2: {
         width: '100%',
         height: 350,
+        border: '5px solid rgba(235, 40, 126, 100)',
         borderRadius: '35px',
         alignContent: 'center',
         transform: 'rotate(3deg)',
@@ -110,12 +111,22 @@ const Story = () => {
                             <p>
                                 Attend Yasogami High School, where you will maintain an ordinary teenage social life. Listen to lectures, take exams, and join clubs to increase your social stats
                                 (Courage, Knowledge, Expression, Understanding, and Diligence).
-                                Along the way, forge bonds with your classmates. Who knows, it may lead down to a deeper relationship.
+                                Along the way, forge bonds with your classmates. Who knows, it may lead down to a deeper relationship. Outside of school, pursue some hobbies or take a part-time job!
                             </p>
                         </Paper>
                     </Grid>
                     <Grid item md={6} xs={12}>
                         <img src={Exams} alt='Taking the exams' className={classes.imageStyle2} />
+                    </Grid>
+                </Grid>
+            </Box>
+            <Box>
+                <Grid container spacing={2}>
+                    <Grid item md={6} xs={12}>
+
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+
                     </Grid>
                 </Grid>
             </Box>

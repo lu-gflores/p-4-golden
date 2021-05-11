@@ -16,11 +16,12 @@ const useStyles = makeStyles({
         width: 250,
     },
     fullList: {
-        width: 'auto'
+        width: 'auto',
     },
     ListItemText: {
         fontFamily: 'Fira Sans Extra Condensed',
-        fontWeight: '700'
+        fontSize: '32px',
+        fontWeight: '700',
     }
 })
 
