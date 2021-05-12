@@ -3,6 +3,10 @@ import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
+import Card from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia'
 import Paper from '@material-ui/core/Paper'
 // Images
 import StoryBackground from '../images/story-background-image.jpg'
@@ -10,6 +14,7 @@ import heroBanner from '../images/story-images/story-title.gif'
 import MidnightChannel from '../images/story-images/MidnightChannel.jpg'
 import Exams from '../images/story-images/exams.jpg'
 import Encounter from '../images/story-images/encounter.jpg'
+import Persona from '../images/story-images/persona-render.png'
 
 const useStyles = makeStyles(() => ({
     backgroundImage: {
@@ -17,6 +22,13 @@ const useStyles = makeStyles(() => ({
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         width: '100%',
+    },
+    cardRoot: {
+        width: '100%'
+    },
+    cardMedia: {
+        height: 350,
+
     },
     storyTitle: {
         padding: '5.5rem 0 2.3rem 0',
@@ -55,6 +67,10 @@ const useStyles = makeStyles(() => ({
         borderRadius: '30px',
         transform: 'rotate(-3deg)',
         color: '#004f77',
+    },
+    headerStyle: {
+        textAlign: 'center',
+        fontSize: '48px'
     },
     imageStyle1: {
         width: '100%',
@@ -132,6 +148,58 @@ const Story = () => {
                             <p>Outside of your social life, dive into the TV world to solve the mysterious murders that are happening in Inaba. Defeat the denizens known as Shadows by
                             manifesting avatars known as Personas.</p>
                         </Paper>
+                    </Grid>
+                </Grid>
+            </Box>
+            <Box>
+                <Grid container spacing={2}>
+                    <Grid item xs={12}>
+                        <h1 className={classes.headerStyle}>What are Personas?</h1>
+                    </Grid>
+                    <Grid item md={4} xs={12}>
+                        <Card>
+                            <CardMedia className={classes.cardMedia} image={Persona} title='Izanagi' />
+                            <CardContent>
+                                <Typography gutterBottom variant='h2' component='h2' align='center'>
+                                    Persona
+                                </Typography>
+                                <p>
+                                    Manifestations of the user's personality, often referred to as a mask. Similar to Shadows, where Shadows are malevolent manifestations of one's inner thoughts, whereas
+                                    Personas are the same feelings, but are tamed and trained by its users. By defeating Shadows in the Midnight Channel, you will obtain and evolve Personas in order to solve the
+                                    mystery behind the Midnight Channel.
+                                </p>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                    <Grid item md={4} xs={12}>
+                        <Card>
+                            <CardMedia className={classes.cardMedia} image={Persona} title='Izanagi' />
+                            <CardContent>
+                                <Typography gutterBottom variant='h2' component='h2' align='center'>
+                                    Persona
+                                </Typography>
+                                <p>
+                                    Manifestations of the user's personality, often referred to as a mask. Similar to Shadows, where Shadows are malevolent manifestations of one's inner thoughts, whereas
+                                    Personas are the same feelings, but are tamed and trained by its users. By defeating Shadows in the Midnight Channel, you will obtain and evolve Personas in order to solve the
+                                    mystery behind the Midnight Channel.
+                                </p>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                    <Grid item md={4} xs={12}>
+                        <Card>
+                            <CardMedia className={classes.cardMedia} image={Persona} title='Izanagi' />
+                            <CardContent>
+                                <Typography gutterBottom variant='h2' component='h2' align='center'>
+                                    Persona
+                                </Typography>
+                                <p>
+                                    Manifestations of the user's personality, often referred to as a mask. Similar to Shadows, where Shadows are malevolent manifestations of one's inner thoughts, whereas
+                                    Personas are the same feelings, but are tamed and trained by its users. By defeating Shadows in the Midnight Channel, you will obtain and evolve Personas in order to solve the
+                                    mystery behind the Midnight Channel.
+                                </p>
+                            </CardContent>
+                        </Card>
                     </Grid>
                 </Grid>
             </Box>
