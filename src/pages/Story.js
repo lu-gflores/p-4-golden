@@ -9,6 +9,7 @@ import StoryBackground from '../images/story-background-image.jpg'
 import heroBanner from '../images/story-images/story-title.gif'
 import MidnightChannel from '../images/story-images/MidnightChannel.jpg'
 import Exams from '../images/story-images/exams.jpg'
+import Encounter from '../images/story-images/encounter.jpg'
 
 const useStyles = makeStyles(() => ({
     backgroundImage: {
@@ -59,6 +60,7 @@ const useStyles = makeStyles(() => ({
         width: '100%',
         height: 400,
         borderRadius: '35px',
+        border: '5px solid rgb(156,203,227)',
         alignContent: 'center',
         transform: 'rotate(-3deg)',
     },
@@ -123,10 +125,13 @@ const Story = () => {
             <Box>
                 <Grid container spacing={2}>
                     <Grid item md={6} xs={12}>
-
+                        <img src={Encounter} alt='Turn-based encounter' className={classes.imageStyle1} />
                     </Grid>
                     <Grid item md={6} xs={12}>
-
+                        <Paper className={classes.paperSection1}>
+                            <p>Outside of your social life, dive into the TV world to solve the mysterious murders that are happening in Inaba. Defeat the denizens known as Shadows by
+                            manifesting avatars known as Personas.</p>
+                        </Paper>
                     </Grid>
                 </Grid>
             </Box>

@@ -23,6 +23,7 @@ const useStyles = makeStyles({
         fontFamily: 'Fira Sans Extra Condensed',
         fontSize: '32px',
         fontWeight: '700',
+        transform: 'rotate(-3deg)'
     }
 })
 
