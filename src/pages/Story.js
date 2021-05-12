@@ -26,7 +26,9 @@ const useStyles = makeStyles(() => ({
         width: '100%',
     },
     cardRoot: {
-        width: '100%'
+        width: '100%',
+        background: `linear-gradient(0deg, rgba(156,203,227,1) 9%, rgba(255,255,255,1) 100%)`,
+        border: '5px solid rgba(235, 40, 126, 100)',
     },
     cardMedia: {
         height: 350,
@@ -165,7 +167,7 @@ const Story = () => {
                         <h1 className={classes.headerStyle}>What are Personas?</h1>
                     </Grid>
                     <Grid item md={4} xs={12}>
-                        <Card>
+                        <Card className={classes.cardRoot}>
                             <CardMedia className={classes.cardMedia} image={Persona} title='Izanagi' />
                             <CardContent>
                                 <Typography gutterBottom variant='h2' component='h2' align='center'>
@@ -194,7 +196,7 @@ const Story = () => {
                         </Card>
                     </Grid>
                     <Grid item md={4} xs={12}>
-                        <Card>
+                        <Card className={classes.cardRoot}>
                             <CardMedia className={classes.cardMedia} image={SocialLinks} title='Bonding with Yosuke' />
                             <CardContent>
                                 <Typography gutterBottom variant='h2' component='h2' align='center'>
