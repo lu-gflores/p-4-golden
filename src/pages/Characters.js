@@ -14,6 +14,9 @@ const useStyles = makeStyles(() => ({
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         width: '100%',
+    },
+    title: {
+        textAlign: 'center'
     }
 
 }))
@@ -21,7 +24,13 @@ const Characters = () => {
     const classes = useStyles()
     return (
         <Container maxWidth='false' className={classes.backgroundImage}>
-            <h1>Characters</h1>
+            <Box>
+                <Grid container>
+                    <Grid item xs={12}>
+                        <h1 className={classes.title}>Characters</h1>
+                    </Grid>
+                </Grid>
+            </Box>
         </Container>
     )
 }
