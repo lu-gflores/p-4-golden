@@ -15,6 +15,8 @@ import MidnightChannel from '../images/story-images/MidnightChannel.jpg'
 import Exams from '../images/story-images/exams.jpg'
 import Encounter from '../images/story-images/encounter.jpg'
 import Persona from '../images/story-images/persona-render.png'
+import Fusion from '../images/story-images/fusion.jpg'
+import SocialLinks from '../images/story-images/social-link.jpg'
 
 const useStyles = makeStyles(() => ({
     backgroundImage: {
@@ -28,7 +30,7 @@ const useStyles = makeStyles(() => ({
     },
     cardMedia: {
         height: 350,
-
+        width: '100%'
     },
     storyTitle: {
         padding: '5.5rem 0 2.3rem 0',
@@ -70,7 +72,11 @@ const useStyles = makeStyles(() => ({
     },
     headerStyle: {
         textAlign: 'center',
-        fontSize: '48px'
+        fontSize: '48px',
+        textDecoration: 'underline',
+        background: `linear-gradient(0deg, rgba(156,203,227,1) 9%, rgba(255,255,255,1) 100%)`,
+        border: '5px solid rgba(235, 40, 126, 100)',
+        borderRadius: '30px',
     },
     imageStyle1: {
         width: '100%',
@@ -114,8 +120,8 @@ const Story = () => {
                     <Grid item md={6} xs={12}>
                         <Paper className={classes.paperSection1}>
                             <p>
-                                This is a coming of age story that sets the protagonist and his friends on a journey kickstarted by a chain of serial murders. You
-                                will meet kindred spirits, feel a sense of belonging, and confront the darker sides of one's self.
+                                This is a coming of age story that sets the protagonist and his friends on a journey kickstarted by a chain of serial murders.
+                                You will meet kindred spirits, feel a sense of belonging, and confront the darker sides of one's self.
                             </p>
                         </Paper>
                     </Grid>
@@ -127,9 +133,11 @@ const Story = () => {
                     <Grid item md={6} xs={12}>
                         <Paper className={classes.paperIntro}>
                             <p>
-                                Attend Yasogami High School, where you will maintain an ordinary teenage social life. Listen to lectures, take exams, and join clubs to increase your social stats
+                                Attend Yasogami High School, where you will maintain an ordinary teenage social life.
+                                Listen to lectures, take exams, and join clubs to increase your social stats
                                 (Courage, Knowledge, Expression, Understanding, and Diligence).
-                                Along the way, forge bonds with your classmates. Who knows, it may lead down to a deeper relationship. Outside of school, pursue some hobbies or take a part-time job!
+                                Along the way, forge bonds with your classmates. Who knows, it may lead down to a deeper relationship. Outside of school,
+                                pursue some hobbies or take a part-time job!
                             </p>
                         </Paper>
                     </Grid>
@@ -172,31 +180,29 @@ const Story = () => {
                         </Card>
                     </Grid>
                     <Grid item md={4} xs={12}>
-                        <Card>
-                            <CardMedia className={classes.cardMedia} image={Persona} title='Izanagi' />
+                        <Card className={classes.cardRoot}>
+                            <CardMedia className={classes.cardMedia} image={Fusion} title='Fusing Personas through menu' />
                             <CardContent>
                                 <Typography gutterBottom variant='h2' component='h2' align='center'>
-                                    Persona
+                                    Fusion
                                 </Typography>
                                 <p>
-                                    Manifestations of the user's personality, often referred to as a mask. Similar to Shadows, where Shadows are malevolent manifestations of one's inner thoughts, whereas
-                                    Personas are the same feelings, but are tamed and trained by its users. By defeating Shadows in the Midnight Channel, you will obtain and evolve Personas in order to solve the
-                                    mystery behind the Midnight Channel.
+                                    Obtaining and growing personas isn't always enough. After collecting enough personas, visit the Velvet Room to fuse specific ones! With the right personas, you can fuse even
+                                    stronger ones with devastating or resourceful abilities that will make the adventure much easier.
                                 </p>
                             </CardContent>
                         </Card>
                     </Grid>
                     <Grid item md={4} xs={12}>
                         <Card>
-                            <CardMedia className={classes.cardMedia} image={Persona} title='Izanagi' />
+                            <CardMedia className={classes.cardMedia} image={SocialLinks} title='Bonding with Yosuke' />
                             <CardContent>
                                 <Typography gutterBottom variant='h2' component='h2' align='center'>
-                                    Persona
+                                    Social Links
                                 </Typography>
                                 <p>
-                                    Manifestations of the user's personality, often referred to as a mask. Similar to Shadows, where Shadows are malevolent manifestations of one's inner thoughts, whereas
-                                    Personas are the same feelings, but are tamed and trained by its users. By defeating Shadows in the Midnight Channel, you will obtain and evolve Personas in order to solve the
-                                    mystery behind the Midnight Channel.
+                                    Outside of combat, you can build relationships with your fellow teammates, classmates, and citizens of Inaba through Social Links. By creating and growing Social Links, personas you
+                                    fuse will be even stronger prior to forming a Social Link.
                                 </p>
                             </CardContent>
                         </Card>
