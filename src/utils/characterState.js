@@ -27,49 +27,54 @@ export const CharacterState = () => {
             title: 'Captain Ressentiment',
             charImg: yosuke,
             url: '/characters/yosuke-hanamura',
-            description: ``
+            description: `A clumsy student who just transfered here six months before the protagonist. His father manages a large department store called Junes. He has a cheerful personality and seems to take a liking to the protagonist
+            as they came to Inaba under similar circumstances. `
         },
         {
             characterName: 'Chie Satonaka',
             title: 'Kung-fu Enthusiast',
             charImg: chie,
             url: '/characters/chie-satonaka',
-            description: ``
+            description: `An energetic and outgoing tomboy who is a obessed with kung fu and martial arts movies. She is best friends with Yukiko despite being opposites and seemingly gets along with Yosuke. She also posseses a strong sense
+            of justice, willing to protect others without hesitation.`
         },
         {
             characterName: 'Yukiko Amagi',
             title: 'Scarlet Princess',
             charImg: yukiko,
             url: '/characters/yukiko-amagi',
-            description: ``
+            description: `A rich and elegant student who is actually popular at Yasogami. She is best friends with Chie, although unlike Chie she is quite introverted. Her family runs a renowned local inn and is set to become its heiress. Despite being
+            intelligent, she also has a strange sense of humor where she tends to laugh at the slightest jokes.`
         },
         {
             characterName: 'Kanji Tatsumi',
             title: 'Bloodcurdling Beefcake',
             charImg: kanji,
             url: '/characters/kanji-tatsumi',
-            description: ``
+            description: `A notorious deliquent who earned a reputation in town for fighting biker gangs. As a result, people are terrified of him and doesn't seem to have any friends. Although he tries to embody his tough-guy personality, it seems as though
+            he has other passions he wants to pursue in fear of being judged by others.`
         },
         {
             characterName: 'Rise Kujikawa',
             title: 'Risette',
             charImg: rise,
             url: '/characters/rise-kujikawa',
-            description: ``
+            description: `A former idol who decided to take a break from the busniess to work at her family business 'due to health concerns.' She is very cheerful and quite boastful about herself, but very sweet to others. Despite her bubbly demeanor, she struggles on her
+            individuality.`
         },
         {
             characterName: 'Teddie',
             title: '???',
             charImg: teddie,
             url: '/characters/teddie',
-            description: ``
+            description: `A strange bear who the protagonist and Yosuke first encounter in the Midnight Channel. He has a cheery but childish attitude who lacks any knowledge of human customs and quickly idolizes the protagonist to the point of calling him 'Sensei.'`
         },
         {
             characterName: 'Naoto Shirogane',
             title: 'Detective Prince',
             charImg: naoto,
             url: '/characters/naoto-shirogane',
-            description: ``
+            description: `A descendant of a respected linage of detectives and is nicknamed 'Detective Prince. Naoto is sent to Inaba to solve the muders case, although often faces discrimination by authories due to appearance.`
         },
         {
             characterName: 'Igor',
@@ -93,7 +98,8 @@ export const CharacterState = () => {
             title: 'Antisocial Poet',
             charImg: marie,
             url: '/characters/marie',
-            description: ``
+            description: `A new face exclusively in Persona 4 Golden. A cold and antisocial girl who the protagonist first encounters when he first arrives in Inaba. She is actually another resident of the Velvet Room who acts as an apprentice to help the 
+            protagonist in his journey uncovering the truth.`
         },
 
     ]
