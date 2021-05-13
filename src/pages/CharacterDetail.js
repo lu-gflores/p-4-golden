@@ -23,6 +23,7 @@ const CharacterDetail = () => {
                 <Container maxWidth='false'>
                     <h2>{character.characterName}</h2>
                     <h3>{character.title}</h3>
+                    <p>{character.description}</p>
                 </Container>
             )}
         </>

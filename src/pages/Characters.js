@@ -4,8 +4,9 @@ import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
-
+// Images
 import CharactersBG from '../images/charactersbg.jpg'
 import protagonist from '../images/characters/Yu_Narukami_render.png'
 import yosuke from '../images/characters/Yosuke_Hanamura_render.png'
@@ -18,17 +19,48 @@ import naoto from '../images/characters/Naoto_Shirogane_render.png'
 import igor from '../images/characters/IgorPersona3.png'
 import margaret from '../images/characters/Margaret_Render.png'
 import marie from '../images/characters/Marie_portrait.png'
-
-
 const useStyles = makeStyles(() => ({
     backgroundImage: {
+        // background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${CharactersBG})`,
+        // backgroundSize: 'cover',
+        // backgroundRepeat: 'no-repeat',
+        // backgroundPosition: 'center',
+        background: 'linear-gradient(90deg, rgba(248,232,23,1) 0%, rgba(229,255,153,1) 50%, rgba(255,250,64,1) 100%)',
+        width: '100%',
+    },
+    characterImageStyle_1: {
+        width: '80%',
+        height: 600,
+        transform: 'rotate(3deg)'
+    },
+    characterImageStyle_2: {
+        width: '80%',
+        height: 600,
+        transform: 'rotate(-3deg)'
+    },
+    titleStyle: {
         background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${CharactersBG})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         width: '100%',
+        height: '50vh',
+        fontSize: '1.2rem',
+        color: '#fff',
+        border: '5px solid rgba(235, 40, 126, 100)',
+        padding: '1.2rem',
+        borderRadius: '10% 10% / 10% 40%',
+        textAlign: 'center'
     },
-    title: {
+    paperStyle_1: {
+        background: `linear-gradient(0deg, rgba(156,203,227,1) 9%, rgba(255,255,255,1) 100%)`,
+        border: '5px solid rgb(156,203,227)',
+        padding: '1.5rem',
+        marginTop: '3rem',
+        fontSize: '1.2rem',
+        borderRadius: '30px',
+        transform: 'rotate(3deg)',
+        color: '#004f77',
         textAlign: 'center'
     }
 
@@ -40,19 +72,43 @@ const Characters = () => {
             <Box>
                 <Grid container>
                     <Grid item xs={12}>
-                        <h1 className={classes.title}>Characters</h1>
+                        <Paper className={classes.titleStyle}>
+                            <h1>Characters</h1>
+                        </Paper>
                     </Grid>
                 </Grid>
             </Box>
             <Box>
-                <Grid container>
-                    <Grid item xs={6}>
+                <Grid container spacing={2}>
+                    <Grid item md={6} xs={12}>
+                        <Paper className={classes.paperStyle_1}>
+                            <h1>Protagonist</h1>
+                            <h2>Arcana: <em>The Fool</em></h2>
+                        </Paper>
+                    </Grid>
+                    <Grid item md={6} xs={12}>
                         <Link to='/characters/protagonist'>
-                            <img src={protagonist} alt='Protagonist' />
+                            <img className={classes.characterImageStyle_1} src={protagonist} alt='Protagonist' />
                         </Link>
                     </Grid>
                 </Grid>
             </Box>
+            <Box>
+                <Grid container spacing={2}>
+                    <Grid item md={6} xs={12}>
+                        <Link to='/characters/yosuke-hanamura'>
+                            <img className={classes.characterImageStyle_2} src={yosuke} alt={'Yosuke Hanamura'} />
+                        </Link>
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                        <Paper className={classes.paperStyle_1}>
+                            <h1>Yosuke Hanamura</h1>
+                            <h2>Arcana: <em>The Magician</em></h2>
+                        </Paper>
+                    </Grid>
+                </Grid>
+            </Box>
+
         </Container>
     )
 }
