@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Story from './pages/Story'
 import Characters from './pages/Characters'
+import CharacterDetail from './pages/CharacterDetail'
 
 import './styles/AppStyles.css'
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route exact path='/' component={Home} />
         <Route exact path='/story' component={Story} />
         <Route exact path='/characters' component={Characters} />
+        <Route path='/characters/:id' component={CharacterDetail} />
         <Footer />
       </Router>
     </div>

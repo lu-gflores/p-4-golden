@@ -7,7 +7,7 @@ import rise from '../images/characters/Rise_Kujikawa_render.png'
 import teddie from '../images/characters/Teddie_render.png'
 import naoto from '../images/characters/Naoto_Shirogane_render.png'
 import igor from '../images/characters/IgorPersona3.png'
-import margaret from '../images/characters/Margaret_render.png'
+import margaret from '../images/characters/Margaret_Render.png'
 import marie from '../images/characters/Marie_portrait.png'
 
 export const CharacterState = () => {
