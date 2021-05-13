@@ -1,3 +1,4 @@
+// character portraits
 import protagonist from '../images/characters/Yu_Narukami_render.png'
 import yosuke from '../images/characters/Yosuke_Hanamura_render.png'
 import chie from '../images/characters/Chie_Satonaka_render.png'
