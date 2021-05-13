@@ -29,13 +29,18 @@ const useStyles = makeStyles(() => ({
         width: '100%',
     },
     characterImageStyle_1: {
-        width: '80%',
-        height: 600,
+        maxWidth: '100%',
+        maxHeight: '80%',
         transform: 'rotate(3deg)'
     },
     characterImageStyle_2: {
-        width: '80%',
-        height: 600,
+        maxWidth: '100%',
+        maxHeight: '80%',
+        transform: 'rotate(-3deg)'
+    },
+    imageResize: {
+        maxWidth: '100%',
+        maxHeight: '100%',
         transform: 'rotate(-3deg)'
     },
     titleStyle: {
@@ -44,12 +49,13 @@ const useStyles = makeStyles(() => ({
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         width: '100%',
-        height: '50vh',
+        height: 'auto',
         fontSize: '1.2rem',
         color: '#fff',
         border: '5px solid rgba(235, 40, 126, 100)',
         padding: '1.2rem',
         borderRadius: '10% 10% / 10% 40%',
+        marginBottom: '1rem',
         textAlign: 'center'
     },
     paperStyle_1: {
@@ -61,7 +67,7 @@ const useStyles = makeStyles(() => ({
         borderRadius: '30px',
         transform: 'rotate(3deg)',
         color: '#004f77',
-        textAlign: 'center'
+        textAlign: 'center',
     }
 
 }))
@@ -78,6 +84,7 @@ const Characters = () => {
                     </Grid>
                 </Grid>
             </Box>
+
             <Box>
                 <Grid container spacing={2}>
                     <Grid item md={6} xs={12}>
@@ -108,7 +115,142 @@ const Characters = () => {
                     </Grid>
                 </Grid>
             </Box>
-
+            <Box>
+                <Grid container spacing={2}>
+                    <Grid item md={6} xs={12}>
+                        <Paper className={classes.paperStyle_1}>
+                            <h1>Chie Satonaka</h1>
+                            <h2>Arcana: <em>The Chariot</em></h2>
+                        </Paper>
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                        <Link to='/characters/chie-satonaka'>
+                            <img className={classes.characterImageStyle_1} src={chie} alt='Chie Satonaka' />
+                        </Link>
+                    </Grid>
+                </Grid>
+            </Box>
+            <Box>
+                <Grid container spacing={2}>
+                    <Grid item md={6} xs={12}>
+                        <Link to='/characters/yukiko-amagi'>
+                            <img className={classes.characterImageStyle_2} src={yukiko} alt={'Yukiko Amagi'} />
+                        </Link>
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                        <Paper className={classes.paperStyle_1}>
+                            <h1>Yukiko Amagi</h1>
+                            <h2>Arcana: <em>The Priestess</em></h2>
+                        </Paper>
+                    </Grid>
+                </Grid>
+            </Box>
+            <Box>
+                <Grid container spacing={2}>
+                    <Grid item md={6} xs={12}>
+                        <Paper className={classes.paperStyle_1}>
+                            <h1>Kanji Tatsumi</h1>
+                            <h2>Arcana: <em>The Emperor</em></h2>
+                        </Paper>
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                        <Link to='/characters/kanji-tatsumi'>
+                            <img className={classes.imageResize} src={kanji} alt='Kanji Tatsumi' />
+                        </Link>
+                    </Grid>
+                </Grid>
+            </Box>
+            <Box>
+                <Grid container spacing={2}>
+                    <Grid item md={6} xs={12}>
+                        <Link to='/characters/rise-kujikawa'>
+                            <img className={classes.characterImageStyle_2} src={rise} alt={'Rise Kujikawa'} />
+                        </Link>
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                        <Paper className={classes.paperStyle_1}>
+                            <h1>Rise Kujikawa</h1>
+                            <h2>Arcana: <em>The Lovers</em></h2>
+                        </Paper>
+                    </Grid>
+                </Grid>
+            </Box>
+            <Box>
+                <Grid container spacing={2}>
+                    <Grid item md={6} xs={12}>
+                        <Paper className={classes.paperStyle_1}>
+                            <h1>Teddie</h1>
+                            <h2>Arcana: <em>The Star</em></h2>
+                        </Paper>
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                        <Link to='/characters/teddie'>
+                            <img className={classes.characterImageStyle_1} src={teddie} alt='teddie' />
+                        </Link>
+                    </Grid>
+                </Grid>
+            </Box>
+            <Box>
+                <Grid container spacing={2}>
+                    <Grid item md={6} xs={12}>
+                        <Link to='/characters/naoto-shirogane'>
+                            <img className={classes.characterImageStyle_2} src={naoto} alt={'Naoto Shirogane'} />
+                        </Link>
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                        <Paper className={classes.paperStyle_1}>
+                            <h1>Naoto Shirogane</h1>
+                            <h2>Arcana: <em>The Fortune</em></h2>
+                        </Paper>
+                    </Grid>
+                </Grid>
+            </Box>
+            <Box>
+                <Grid container spacing={2}>
+                    <Grid item md={6} xs={12}>
+                        <Paper className={classes.paperStyle_1}>
+                            <h1>Igor</h1>
+                            <h2><em>Proprietor of the Velvet Room</em></h2>
+                        </Paper>
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                        <Link to='/characters/igor'>
+                            <img className={classes.characterImageStyle_1} src={igor} alt='igor' />
+                        </Link>
+                    </Grid>
+                </Grid>
+            </Box>
+            <Box>
+                <Grid container spacing={2}>
+                    <Grid item md={6} xs={12}>
+                        <Link to='/characters/margaret'>
+                            <img className={classes.characterImageStyle_2} src={margaret} alt={'Margaret'} />
+                        </Link>
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                        <Paper className={classes.paperStyle_1}>
+                            <h1>Margaret</h1>
+                            <h2><em>Velvet Room Attendant</em></h2>
+                            <h2>Arcana:<em>The Empress</em></h2>
+                        </Paper>
+                    </Grid>
+                </Grid>
+            </Box>
+            <Box>
+                <Grid container spacing={2}>
+                    <Grid item md={6} xs={12}>
+                        <Paper className={classes.paperStyle_1}>
+                            <h1>Marie</h1>
+                            <h2>Arcana: <em>The Aeon</em></h2>
+                        </Paper>
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                        <Link to='/characters/marie'>
+                            <img className={classes.characterImageStyle_1} src={marie} alt='marie' />
+                        </Link>
+                    </Grid>
+                </Grid>
+            </Box>
         </Container>
     )
 }
