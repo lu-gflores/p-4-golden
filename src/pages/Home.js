@@ -5,6 +5,7 @@ import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
 import GridList from '@material-ui/core/GridList'
 import GridListTile from '@material-ui/core/GridListTile'
+import Box from '@material-ui/core/Box'
 import Paper from '@material-ui/core/Paper'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
@@ -45,6 +46,19 @@ const useStyles = makeStyles(theme => ({
         opacity: 0.7,
         background: '#000',
         color: '#fff'
+    },
+    newContentPaper: {
+        background: 'linear-gradient(90deg, rgba(249,223,31,1) 0%, rgba(74,220,226,1) 2%, rgba(232,131,131,1) 4%, rgba(40,67,199,1) 5%, rgba(20,251,7,1) 7%, rgba(255,255,255,1) 8%, rgba(248,137,25,1) 9%, rgba(253,223,55,1) 11%, rgba(255,250,64,1) 100%);',
+        border: '5px solid #fff',
+        textAlign: 'center',
+        padding: '1rem',
+        lineHeight: 1.5,
+        fontSize: '1.3rem',
+        transform: 'rotate(-3deg)',
+    },
+    headerText: {
+        WebkitTextStroke: '1px #fff',
+        WebkitTextFillColor: '#000'
     }
 }))
 
@@ -70,7 +84,7 @@ const Home = () => {
         <Container maxWidth='false'>
             <div className='hero-banner'></div>
             <Divider />
-            <div className={classes.backgroundStyle}>
+            <section className={classes.backgroundStyle}>
                 <div className={classes.root}>
                     <Grid container spacing={2} alignContent='center' justify='center'>
                         <Grid item md={4}>
@@ -84,11 +98,22 @@ const Home = () => {
                         </Grid>
                     </Grid>
                 </div>
-            </div>
-
-            <section className='general-info'>
-                <h1>General info</h1>
             </section>
+
+            <Box>
+                <Grid container spacing={2}>
+                    <Grid item md={6} xs={12}>
+                        <Paper className={classes.newContentPaper}>
+                            <h1 className={classes.headerText}>What's in store</h1>
+                            <p>
+                                Originally released on the Playstation 2 in 2008, Shin Megami Tensei: Persona 4 has received critical acclaim for its gameplay, story, characters, and soundtrack.
+                                Persona 4 Golden is an enhanced version of the original, adding new story and gameplay elements, new Personas, new endings, and visual elements. It is currently released
+                                on PS Vita and PC via Steam.
+                            </p>
+                        </Paper>
+                    </Grid>
+                </Grid>
+            </Box>
 
             <section className={classes.gridListRoot}>
                 <h1 className='media-title'>Media</h1>

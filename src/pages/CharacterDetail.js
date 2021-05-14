@@ -10,7 +10,7 @@ import ScrollTop from '../components/ScrollTop'
 import { CharacterState } from '../utils/characterState'
 const useStyles = makeStyles({
     backgroundContainer: {
-        background: 'linear-gradient(90deg, rgba(248,232,23,1) 0%, rgba(229,255,153,1) 50%, rgba(255,250,64,1) 100%)'
+        background: 'linear-gradient(90deg, rgba(249,223,31,1) 0%, rgba(255,250,64,1) 90%, rgba(248,137,25,1) 91%, rgba(255,255,255,1) 93%, rgba(40,67,199,1) 94%, rgba(20,251,7,1) 95%, rgba(232,131,131,1) 96%, rgba(74,220,226,1) 98%, rgba(253,223,55,1) 99%);',
     },
     charDesc: {
         border: '5px solid rgba(235, 40, 126, 100)',
