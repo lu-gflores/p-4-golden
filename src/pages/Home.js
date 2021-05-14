@@ -116,7 +116,7 @@ const Home = () => {
             </Box>
 
             <section className={classes.gridListRoot}>
-                <h1 className='media-title'>Media</h1>
+                <h1>Media</h1>
                 <GridList cellHeight='auto' cols={screenWidth()} className={classes.gridList} >
                     {screenshotData.map(tile => (
                         <GridListTile key={tile.img}>

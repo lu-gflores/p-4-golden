@@ -22,10 +22,7 @@ import SocialLinks from '../images/story-images/social-link.jpg'
 
 const useStyles = makeStyles(() => ({
     backgroundImage: {
-        backgroundImage: `url(${StoryBackground})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        width: '100%',
+        background: 'linear-gradient(90deg, rgba(249,223,31,1) 0%, rgba(74,220,226,1) 2%, rgba(232,131,131,1) 4%, rgba(40,67,199,1) 5%, rgba(20,251,7,1) 7%, rgba(255,255,255,1) 8%, rgba(248,137,25,1) 9%, rgba(253,223,55,1) 11%, rgba(255,250,64,1) 100%);',
     },
     cardRoot: {
         width: '100%',
