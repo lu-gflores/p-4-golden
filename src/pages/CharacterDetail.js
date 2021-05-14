@@ -6,6 +6,7 @@ import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import Button from '@material-ui/core/Button'
+import ScrollTop from '../components/ScrollTop'
 import { CharacterState } from '../utils/characterState'
 const useStyles = makeStyles({
     backgroundContainer: {
@@ -57,6 +58,7 @@ const CharacterDetail = () => {
                     <Box>
                         <Link to='/characters'><Button>Back</Button></Link>
                     </Box>
+                    <ScrollTop />
                 </Container>
             )}
         </>

@@ -8,6 +8,8 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Paper from '@material-ui/core/Paper'
+
+import ScrollTop from '../components/ScrollTop'
 // Images
 import StoryBackground from '../images/story-background-image.jpg'
 import heroBanner from '../images/story-images/story-title.gif'
@@ -211,6 +213,7 @@ const Story = () => {
                     </Grid>
                 </Grid>
             </Box>
+            <ScrollTop />
         </Container>
     )
 }

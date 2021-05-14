@@ -6,6 +6,9 @@ import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
+
+import ScrollTop from '../components/ScrollTop'
+
 // Images
 import CharactersBG from '../images/charactersbg.jpg'
 import protagonist from '../images/characters/Yu_Narukami_render.png'
@@ -251,6 +254,7 @@ const Characters = () => {
                     </Grid>
                 </Grid>
             </Box>
+            <ScrollTop />
         </Container>
     )
 }

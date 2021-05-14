@@ -7,6 +7,9 @@ import GridList from '@material-ui/core/GridList'
 import GridListTile from '@material-ui/core/GridListTile'
 import Paper from '@material-ui/core/Paper'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
+
+import ScrollTop from '../components/ScrollTop'
+
 import backgroundImage1 from '../images/backgroundimage-1.gif'
 import screenshotData from '../utils/ScreenshotData'
 import '../styles/Home.css'
@@ -97,6 +100,7 @@ const Home = () => {
                     ))}
                 </GridList>
             </section>
+            <ScrollTop />
         </Container>
     )
 }
