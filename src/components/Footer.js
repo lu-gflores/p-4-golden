@@ -1,8 +1,10 @@
 import React from 'react'
 import AppBar from '@material-ui/core/AppBar'
 import Container from '@material-ui/core/Container'
+import Grid from '@material-ui/core/Grid'
 import Toolbar from '@material-ui/core/Toolbar'
 import Paper from '@material-ui/core/Paper'
+
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 
 import Rating from '../images/logos/rating.jpg'
@@ -16,7 +18,6 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         width: '100%',
         padding: '20px 0',
-        alignContent: 'center'
     },
     paper: {
         display: 'flex'
@@ -29,6 +30,8 @@ const useStyles = makeStyles(theme => ({
         fontWeight: 'bold'
     },
     copyright: {
+        paddingTop: '1.2rem',
+        paddingBottom: '1rem',
         textAlign: 'center',
         color: '#000'
     }
@@ -39,24 +42,23 @@ const Footer = () => {
         <AppBar position='static' className={classes.footer}>
             <Container maxWidth='md'>
                 <Toolbar>
-                    <Paper variant='outlined' square className={classes.paper}>
-                        <img className='logo' src={Rating} alt='ESRB Mature Rating' />
-                        {/* <ul className={classes.esrbContent}>
-                            <li>Alcohol Reference</li>
-                            <li>Animated Blood</li>
-                            <li>Language</li>
-                            <li>Partial Nudity</li>
-                            <li>Sexual Themes</li>
-                            <li>Violence</li>
-                        </ul> */}
-                    </Paper>
-                    <img className='logo' src={Atlus} alt='Atlus Co.' />
-                    <img className='logo' src={Steam} alt='Steam' />
-
+                    <Grid container spacing={2}>
+                        <Grid item md={4} xs={6}>
+                            <img className='logo' src={Rating} alt='ESRB Mature Rating' />
+                        </Grid>
+                        <Grid item md={4} xs={6}>
+                            <img className='logo' src={Atlus} alt='Atlus Co.' />
+                        </Grid>
+                        <Grid item md={4} xs={12}>
+                            <img className='logo' src={Steam} alt='Steam' />
+                        </Grid>
+                    </Grid>
                 </Toolbar>
-                <Toolbar className={classes.copyright}>
-                    Site Created by Copyright&copy; 2021 lu-gflores
-                </Toolbar>
+                <Grid container>
+                    <Grid item md={12} xs={12}>
+                        <p className={classes.copyright}>Site Created by Copyright&copy; 2021 lu-gflores</p>
+                    </Grid>
+                </Grid>
             </Container>
         </AppBar>
     )
