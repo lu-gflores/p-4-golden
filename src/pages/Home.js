@@ -8,13 +8,14 @@ import GridListTile from '@material-ui/core/GridListTile'
 import Box from '@material-ui/core/Box'
 import Paper from '@material-ui/core/Paper'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-
 import ScrollTop from '../components/ScrollTop'
-
+// images
 import backgroundImage1 from '../images/backgroundimage-1.gif'
-import screenshot_1 from '../images/screenshots/screenshot-1.jpg'
+import originalCover from '../images/Front-Cover.jpg'
+import screenshot_1 from '../images/screenshots/screenshot-2.jpg'
 import screenshotData from '../utils/ScreenshotData'
 import '../styles/Home.css'
+
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
@@ -50,7 +51,7 @@ const useStyles = makeStyles(theme => ({
     },
     newContentPaper: {
         background: 'linear-gradient(90deg, rgba(249,223,31,1) 0%, rgba(74,220,226,1) 2%, rgba(232,131,131,1) 4%, rgba(40,67,199,1) 5%, rgba(20,251,7,1) 7%, rgba(255,255,255,1) 8%, rgba(248,137,25,1) 9%, rgba(253,223,55,1) 11%, rgba(255,250,64,1) 100%);',
-        border: '5px solid #fff',
+        border: '5px solid #000',
         textAlign: 'center',
         padding: '1rem 2rem 2rem 3rem',
         lineHeight: 1.3,
@@ -64,16 +65,16 @@ const useStyles = makeStyles(theme => ({
         background: `linear-gradient(0deg, rgba(156,203,227,1) 9%, rgba(255,255,255,1) 100%)`,
         border: '5px solid rgba(235, 40, 126, 100)',
         borderRadius: '10px',
-        width: '100%',
-        height: 'auto',
+        maxWidth: '100%',
+        maxHeight: 600,
         transform: 'rotate(3deg)',
     },
     imagesPaper_2: {
         background: `linear-gradient(0deg, rgba(156,203,227,1) 9%, rgba(255,255,255,1) 100%)`,
-        border: '5px solid rgba(235, 40, 126, 100)',
+        border: '5px solid rgb(156,203,227)',
         borderRadius: '10px',
-        width: '100%',
-        height: 'auto',
+        maxWidth: '100%',
+        maxHeight: '100%',
         transform: 'rotate(-3deg)',
     },
     headerText: {
@@ -127,26 +128,30 @@ const Home = () => {
                         <Paper className={classes.newContentPaper}>
                             <h1 className={classes.headerText}>What's in store</h1>
                             <p>
-                                Originally released on the Playstation 2 in 2008, <em><strong>Shin Megami Tensei: Persona 4</strong></em> has received critical acclaim for its gameplay, story, characters, and soundtrack.
-                                <em><strong>Persona 4 Golden </strong></em>is an enhanced version of the original, adding new story and gameplay elements, new Personas, new endings, and visual elements. It is currently released
+                                Originally released on the Playstation 2 in 2008 here in the West, <em><strong>Shin Megami Tensei: Persona 4</strong></em> has received critical acclaim for its gameplay, story, characters, and soundtrack.
+                                <em><strong>Persona 4 Golden </strong></em>is an enhanced version of the original, adding new story and gameplay elements, updated visuals, and more! It is currently released
                                 on PS Vita and PC via Steam.
                             </p>
                         </Paper>
                     </Grid>
                     <Grid item md={6} xs={12}>
-                        <img src={screenshot_1} alt='gameplay' className={classes.imagesPaper_1} />
+                        <img src={originalCover} alt='Shin Megami Tensei Persona 4 Cover Art' className={classes.imagesPaper_1} />
                     </Grid>
                     <Grid item md={6} xs={12}>
-                        <img src={screenshot_1} alt='gameplay' className={classes.imagesPaper_2} />
+                        <img src={screenshot_1} alt='team attack' className={classes.imagesPaper_2} />
                     </Grid>
                     <Grid item md={6} xs={12}>
                         <Paper className={classes.newContentPaper}>
-                            <h1 className={classes.headerText}>What's in store</h1>
+                            <h1 className={classes.headerText}>Features</h1>
                             <p>
-                                Originally released on the Playstation 2 in 2008, <em><strong>Shin Megami Tensei: Persona 4</strong></em> has received critical acclaim for its gameplay, story, characters, and soundtrack.
-                                <em><strong>Persona 4 Golden </strong></em>is an enhanced version of the original, adding new story and gameplay elements, new Personas, new endings, and visual elements. It is currently released
-                                on PS Vita and PC via Steam.
+                                Whether you are new or a veteran, <em><strong>Persona 4 Golden</strong></em> offers something new for everyone!
                             </p>
+                            <ul>
+                                <li>New Animated Cutscenes</li>
+                                <li>A new character</li>
+                                <li>New Personas</li>
+                                <li>Online Dungeon Assists</li>
+                            </ul>
                         </Paper>
                     </Grid>
                 </Grid>
