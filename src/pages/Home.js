@@ -12,6 +12,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 import ScrollTop from '../components/ScrollTop'
 
 import backgroundImage1 from '../images/backgroundimage-1.gif'
+import screenshot_1 from '../images/screenshots/screenshot-1.jpg'
 import screenshotData from '../utils/ScreenshotData'
 import '../styles/Home.css'
 const useStyles = makeStyles(theme => ({
@@ -51,12 +52,32 @@ const useStyles = makeStyles(theme => ({
         background: 'linear-gradient(90deg, rgba(249,223,31,1) 0%, rgba(74,220,226,1) 2%, rgba(232,131,131,1) 4%, rgba(40,67,199,1) 5%, rgba(20,251,7,1) 7%, rgba(255,255,255,1) 8%, rgba(248,137,25,1) 9%, rgba(253,223,55,1) 11%, rgba(255,250,64,1) 100%);',
         border: '5px solid #fff',
         textAlign: 'center',
-        padding: '1rem',
-        lineHeight: 1.5,
+        padding: '1rem 2rem 2rem 3rem',
+        lineHeight: 1.3,
         fontSize: '1.3rem',
+        transform: 'rotate(3deg)',
+    },
+    // boxWrapper: {
+    //     position: 'relative',
+    // },
+    imagesPaper_1: {
+        background: `linear-gradient(0deg, rgba(156,203,227,1) 9%, rgba(255,255,255,1) 100%)`,
+        border: '5px solid rgba(235, 40, 126, 100)',
+        borderRadius: '10px',
+        width: '100%',
+        height: 'auto',
+        transform: 'rotate(3deg)',
+    },
+    imagesPaper_2: {
+        background: `linear-gradient(0deg, rgba(156,203,227,1) 9%, rgba(255,255,255,1) 100%)`,
+        border: '5px solid rgba(235, 40, 126, 100)',
+        borderRadius: '10px',
+        width: '100%',
+        height: 'auto',
         transform: 'rotate(-3deg)',
     },
     headerText: {
+        textAlign: 'center',
         WebkitTextStroke: '1px #fff',
         WebkitTextFillColor: '#000'
     }
@@ -106,8 +127,24 @@ const Home = () => {
                         <Paper className={classes.newContentPaper}>
                             <h1 className={classes.headerText}>What's in store</h1>
                             <p>
-                                Originally released on the Playstation 2 in 2008, Shin Megami Tensei: Persona 4 has received critical acclaim for its gameplay, story, characters, and soundtrack.
-                                Persona 4 Golden is an enhanced version of the original, adding new story and gameplay elements, new Personas, new endings, and visual elements. It is currently released
+                                Originally released on the Playstation 2 in 2008, <em><strong>Shin Megami Tensei: Persona 4</strong></em> has received critical acclaim for its gameplay, story, characters, and soundtrack.
+                                <em><strong>Persona 4 Golden </strong></em>is an enhanced version of the original, adding new story and gameplay elements, new Personas, new endings, and visual elements. It is currently released
+                                on PS Vita and PC via Steam.
+                            </p>
+                        </Paper>
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                        <img src={screenshot_1} alt='gameplay' className={classes.imagesPaper_1} />
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                        <img src={screenshot_1} alt='gameplay' className={classes.imagesPaper_2} />
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                        <Paper className={classes.newContentPaper}>
+                            <h1 className={classes.headerText}>What's in store</h1>
+                            <p>
+                                Originally released on the Playstation 2 in 2008, <em><strong>Shin Megami Tensei: Persona 4</strong></em> has received critical acclaim for its gameplay, story, characters, and soundtrack.
+                                <em><strong>Persona 4 Golden </strong></em>is an enhanced version of the original, adding new story and gameplay elements, new Personas, new endings, and visual elements. It is currently released
                                 on PS Vita and PC via Steam.
                             </p>
                         </Paper>
