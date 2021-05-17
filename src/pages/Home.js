@@ -12,6 +12,7 @@ import ScrollTop from '../components/ScrollTop'
 // images
 import backgroundImage1 from '../images/backgroundimage-1.gif'
 import originalCover from '../images/Front-Cover.jpg'
+import introArt from '../images/persona-intro.jpg'
 import screenshot_1 from '../images/screenshots/screenshot-2.jpg'
 import screenshotData from '../utils/ScreenshotData'
 import '../styles/Home.css'
@@ -58,15 +59,18 @@ const useStyles = makeStyles(theme => ({
         fontSize: '1.3rem',
         transform: 'rotate(3deg)',
     },
-    // boxWrapper: {
-    //     position: 'relative',
-    // },
+    introImage: {
+        width: '100%',
+        height: 260,
+        border: '5px solid #000',
+        transform: 'rotate(-2deg)',
+    },
     imagesPaper_1: {
         background: `linear-gradient(0deg, rgba(156,203,227,1) 9%, rgba(255,255,255,1) 100%)`,
         border: '5px solid rgba(235, 40, 126, 100)',
         borderRadius: '10px',
         maxWidth: '100%',
-        maxHeight: 600,
+        maxHeight: 500,
         transform: 'rotate(3deg)',
     },
     imagesPaper_2: {
@@ -105,6 +109,18 @@ const Home = () => {
     return (
         <Container maxWidth='lg'>
             <div className='hero-banner'></div>
+            <Box>
+                <Grid container spacing={2}>
+                    <Grid item md={6} xs={12}>
+                        <Paper className={classes.newContentPaper}>
+                            <h1 className={classes.headerText}>One of Playstation 2's Biggest RPGs makes a return on modern tech!</h1>
+                        </Paper>
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                        <img src={introArt} className={classes.introImage} alt='Investigation team walking along' />
+                    </Grid>
+                </Grid>
+            </Box>
             <Divider />
             <section className={classes.backgroundStyle}>
                 <div className={classes.root}>
