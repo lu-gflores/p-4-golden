@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import Divider from '@material-ui/core/Divider'
@@ -8,6 +8,9 @@ import GridListTile from '@material-ui/core/GridListTile'
 import Box from '@material-ui/core/Box'
 import Paper from '@material-ui/core/Paper'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
+import Modal from '@material-ui/core/Modal'
+import Backdrop from '@material-ui/core/Backdrop'
+import Fade from '@material-ui/core/Fade'
 import ScrollTop from '../components/ScrollTop'
 // images
 import backgroundImage1 from '../images/backgroundimage-1.gif'
@@ -31,6 +34,9 @@ const useStyles = makeStyles(theme => ({
     gridList: {
         width: '100%',
         height: 'auto',
+    },
+    modal: {
+        display: 'flex',
     },
     backgroundStyle: {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${backgroundImage1})`,
@@ -93,11 +99,22 @@ const useStyles = makeStyles(theme => ({
 const Home = () => {
     const classes = useStyles()
     const theme = useTheme()
+    const [open, setOpen] = useState(false)
     const exSmallScreen = useMediaQuery(theme.breakpoints.only('xs'))
     const smallScreen = useMediaQuery(theme.breakpoints.only('sm'))
     const mediumScreen = useMediaQuery(theme.breakpoints.only('md'))
     const largeScreen = useMediaQuery(theme.breakpoints.only('lg'))
     const exLargeScreen = useMediaQuery(theme.breakpoints.only('xl'))
+
+    // modal function
+    const handleOpen = () => {
+        setOpen(true)
+    }
+    const handleClose = () => {
+        setOpen(false)
+    }
+
+    // makes screenshots responsive to screen size
     const screenWidth = () => {
         if (exLargeScreen) return 4;
 
@@ -180,10 +197,13 @@ const Home = () => {
                 <GridList cellHeight='auto' cols={screenWidth()} className={classes.gridList} >
                     {screenshotData.map(tile => (
                         <GridListTile key={tile.img}>
-                            <img className='screenshots' src={tile.img} alt={tile.alt} />
+                            <img onClick={handleOpen} className='screenshots' src={tile.img} alt={tile.alt} />
                         </GridListTile>
                     ))}
                 </GridList>
+                <Modal className={classes.modal} open={open} onClose={handleClose} closeAfterTransition BackdropComponent={Backdrop} BackdropProps={{ timeout: 500 }}>
+                    <Fade in={open}></Fade>
+                </Modal>
             </section>
             <ScrollTop />
         </Container>
