@@ -77,7 +77,7 @@ const useStyles = makeStyles(() => ({
 const Characters = () => {
     const classes = useStyles()
     return (
-        <Container maxWidth='false' className={classes.backgroundImage}>
+        <Container maxWidth={false} className={classes.backgroundImage}>
             <Box>
                 <Grid container>
                     <Grid item xs={12}>

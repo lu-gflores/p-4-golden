@@ -35,7 +35,7 @@ const Navbar = () => {
         bottom: false,
         right: false
     })
-
+    const nodeRef = React.useRef(null)
     const toggleDrawer = (anchor, open) => e => {
         if (e.type === 'keydown' && (e.key === 'Tab' || e.key === 'Shift')) {
             return;

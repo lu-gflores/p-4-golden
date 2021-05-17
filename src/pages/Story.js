@@ -16,7 +16,7 @@ import heroBanner from '../images/story-images/story-title.gif'
 import MidnightChannel from '../images/story-images/MidnightChannel.jpg'
 import Exams from '../images/story-images/exams.jpg'
 import Encounter from '../images/story-images/encounter.jpg'
-import Persona from '../images/story-images/persona-render.png'
+import Persona from '../images/story-images/summoning.jpg'
 import Fusion from '../images/story-images/fusion.jpg'
 import SocialLinks from '../images/story-images/social-link.jpg'
 
@@ -25,13 +25,12 @@ const useStyles = makeStyles(() => ({
         background: 'linear-gradient(90deg, rgba(249,223,31,1) 0%, rgba(74,220,226,1) 2%, rgba(232,131,131,1) 4%, rgba(40,67,199,1) 5%, rgba(20,251,7,1) 7%, rgba(255,255,255,1) 8%, rgba(248,137,25,1) 9%, rgba(253,223,55,1) 11%, rgba(255,250,64,1) 100%);',
     },
     cardRoot: {
-        width: '100%',
+        maxWidth: '100%',
         background: `linear-gradient(0deg, rgba(156,203,227,1) 9%, rgba(255,255,255,1) 100%)`,
         border: '5px solid rgba(235, 40, 126, 100)',
     },
     cardMedia: {
-        height: 350,
-        width: '100%'
+
     },
     storyTitle: {
         padding: '5.5rem 0 2.3rem 0',
@@ -45,9 +44,9 @@ const useStyles = makeStyles(() => ({
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        borderRadius: '10% 10% / 10% 40%',
+        borderRadius: '30px',
         width: '100%',
-        height: '60vh'
+        height: '50vh'
     },
     paperIntro: {
         background: `linear-gradient(0deg, rgba(156,203,227,1) 9%, rgba(255,255,255,1) 100%)`,
@@ -100,7 +99,7 @@ const useStyles = makeStyles(() => ({
 const Story = () => {
     const classes = useStyles()
     return (
-        <Container maxWidth='false' className={classes.backgroundImage}>
+        <Container maxWidth={false} className={classes.backgroundImage}>
             <div className={classes.heroBanner}>
                 <h1 className={classes.storyTitle}>Story</h1>
             </div>
@@ -167,43 +166,43 @@ const Story = () => {
                     </Grid>
                     <Grid item md={4} xs={12}>
                         <Card className={classes.cardRoot}>
-                            <CardMedia className={classes.cardMedia} image={Persona} title='Izanagi' />
+                            <CardMedia component='img' image={Persona} title='Izanagi' />
                             <CardContent>
                                 <Typography gutterBottom variant='h2' component='h2' align='center'>
-                                    Persona
+                                    Personas
                                 </Typography>
                                 <p>
-                                    Manifestations of the user's personality, often referred to as a mask. Similar to Shadows, where Shadows are malevolent manifestations of one's inner thoughts, whereas
-                                    Personas are the same feelings, but are tamed and trained by its users. By defeating Shadows in the Midnight Channel, you will obtain and evolve Personas in order to solve the
-                                    mystery behind the Midnight Channel.
+                                    Manifestations of the user's personality. Like Shadows, which are malevolent manifestations of one's inner thoughts,
+                                    Personas are the same feelings, but are tamed and trained by its user. By defeating Shadows in the Midnight Channel, you will obtain and strengthen Personas in order to solve the
+                                    mystery behind the Midnight Channel. Personas are based on beings based on religions, mythologies, and novels of various cultures.
                                 </p>
                             </CardContent>
                         </Card>
                     </Grid>
                     <Grid item md={4} xs={12}>
                         <Card className={classes.cardRoot}>
-                            <CardMedia className={classes.cardMedia} image={Fusion} title='Fusing Personas through menu' />
+                            <CardMedia component='img' image={Fusion} title='Fusing Personas through menu' />
                             <CardContent>
                                 <Typography gutterBottom variant='h2' component='h2' align='center'>
                                     Fusion
                                 </Typography>
                                 <p>
-                                    Obtaining and growing personas isn't always enough. After collecting enough personas, visit the Velvet Room to fuse specific ones! With the right personas, you can fuse even
-                                    stronger ones with devastating or resourceful abilities that will make the adventure much easier.
+                                    Obtaining and growing personas isn't always enough. After collecting enough personas, visit the Velvet Room and speak with Margaret to fuse much stronger ones! With the right personas and criteria, you can fuse even
+                                    stronger Personas that inherit devastating or resourceful abilities that will can make a huge difference in the comming battles.
                                 </p>
                             </CardContent>
                         </Card>
                     </Grid>
                     <Grid item md={4} xs={12}>
                         <Card className={classes.cardRoot}>
-                            <CardMedia className={classes.cardMedia} image={SocialLinks} title='Bonding with Yosuke' />
+                            <CardMedia component='img' image={SocialLinks} title='Bonding with Yosuke' />
                             <CardContent>
                                 <Typography gutterBottom variant='h2' component='h2' align='center'>
                                     Social Links
                                 </Typography>
                                 <p>
-                                    Outside of combat, you can build relationships with your fellow teammates, classmates, and citizens of Inaba through Social Links. By creating and growing Social Links, personas you
-                                    fuse will be even stronger prior to forming a Social Link.
+                                    Another way to make your Personas stronger is through Social Links. Outside of combat, you can build relationships with your fellow teammates, classmates, and citizens of Inaba. By forming and deepening your Social Links, personas you
+                                    fuse will be even stronger prior to establishing a bond. Deepening your bonds may also grant unique abilities that make the advanture easier!
                                 </p>
                             </CardContent>
                         </Card>

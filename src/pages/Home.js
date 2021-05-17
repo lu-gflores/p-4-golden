@@ -103,7 +103,7 @@ const Home = () => {
     }
 
     return (
-        <Container maxWidth='false'>
+        <Container maxWidth='lg'>
             <div className='hero-banner'></div>
             <Divider />
             <section className={classes.backgroundStyle}>
@@ -123,7 +123,7 @@ const Home = () => {
             </section>
 
             <Box>
-                <Grid container spacing={2}>
+                <Grid container spacing={3}>
                     <Grid item md={6} xs={12}>
                         <Paper className={classes.newContentPaper}>
                             <h1 className={classes.headerText}>What's in store</h1>

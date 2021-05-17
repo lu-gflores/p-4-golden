@@ -36,7 +36,7 @@ const CharacterDetail = () => {
     return (
         <>
             {character && (
-                <Container maxWidth='false' className={classes.backgroundContainer}>
+                <Container maxWidth={false} className={classes.backgroundContainer}>
                     <Box>
                         <Grid container >
                             <Grid item xs={12}>
