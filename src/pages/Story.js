@@ -56,7 +56,7 @@ const useStyles = makeStyles(() => ({
         background: `linear-gradient(0deg, rgba(156,203,227,1) 9%, rgba(255,255,255,1) 100%)`,
         border: '5px solid rgb(156,203,227)',
         padding: '1.5rem',
-        marginBottom: '1rem',
+        marginBottom: '2rem',
         fontSize: '1.2rem',
         borderRadius: '30px',
         transform: 'rotate(3deg)',

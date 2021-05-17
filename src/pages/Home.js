@@ -29,11 +29,11 @@ const useStyles = makeStyles(theme => ({
         flexWrap: 'wrap',
         justifyContent: 'space-around',
         overflow: 'hidden',
-        backgroundColor: '#FFFB41',
     },
     gridList: {
         width: '100%',
         height: 'auto',
+        zIndex: -1
     },
     modal: {
         display: 'flex',
@@ -206,9 +206,16 @@ const Home = () => {
                     </Grid>
                 </Grid>
             </Box>
-
+            <Box>
+                <Grid container >
+                    <Grid item xs={12}>
+                        <Paper className={classes.newContentPaper}>
+                            <h1 className={classes.headerText}>Screenshots</h1>
+                        </Paper>
+                    </Grid>
+                </Grid>
+            </Box>
             <section className={classes.gridListRoot}>
-                <h1>Media</h1>
                 <GridList cellHeight='auto' cols={screenWidth()} className={classes.gridList} >
                     {screenshotData.map(tile => (
                         <GridListTile key={tile.img}>

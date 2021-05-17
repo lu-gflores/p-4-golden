@@ -36,29 +36,29 @@ const screenshotData = [
         img: screenshot6,
         alt: 'screenshot 6'
     },
-    {
-        img: screenshot7,
-        alt: 'screenshot 7'
-    },
-    {
-        img: screenshot8,
-        alt: 'screenshot 8'
-    },
-    {
-        img: screenshot10,
-        alt: 'screenshot 10'
-    },
-    {
-        img: screenshot11,
-        alt: 'screenshot 11'
-    },
-    {
-        img: screenshot12,
-        alt: 'screenshot 12'
-    },
-    {
-        img: screenshot13,
-        alt: 'screenshot 13'
-    }
+    // {
+    //     img: screenshot7,
+    //     alt: 'screenshot 7'
+    // },
+    // {
+    //     img: screenshot8,
+    //     alt: 'screenshot 8'
+    // },
+    // {
+    //     img: screenshot10,
+    //     alt: 'screenshot 10'
+    // },
+    // {
+    //     img: screenshot11,
+    //     alt: 'screenshot 11'
+    // },
+    // {
+    //     img: screenshot12,
+    //     alt: 'screenshot 12'
+    // },
+    // {
+    //     img: screenshot13,
+    //     alt: 'screenshot 13'
+    // }
 ]
 export default screenshotData;
