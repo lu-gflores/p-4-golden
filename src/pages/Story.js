@@ -14,6 +14,7 @@ import ScrollTop from '../components/ScrollTop'
 import StoryBackground from '../images/story-background-image.jpg'
 import heroBanner from '../images/story-images/story-title.gif'
 import MidnightChannel from '../images/story-images/MidnightChannel.jpg'
+import allOut from '../images/story-images/all-out-attack.jpg'
 import Exams from '../images/story-images/exams.jpg'
 import Encounter from '../images/story-images/encounter.jpg'
 import Persona from '../images/story-images/summoning.jpg'
@@ -44,7 +45,10 @@ const useStyles = makeStyles(() => ({
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        borderRadius: '30px',
+        border: '3px solid #000',
+        borderRadius: '20px',
+        marginBottom: '1rem',
+        boxShadow: '0 10px 6px -5px #01060d',
         width: '100%',
         height: '50vh'
     },
@@ -57,6 +61,7 @@ const useStyles = makeStyles(() => ({
         borderRadius: '30px',
         transform: 'rotate(3deg)',
         color: '#004f77',
+        boxShadow: '0 10px 6px -5px #01060d',
         zIndex: 5
     },
     paperSection1: {
@@ -68,6 +73,7 @@ const useStyles = makeStyles(() => ({
         fontSize: '1.2rem',
         borderRadius: '30px',
         transform: 'rotate(-3deg)',
+        boxShadow: '0 10px 6px -5px #01060d',
         color: '#004f77',
     },
     headerStyle: {
@@ -83,6 +89,7 @@ const useStyles = makeStyles(() => ({
         height: 400,
         borderRadius: '35px',
         border: '5px solid rgb(156,203,227)',
+        boxShadow: '0 10px 6px -5px #01060d',
         alignContent: 'center',
         transform: 'rotate(-3deg)',
     },
@@ -92,6 +99,7 @@ const useStyles = makeStyles(() => ({
         border: '5px solid rgba(235, 40, 126, 100)',
         borderRadius: '35px',
         alignContent: 'center',
+        boxShadow: '0 10px 6px -5px #01060d',
         transform: 'rotate(3deg)',
     }
 }))
@@ -99,7 +107,7 @@ const useStyles = makeStyles(() => ({
 const Story = () => {
     const classes = useStyles()
     return (
-        <Container maxWidth={false} className={classes.backgroundImage}>
+        <Container maxWidth='lg' className={classes.backgroundImage}>
             <div className={classes.heroBanner}>
                 <h1 className={classes.storyTitle}>Story</h1>
             </div>
@@ -115,13 +123,14 @@ const Story = () => {
             <Box>
                 <Grid container spacing={2}>
                     <Grid item md={6} xs={12}>
-                        <img src={MidnightChannel} alt='Midnight Channel' className={classes.imageStyle1} />
+                        <img src={allOut} alt='Animated all out attack' className={classes.imageStyle1} />
                     </Grid>
                     <Grid item md={6} xs={12}>
                         <Paper className={classes.paperSection1}>
                             <p>
                                 This is a coming of age story that sets the protagonist and his friends on a journey kickstarted by a chain of serial murders.
-                                You will meet kindred spirits, feel a sense of belonging, and confront the darker sides of one's self.
+                                As the new transfer student, you will meet kindred spirits, feel a sense of belonging, and confront the darker sides of one's self. Seek out the
+                                truth!
                             </p>
                         </Paper>
                     </Grid>
@@ -135,9 +144,9 @@ const Story = () => {
                             <p>
                                 Attend Yasogami High School, where you will maintain an ordinary teenage social life.
                                 Listen to lectures, take exams, and join clubs to increase your social stats
-                                (Courage, Knowledge, Expression, Understanding, and Diligence).
-                                Along the way, forge bonds with your classmates. Who knows, it may lead down to a deeper relationship. Outside of school,
+                                (Courage, Knowledge, Expression, Understanding, and Diligence). Outside of school,
                                 pursue some hobbies or take a part-time job!
+                                Along the way, forge bonds with your classmates. Who knows, it may lead down to a deeper relationship.
                             </p>
                         </Paper>
                     </Grid>
@@ -153,8 +162,8 @@ const Story = () => {
                     </Grid>
                     <Grid item md={6} xs={12}>
                         <Paper className={classes.paperSection1}>
-                            <p>Outside of your social life, dive into the TV world to solve the mysterious murders that are happening in Inaba. Defeat the denizens known as Shadows by
-                            manifesting avatars known as Personas.</p>
+                            <p>While maintaining your social life, dive into the TV world to solve the mysterious murders that are happening in Inaba. Battle against the denizens of the world known as Shadows by
+                            manifesting your avatars known as Personas.</p>
                         </Paper>
                     </Grid>
                 </Grid>

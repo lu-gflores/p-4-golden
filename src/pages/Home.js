@@ -57,12 +57,14 @@ const useStyles = makeStyles(theme => ({
         padding: '1rem 2rem 2rem 3rem',
         lineHeight: 1.3,
         fontSize: '1.3rem',
+        boxShadow: '0 10px 6px -5px #01060d',
         transform: 'rotate(3deg)',
     },
     introImage: {
         width: '100%',
         height: 260,
         border: '5px solid #000',
+        boxShadow: '0 10px 6px -5px #01060d',
         transform: 'rotate(-2deg)',
     },
     imagesPaper_1: {
