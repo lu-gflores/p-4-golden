@@ -66,6 +66,16 @@ const useStyles = makeStyles(theme => ({
         boxShadow: '0 10px 6px -5px #01060d',
         transform: 'rotate(3deg)',
     },
+    newContentPaper_2: {
+        background: 'linear-gradient(90deg, rgba(249,223,31,1) 0%, rgba(255,250,64,1) 90%, rgba(248,137,25,1) 91%, rgba(255,255,255,1) 93%, rgba(40,67,199,1) 94%, rgba(20,251,7,1) 95%, rgba(232,131,131,1) 96%, rgba(74,220,226,1) 98%, rgba(253,223,55,1) 99%);',
+        border: '5px solid #000',
+        textAlign: 'center',
+        padding: '1rem 2rem 2rem 3rem',
+        lineHeight: 1.3,
+        fontSize: '1.3rem',
+        boxShadow: '0 10px 6px -5px #01060d',
+        transform: 'rotate(-1.5deg)',
+    },
     introImage: {
         width: '100%',
         height: 280,
@@ -209,7 +219,7 @@ const Home = () => {
             <Box>
                 <Grid container >
                     <Grid item xs={12}>
-                        <Paper className={classes.newContentPaper}>
+                        <Paper className={classes.newContentPaper_2}>
                             <h1 className={classes.headerText}>Screenshots</h1>
                         </Paper>
                     </Grid>
@@ -227,6 +237,15 @@ const Home = () => {
                     <Fade in={open}></Fade>
                 </Modal> */}
             </section>
+            <Box>
+                <Grid container>
+                    <Grid item xs={12}>
+                        <Paper className={classes.newContentPaper_2}>
+                            <h1 className={classes.headerText}>Check out its spin-offs!</h1>
+                        </Paper>
+                    </Grid>
+                </Grid>
+            </Box>
             <ScrollTop />
         </Container>
     )
