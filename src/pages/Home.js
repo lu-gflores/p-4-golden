@@ -14,7 +14,7 @@ import Fade from '@material-ui/core/Fade'
 import ScrollTop from '../components/ScrollTop'
 // images
 import backgroundImage1 from '../images/backgroundimage-1.gif'
-import originalCover from '../images/Front-Cover.jpg'
+import originalImage from '../images/original.jpg'
 import introArt from '../images/persona-intro.jpg'
 import screenshot_1 from '../images/screenshots/screenshot-2.jpg'
 import screenshotData from '../utils/ScreenshotData'
@@ -68,17 +68,17 @@ const useStyles = makeStyles(theme => ({
     },
     introImage: {
         width: '100%',
-        height: 260,
+        height: 280,
         border: '5px solid #000',
         boxShadow: '0 10px 6px -5px #01060d',
-        transform: 'rotate(-2deg)',
+        transform: 'rotate(-1deg)',
     },
     imagesPaper_1: {
         background: `linear-gradient(0deg, rgba(156,203,227,1) 9%, rgba(255,255,255,1) 100%)`,
         border: '5px solid rgba(235, 40, 126, 100)',
         borderRadius: '10px',
         maxWidth: '100%',
-        maxHeight: 500,
+        maxHeight: '100%',
         transform: 'rotate(3deg)',
     },
     imagesPaper_2: {
@@ -161,7 +161,7 @@ const Home = () => {
                 <Grid container spacing={3}>
                     <Grid item md={6} xs={12}>
                         <Paper className={classes.newContentPaper}>
-                            <h1 className={classes.headerText}>What's in store</h1>
+                            <h1 className={classes.headerText}>What's in stored</h1>
                             <p>
                                 Originally released on the Playstation 2 in 2008 here in the West, <em><strong>Shin Megami Tensei: Persona 4</strong></em> has received critical acclaim for its gameplay, story, characters, and soundtrack.
                                 <em><strong>Persona 4 Golden </strong></em>is an enhanced version of the original, adding new story and gameplay elements, updated visuals, and more! It is currently released
@@ -170,11 +170,23 @@ const Home = () => {
                         </Paper>
                     </Grid>
                     <Grid item md={6} xs={12}>
-                        <img src={originalCover} alt='Shin Megami Tensei Persona 4 Cover Art' className={classes.imagesPaper_1} />
+                        <img src={originalImage} alt='Ps2 original screenshot of dialogue' className={classes.imagesPaper_1} />
                     </Grid>
+
                     <Grid item md={6} xs={12}>
+                        {/* Placeholder image */}
                         <img src={screenshot_1} alt='team attack' className={classes.imagesPaper_2} />
                     </Grid>
+
+                    <Grid item md={6} xs={12}>
+                        <Paper className={classes.newContentPaper}>
+                            <h1 className={classes.headerText}>What's Persona 4 Golden?</h1>
+                            <p>A turn-based role-playing game blended with life simulation elements.
+                            It is the fifth entry of the <em>Persona</em> series, with the <em>Persona</em> series being largest spin-off series of the <em>Megami Tensei</em> series. Despite the number 4, each entry is a stand-alone, so you don't need to
+                            have played the previous games, although you may find some interesting references!</p>
+                        </Paper>
+                    </Grid>
+
                     <Grid item md={6} xs={12}>
                         <Paper className={classes.newContentPaper}>
                             <h1 className={classes.headerText}>Features</h1>
@@ -189,6 +201,9 @@ const Home = () => {
                             </ul>
                         </Paper>
                     </Grid>
+                    <Grid item md={6} xs={12}>
+                        <img src={screenshot_1} alt='team attack' className={classes.imagesPaper_2} />
+                    </Grid>
                 </Grid>
             </Box>
 
@@ -201,9 +216,9 @@ const Home = () => {
                         </GridListTile>
                     ))}
                 </GridList>
-                <Modal className={classes.modal} open={open} onClose={handleClose} closeAfterTransition BackdropComponent={Backdrop} BackdropProps={{ timeout: 500 }}>
+                {/* <Modal className={classes.modal} open={open} onClose={handleClose} closeAfterTransition BackdropComponent={Backdrop} BackdropProps={{ timeout: 500 }}>
                     <Fade in={open}></Fade>
-                </Modal>
+                </Modal> */}
             </section>
             <ScrollTop />
         </Container>

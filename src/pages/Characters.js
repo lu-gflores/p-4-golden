@@ -33,12 +33,12 @@ const useStyles = makeStyles(() => ({
     },
     characterImageStyle_1: {
         maxWidth: '100%',
-        maxHeight: '80%',
+        maxHeight: 500,
         transform: 'rotate(3deg)'
     },
     characterImageStyle_2: {
         maxWidth: '100%',
-        maxHeight: '80%',
+        maxHeight: 500,
         transform: 'rotate(-3deg)'
     },
     imageResize: {
@@ -66,6 +66,7 @@ const useStyles = makeStyles(() => ({
         border: '5px solid rgb(156,203,227)',
         padding: '1.5rem',
         marginTop: '3rem',
+        textDecoration: 'none',
         fontSize: '1.2rem',
         borderRadius: '30px',
         transform: 'rotate(3deg)',
@@ -77,7 +78,7 @@ const useStyles = makeStyles(() => ({
 const Characters = () => {
     const classes = useStyles()
     return (
-        <Container maxWidth={false} className={classes.backgroundImage}>
+        <Container maxWidth='lg' className={classes.backgroundImage}>
             <Box>
                 <Grid container>
                     <Grid item xs={12}>
@@ -92,14 +93,14 @@ const Characters = () => {
                 <Grid container spacing={2}>
                     <Grid item md={6} xs={12}>
                         <Paper className={classes.paperStyle_1}>
-                            <h1>Protagonist</h1>
-                            <h2>Arcana: <em>The Fool</em></h2>
+                            <Link to='/characters/protagonist'>
+                                <h1>Protagonist</h1>
+                                <h2>Arcana: <em>The Fool</em></h2>
+                            </Link>
                         </Paper>
                     </Grid>
                     <Grid item md={6} xs={12}>
-                        <Link to='/characters/protagonist'>
-                            <img className={classes.characterImageStyle_1} src={protagonist} alt='Protagonist' />
-                        </Link>
+                        <img className={classes.characterImageStyle_1} src={protagonist} alt='Protagonist' />
                     </Grid>
                 </Grid>
             </Box>
