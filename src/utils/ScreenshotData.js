@@ -36,14 +36,14 @@ const screenshotData = [
         img: screenshot6,
         alt: 'screenshot 6'
     },
-    // {
-    //     img: screenshot7,
-    //     alt: 'screenshot 7'
-    // },
-    // {
-    //     img: screenshot8,
-    //     alt: 'screenshot 8'
-    // },
+    {
+        img: screenshot7,
+        alt: 'screenshot 7'
+    },
+    {
+        img: screenshot8,
+        alt: 'screenshot 8'
+    },
     // {
     //     img: screenshot10,
     //     alt: 'screenshot 10'
