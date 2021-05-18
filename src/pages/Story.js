@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import Box from '@material-ui/core/Box'
@@ -10,6 +10,7 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Paper from '@material-ui/core/Paper'
 
 import ScrollTop from '../components/ScrollTop'
+import Loading from '../components/Loading'
 // Images
 import StoryBackground from '../images/story-background-image.jpg'
 import heroBanner from '../images/story-images/story-title.gif'
@@ -26,12 +27,10 @@ const useStyles = makeStyles(() => ({
         background: 'linear-gradient(90deg, rgba(249,223,31,1) 0%, rgba(74,220,226,1) 2%, rgba(232,131,131,1) 4%, rgba(40,67,199,1) 5%, rgba(20,251,7,1) 7%, rgba(255,255,255,1) 8%, rgba(248,137,25,1) 9%, rgba(253,223,55,1) 11%, rgba(255,250,64,1) 100%);',
     },
     cardRoot: {
-        maxWidth: '100%',
+        // maxWidth: '100%',
         background: `linear-gradient(0deg, rgba(156,203,227,1) 9%, rgba(255,255,255,1) 100%)`,
-        border: '5px solid rgba(235, 40, 126, 100)',
-    },
-    cardMedia: {
-
+        border: '5px solid #000',
+        boxShadow: '0 10px 16px -5px #01060d'
     },
     storyTitle: {
         padding: '5.5rem 0 2.3rem 0',
@@ -77,12 +76,16 @@ const useStyles = makeStyles(() => ({
         color: '#004f77',
     },
     headerStyle: {
+        marginTop: '1rem',
+        padding: '1.8rem',
         textAlign: 'center',
         fontSize: '48px',
         textDecoration: 'underline',
-        background: `linear-gradient(0deg, rgba(156,203,227,1) 9%, rgba(255,255,255,1) 100%)`,
-        border: '5px solid rgba(235, 40, 126, 100)',
+        background: `linear-gradient(90deg, rgba(249,223,31,1) 0%, rgba(74,220,226,1) 2%, rgba(232,131,131,1) 4%, rgba(40,67,199,1) 5%, rgba(20,251,7,1) 7%, rgba(255,255,255,1) 8%, rgba(248,137,25,1) 9%, rgba(253,223,55,1) 11%, rgba(255,250,64,1) 100%);`,
+        border: '5px solid #000',
         borderRadius: '30px',
+        boxShadow: '0 10px 6px -5px #01060d',
+        transform: 'rotate(2deg)'
     },
     imageStyle1: {
         width: '100%',
@@ -105,7 +108,10 @@ const useStyles = makeStyles(() => ({
 }))
 
 const Story = () => {
+    const [loading, setLoading] = useState(false)
     const classes = useStyles()
+
+
     return (
         <Container maxWidth='lg' className={classes.backgroundImage}>
             <div className={classes.heroBanner}>
