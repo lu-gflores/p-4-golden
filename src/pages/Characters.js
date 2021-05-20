@@ -91,7 +91,7 @@ const Characters = () => {
 
             <Box>
                 <Grid container spacing={2}>
-                    <Grid item md={6} xs={12}>
+                    <Grid item md={7} xs={12}>
                         <Paper className={classes.paperStyle_1}>
                             <Link to='/characters/protagonist'>
                                 <h1>Protagonist</h1>
@@ -99,19 +99,19 @@ const Characters = () => {
                             </Link>
                         </Paper>
                     </Grid>
-                    <Grid item md={6} xs={12}>
+                    <Grid item md={5} xs={12}>
                         <img className={classes.characterImageStyle_1} src={protagonist} alt='Protagonist' />
                     </Grid>
                 </Grid>
             </Box>
             <Box>
                 <Grid container spacing={2}>
-                    <Grid item md={6} xs={12}>
+                    <Grid item md={5} xs={12}>
                         <Link to='/characters/yosuke-hanamura'>
                             <img className={classes.characterImageStyle_2} src={yosuke} alt={'Yosuke Hanamura'} />
                         </Link>
                     </Grid>
-                    <Grid item md={6} xs={12}>
+                    <Grid item md={7} xs={12}>
                         <Paper className={classes.paperStyle_1}>
                             <h1>Yosuke Hanamura</h1>
                             <h2>Arcana: <em>The Magician</em></h2>

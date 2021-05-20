@@ -27,14 +27,19 @@ const useStyles = makeStyles({
         background: 'linear-gradient(0deg, rgba(156,203,227,1) 9%, rgba(255,255,255,1) 100%)',
         border: '5px solid rgba(235, 40, 126, 100)',
         borderRadius: '30px',
+        boxShadow: '0 10px 16px -6px #01060d',
+        margin: '1.2rem 0 0 0',
         padding: '2.5rem',
         fontSize: '20px',
         alignContent: 'justify',
+        transform: 'rotate(-2deg)',
     },
     image: {
+        background: 'linear-gradient(90deg, rgba(253,223,55,1) 2%, rgba(255,250,64,1) 3%, rgba(225,236,55,1) 4%, rgba(255,255,255,1) 5%, rgba(20,251,7,1) 7%, rgba(74,220,226,1) 8%, rgba(40,67,199,1) 10%, rgba(248,137,25,1) 11%, rgba(249,223,31,1) 13%);',
         boxShadow: '0 10px 6px -5px #01060d',
+        borderRadius: '25px',
         maxWidth: '100%',
-        maxHeight: '100%'
+        height: '100%'
     }
 })
 const CharacterDetail = () => {
@@ -51,9 +56,9 @@ const CharacterDetail = () => {
     return (
         <>
             {character && (
-                <Container maxWidth={false} className={classes.backgroundContainer}>
+                <Container maxWidth='lg' className={classes.backgroundContainer}>
                     <Box>
-                        <Grid container >
+                        <Grid container spacing={2} >
                             <Grid item md={7} xs={12}>
                                 <Paper className={classes.charName}>
                                     <h2>{character.characterName}</h2>

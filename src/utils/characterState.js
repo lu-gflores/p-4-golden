@@ -10,18 +10,24 @@ import naoto from '../images/characters/Naoto_Shirogane_render.png'
 import igor from '../images/characters/IgorPersona3.png'
 import margaret from '../images/characters/Margaret_Render.png'
 import marie from '../images/characters/Marie_portrait.png'
-
+// Secondary images
+import izanagi from '../images/secondaryimgs/izanagi.png'
+import konohana from '../images/secondaryimgs/Konohana_Sakuya_art.png'
+import tomoe from '../images/secondaryimgs/P4-TomoeGozen.png'
 export const CharacterState = () => {
     return [
         {
-            characterName: 'Protagonist (Yu Narukami)',
+            characterName: 'Protagonist (canonically named Yu Narukami)',
             title: 'Leader of the Investigation Team',
             charImg: protagonist,
+            secondImg: izanagi,
             url: '/characters/protagonist',
             description: `Protagonist of this story whom you assume the role as. After his parents started working abroad, he transfers to a countryside town called Inaba to stay with his uncle and cousin for a year.
             While attending his new school, Yasogami High, he meets the story's main cast. He begins to learn about the town myth known as the Midnight Channel, where if you watch a TV on a rainy night at midnight,
-            your soulmate will appear on screen. However, he also learns that there has been a chain of murders around town which is possibly connected to the Midnight Channel. His curosity leads him to entering the TV world where he 
-            `
+            your soulmate will appear on screen. However, he also learns that there has been a chain of murders around town which is possibly connected to the Midnight Channel.
+            `,
+            secondDesc: `The protagonist's initial persona who he manages to summon. A japanese deity that existed long before Japan was created. He created the Ouyashima from chaos and gave birth to countless children and laid the
+            foundation of soil and nature.`
         },
         {
             characterName: 'Yosuke Hanamura',
@@ -35,17 +41,22 @@ export const CharacterState = () => {
             characterName: 'Chie Satonaka',
             title: 'Kung-fu Enthusiast',
             charImg: chie,
+            secondImg: tomoe,
             url: '/characters/chie-satonaka',
             description: `An energetic and outgoing tomboy who is a obessed with kung fu and martial arts movies. She is best friends with Yukiko despite being opposites and seemingly gets along with Yosuke. She also posseses a strong sense
-            of justice, willing to protect others without hesitation.`
+            of justice, willing to protect others without hesitation.`,
+            secondDesc: `A female samurai that existed during the Genpei War. After the battle of Awazu, she vanished. It is unclear if she ever existed due to the number of stories of how her life went and thus became a thing of legends.`
         },
         {
             characterName: 'Yukiko Amagi',
             title: 'Scarlet Princess',
             charImg: yukiko,
+            secondImg: konohana,
             url: '/characters/yukiko-amagi',
             description: `A rich and elegant student who is actually popular at Yasogami. She is best friends with Chie, although unlike Chie she is quite introverted. Her family runs a renowned local inn and is set to become its heiress. Despite being
-            intelligent, she also has a strange sense of humor where she tends to laugh at the slightest jokes.`
+            intelligent, she also has a strange sense of humor where she tends to laugh at the slightest jokes.`,
+            secondDesc: `A daughter of the mountain god Ouyamatsumi. Once she became the wife of Ninigi and grew pregnant on the first of their marriage, Ninigi accused her of infidelity and stood her in a burning hut. Fire woud not touch her if she
+            had been faithful and she emerged unscathed.`
         },
         {
             characterName: 'Kanji Tatsumi',
@@ -57,7 +68,7 @@ export const CharacterState = () => {
         },
         {
             characterName: 'Rise Kujikawa',
-            title: 'Risette',
+            title: '"Risette"',
             charImg: rise,
             url: '/characters/rise-kujikawa',
             description: `A former idol who decided to take a break from the busniess to work at her family business 'due to health concerns.' She is very cheerful and quite boastful about herself, but very sweet to others. Despite her bubbly demeanor, she struggles on her
