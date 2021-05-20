@@ -12,12 +12,27 @@ const useStyles = makeStyles({
     backgroundContainer: {
         background: 'linear-gradient(90deg, rgba(249,223,31,1) 0%, rgba(255,250,64,1) 90%, rgba(248,137,25,1) 91%, rgba(255,255,255,1) 93%, rgba(40,67,199,1) 94%, rgba(20,251,7,1) 95%, rgba(232,131,131,1) 96%, rgba(74,220,226,1) 98%, rgba(253,223,55,1) 99%);',
     },
+    charName: {
+        background: 'linear-gradient(90deg, rgba(249,223,31,1) 0%, rgba(74,220,226,1) 2%, rgba(232,131,131,1) 4%, rgba(40,67,199,1) 5%, rgba(20,251,7,1) 7%, rgba(255,255,255,1) 8%, rgba(248,137,25,1) 9%, rgba(253,223,55,1) 11%, rgba(255,250,64,1) 100%);',
+        padding: '1rem 2rem 2rem 3rem',
+        margin: '1rem 0 1.2rem 0',
+        border: '5px solid #000',
+        textAlign: 'justify',
+        lineHeight: 1.3,
+        fontSize: '1.3rem',
+        boxShadow: '0 10px 6px -5px #01060d',
+        transform: 'rotate(-2deg)',
+    },
     charDesc: {
+        background: 'linear-gradient(0deg, rgba(156,203,227,1) 9%, rgba(255,255,255,1) 100%)',
         border: '5px solid rgba(235, 40, 126, 100)',
         borderRadius: '30px',
-        alignContent: 'justify'
+        padding: '2.5rem',
+        fontSize: '20px',
+        alignContent: 'justify',
     },
     image: {
+        boxShadow: '0 10px 6px -5px #01060d',
         maxWidth: '100%',
         maxHeight: '100%'
     }
@@ -39,8 +54,8 @@ const CharacterDetail = () => {
                 <Container maxWidth={false} className={classes.backgroundContainer}>
                     <Box>
                         <Grid container >
-                            <Grid item xs={12}>
-                                <Paper>
+                            <Grid item md={7} xs={12}>
+                                <Paper className={classes.charName}>
                                     <h2>{character.characterName}</h2>
                                 </Paper>
                             </Grid>

@@ -14,7 +14,6 @@ import Loading from '../components/Loading'
 // Images
 import StoryBackground from '../images/story-background-image.jpg'
 import heroBanner from '../images/story-images/story-title.gif'
-import MidnightChannel from '../images/story-images/MidnightChannel.jpg'
 import allOut from '../images/story-images/all-out-attack.jpg'
 import Exams from '../images/story-images/exams.jpg'
 import Encounter from '../images/story-images/encounter.jpg'
@@ -108,9 +107,14 @@ const useStyles = makeStyles(() => ({
 }))
 
 const Story = () => {
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
     const classes = useStyles()
 
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading((false), 5000)
+        }, []);
+    })
 
     return (
         <Container maxWidth='lg' className={classes.backgroundImage}>
