@@ -39,9 +39,11 @@ export const CharacterState = () => {
             characterName: 'Yosuke Hanamura',
             title: 'Captain Ressentiment',
             charImg: yosuke,
+            secondImg: jiraiya,
             url: '/characters/yosuke-hanamura',
             description: `A clumsy student who just transfered here six months before the protagonist. His father manages a large department store called Junes. He has a cheerful personality and seems to take a liking to the protagonist
-            as they came to Inaba under similar circumstances. `
+            as they came to Inaba under similar circumstances.`,
+            secondDesc: `A ninja who uses shapeshifting magic to change into a enormous toad. Originally from the folk tale Jiraiya Goketsu Monogatari (The Tale of the Gallant Jiraiya)`
         },
         {
             characterName: 'Chie Satonaka',
@@ -68,40 +70,50 @@ export const CharacterState = () => {
             characterName: 'Kanji Tatsumi',
             title: 'Bloodcurdling Beefcake',
             charImg: kanji,
+            secondImg: take_mikazuchi,
             url: '/characters/kanji-tatsumi',
             description: `A notorious deliquent who earned a reputation in town for fighting biker gangs. As a result, people are terrified of him and doesn't seem to have any friends. Although he tries to embody his tough-guy personality, it seems as though
-            he has other passions he wants to pursue in fear of being judged by others.`
+            he has other passions he wants to pursue in fear of being judged by others.`,
+            secondDesc: 'Shinto god of thunder born from the sword of Izanagi when slaying down the fire god Kagutsuchi. He and his brother Futsunchi descended from the High Plain of Heaven to pacify the deities of Izumo.'
         },
         {
             characterName: 'Rise Kujikawa',
             title: '"Risette"',
             charImg: rise,
+            secondImg: himiko,
             url: '/characters/rise-kujikawa',
             description: `A former idol who decided to take a break from the busniess to work at her family business 'due to health concerns.' She is very cheerful and quite boastful about herself, but very sweet to others. Despite her bubbly demeanor, she struggles on her
-            individuality.`
+            individuality.`,
+            secondDesc: `A shaman queen of Yamatai-koku who ruled an ancient country that would become Japan. Her magic and sorcery were highly respected and lead her reign to be strict and displined, but peaceful. `
         },
         {
             characterName: 'Teddie',
             title: '???',
             charImg: teddie,
+            secondImg: kintouko,
             url: '/characters/teddie',
-            description: `A strange bear who the protagonist and Yosuke first encounter in the Midnight Channel. He has a cheery but childish attitude who lacks any knowledge of human customs and quickly idolizes the protagonist to the point of calling him 'Sensei.'`
+            description: `A strange bear who the protagonist and Yosuke first encounter in the Midnight Channel. He has a cheery but childish attitude who lacks any knowledge of human customs and quickly idolizes the protagonist to the point of calling him 'Sensei.'`,
+            secondDesc: `Originally known as Kintarō, a child folk hero with superhuman strength raised by a mountain witch on Mount Ashigara. His friends werre animals that resided on the mountain with him. When he reached adulthood, he took on the name Sakata no Kintoki.`,
         },
         {
             characterName: 'Naoto Shirogane',
             title: 'Detective Prince',
             charImg: naoto,
+            secondImg: sukuna,
             url: '/characters/naoto-shirogane',
-            description: `A descendant of a respected linage of detectives and is nicknamed 'Detective Prince. Naoto is sent to Inaba to solve the muders case, although often faces discrimination by authories due to appearance.`
+            description: `A descendant of a respected linage of detectives and is nicknamed 'Detective Prince. Naoto is sent to Inaba to solve the muders case, although often faces discrimination by authorities due to appearance.`,
+            secondDesc: `A dwarf deity of healing and sake brewing. He helped Okuninushi in building the world and formulating protections against disease and feral animals from the Izumo region. `
         },
         {
             characterName: 'Igor',
             title: 'Master of the Velvet Room / Long Nose',
             charImg: igor,
+            secondImg: velvet,
             url: '/characters/igor',
             description: `A mysterious man who guides the protagonist regarding their powers, bonds, and dangers ahead of his journey, although they are quite often cryptic. 
             Despite his appearance, he quite calm and courteous. To ensure the success of this journey, Igor
-            provides services such as Persona fusions and the Persona Compendium. `
+            provides services such as Persona fusions and the Persona Compendium. `,
+            secondDesc: `A room located between the consciousness and subconsciousness hosted by Igor. It is invisible to all except the Protagonist or others with high spiritual sensitivity. It is said the Velvet Room manifests itself differently based on the guest's journey.`
         },
         {
             characterName: 'Margaret',
