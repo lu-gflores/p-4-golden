@@ -14,6 +14,12 @@ import marie from '../images/characters/Marie_portrait.png'
 import izanagi from '../images/secondaryimgs/izanagi.png'
 import konohana from '../images/secondaryimgs/Konohana_Sakuya_art.png'
 import tomoe from '../images/secondaryimgs/P4-TomoeGozen.png'
+import jiraiya from '../images/secondaryimgs/jiraiya.jpg'
+import take_mikazuchi from '../images/secondaryimgs/take-mikazuchi.jpg'
+import himiko from '../images/secondaryimgs/himiko.jpg'
+import kintouko from '../images/secondaryimgs/KintoukiDouji.png'
+import sukuna from '../images/secondaryimgs/sukuna.jpg'
+import velvet from '../images/secondaryimgs/velvetroom.png'
 export const CharacterState = () => {
     return [
         {
